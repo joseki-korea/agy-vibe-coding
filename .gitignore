@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+mcp.json
+scripts/deploy_schema.js
 
 # Editor directories and files
 .vscode/*
