@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v4.5 Master)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v5.0 Cloudflare Edition)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -535,7 +535,7 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v4.5 Master</p>
+        <p>Vibe Masterclass v5.0 Cloudflare</p>
       </div>
     </div>
 
@@ -544,7 +544,7 @@
       <li class="nav-item"><a href="#sec-glossary" class="active"><i class="fa-solid fa-book-open"></i> 1. 쉬운 개념 용어집</a></li>
       <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 2. GitHub Token & CLI 세팅</a></li>
       <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 3. Supabase Key & Project URL</a></li>
-      <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 4. Cloudflare Token & Wrangler</a></li>
+      <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 4. Cloudflare 초기 세팅 순서</a></li>
       <li class="nav-item"><a href="#sec-env-secrets"><i class="fa-solid fa-key"></i> 5. .env 파일 & Secrets 관리</a></li>
     </ul>
 
@@ -566,8 +566,8 @@
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine Master v4.5<br>
-      <span style="color: var(--text-dim);">GitHub Management & Vibe Coding Active</span>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine v5.0 Ready<br>
+      <span style="color: var(--text-dim);">Cloudflare Setup Tutorial Active</span>
     </div>
   </aside>
 
@@ -577,20 +577,20 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-brands fa-github"></i> 바이브 코딩 개발자 GitHub 관리 가이드 v4.5 Master
+        <i class="fa-solid fa-cloud"></i> Cloudflare 초기 세팅 매뉴얼 순서 v5.0
       </div>
       <h1 class="hero-title">
         GitHub + Supabase + Cloudflare<br>
-        <span>바이브 코딩 개발자를 위한 저장소 관리 전략</span>
+        <span>Cloudflare Pages 초기 세팅 100% 완전 정복</span>
       </h1>
       <p class="hero-desc">
-        AI 에이전트를 조율하여 소스코드를 효율적으로 커밋/푸시하고 보안 키 유출 없이 100% 안전하게 저장소를 관리하는 **바이브 코딩 개발자 전용 GitHub 운영 가이드**입니다.
+        무료 회원가입부터 CLI 인증(`npx wrangler login`), 빌드 검증, SPA 404 방지 라우팅(`public/_redirects`), 원클릭 라이브 배포까지 **가장 명확한 Cloudflare 세팅 순서 매뉴얼**입니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-check"></i> .env.local 보안 유출 차단 100%</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Conventional Commit 라벨링 전략</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> GitHub CLI (gh) 원클릭 푸시</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 7단계 Cloudflare 초기 세팅 순서</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> SPA 라우팅 (404 방지) 꿀팁</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 원클릭 라이브 URL 자동 생성</div>
       </div>
     </header>
 
@@ -671,25 +671,70 @@ gh auth login</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 4: CLOUDFLARE AUTH -->
+    <!-- SECTION 4: CLOUDFLARE INITIAL SETUP -->
     <section id="sec-cloudflare-auth" class="doc-section">
       <div class="section-header">
         <div class="section-number">4</div>
-        <h2 class="section-title">Cloudflare API Token & Wrangler CLI 인증</h2>
+        <h2 class="section-title">Cloudflare 초기 세팅 매뉴얼 순서 (7단계 가이드)</h2>
       </div>
 
-      <div class="step-box">
+      <div class="step-box" style="border-left: 4px solid var(--accent-warning);">
         <div class="step-box-header">
-          <span class="step-badge">추천 방법</span>
-          <span class="step-box-title">`npx wrangler login` (1초 웹 브라우저 자동 인증)</span>
+          <span class="step-badge" style="background: var(--accent-warning);">초기 세팅 순서</span>
+          <span class="step-box-title">Cloudflare Pages 완전 무결 초기 세팅 7단계</span>
+        </div>
+
+        <div class="step-path">
+          <i class="fa-solid fa-user-plus"></i> 1단계: Cloudflare 회원가입 (무료)
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+          <a href="https://dash.cloudflare.com/sign-up" target="_blank" style="color: var(--accent-cyan);">dash.cloudflare.com/sign-up</a> 접속 후 이메일과 비밀번호로 회원가입합니다.
+        </p>
+
+        <div class="step-path">
+          <i class="fa-solid fa-terminal"></i> 2단계: 내 컴퓨터 Wrangler CLI 브라우저 인증
         </div>
         <div class="code-container">
-          <div class="code-header">
-            <span class="code-lang"><i class="fa-solid fa-terminal"></i> Terminal</span>
-            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-          </div>
           <pre><code>npx wrangler login</code></pre>
         </div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+          실행 시 웹 브라우저 창이 뜨며 <strong>[Allow / 승인]</strong> 버튼을 누르면 1초 만에 인증이 완료됩니다.
+        </p>
+
+        <div class="step-path">
+          <i class="fa-solid fa-boxes-packing"></i> 3단계: 프로덕션 빌드 검증 (`dist` 생성)
+        </div>
+        <div class="code-container">
+          <pre><code>npm run build</code></pre>
+        </div>
+
+        <div class="step-path">
+          <i class="fa-solid fa-route"></i> 4단계: SPA 404 방지 설정 (`public/_redirects`)
+        </div>
+        <div class="code-container">
+          <pre><code>/* /index.html 200</code></pre>
+        </div>
+
+        <div class="step-path">
+          <i class="fa-solid fa-folder-plus"></i> 5단계: Pages 프로젝트 생성 (최초 1회)
+        </div>
+        <div class="code-container">
+          <pre><code>npx wrangler pages project create vibe-inventory --production-branch main</code></pre>
+        </div>
+
+        <div class="step-path">
+          <i class="fa-solid fa-rocket"></i> 6단계: 라이브 배포 실행
+        </div>
+        <div class="code-container">
+          <pre><code>npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
+        </div>
+
+        <div class="step-path">
+          <i class="fa-solid fa-globe"></i> 7단계: 배포 URL 접속 확인
+        </div>
+        <p style="color: var(--accent-success); font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem;">
+          ✨ 생성된 라이브 주소: <u>https://vibe-inventory.pages.dev</u>
+        </p>
       </div>
     </section>
 
@@ -952,7 +997,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
       </div>
     </section>
 
-    <!-- NEW SECTION 13: GITHUB MANAGEMENT STRATEGY -->
+    <!-- SECTION 13: GITHUB MANAGEMENT STRATEGY -->
     <section id="sec-github-mgmt" class="doc-section">
       <div class="section-header">
         <div class="section-number">13</div>
@@ -977,18 +1022,8 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
         <div style="font-size: 0.9rem; color: var(--text-muted);">
           · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
           · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
-          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v4.5</code>)
+          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v5.0</code>)
         </div>
-      </div>
-
-      <div class="step-box" style="border-left: 4px solid var(--accent-success);">
-        <div class="step-box-header">
-          <span class="step-badge" style="background: var(--accent-success);">원칙 3</span>
-          <span class="step-box-title">올인원 문서화 (README + SQL + Live URL)</span>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">
-          저장소 루트에 <code>README.md</code>, <code>schema.sql</code>, <code>antigravity-manual.html</code>, Cloudflare 배포 URL을 통합하여 누구나 저장소만 보면 100% 이해할 수 있도록 구성합니다.
-        </p>
       </div>
 
       <div class="prompt-box">
@@ -1000,9 +1035,9 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v4.5 Master: 바이브 개발자 GitHub 관리 전략 수록 완료
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v5.0 Cloudflare Edition: Cloudflare 초기 세팅 7단계 수록 완료
       </div>
-      <a href="#sec-github-mgmt" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
+      <a href="#sec-cloudflare-auth" class="btn"><i class="fa-solid fa-cloud"></i> 초기 세팅 보기</a>
     </div>
 
   </main>
