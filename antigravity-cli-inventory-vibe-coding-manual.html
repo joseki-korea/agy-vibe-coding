@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v4.0 Function Edition)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v4.5 Master)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -535,7 +535,7 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v4.0 Function</p>
+        <p>Vibe Masterclass v4.5 Master</p>
       </div>
     </div>
 
@@ -561,12 +561,13 @@
       <li class="nav-item"><a href="#sec-cheatsheet"><i class="fa-solid fa-paste"></i> 10. 올인원 프롬프트 복사</a></li>
       <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 11. 트러블슈팅 & 진단표</a></li>
       <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 12. 함수형 프롬프트 라이브러리</a></li>
+      <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 13. 바이브 개발자 GitHub 관리</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine v4.0 Ready<br>
-      <span style="color: var(--text-dim);">Function Prompts & Realtime DB Active</span>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine Master v4.5<br>
+      <span style="color: var(--text-dim);">GitHub Management & Vibe Coding Active</span>
     </div>
   </aside>
 
@@ -576,20 +577,20 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-code-branch"></i> 함수형 바이브 코딩 템플릿 포함 v4.0
+        <i class="fa-brands fa-github"></i> 바이브 코딩 개발자 GitHub 관리 가이드 v4.5 Master
       </div>
       <h1 class="hero-title">
         GitHub + Supabase + Cloudflare<br>
-        <span>함수처럼 쓰는 바이브 코딩 프롬프트 템플릿</span>
+        <span>바이브 코딩 개발자를 위한 저장소 관리 전략</span>
       </h1>
       <p class="hero-desc">
-        프로그래밍 함수처럼 파라미터 <code>[입력값]</code>만 넣으면 안티그래비티 CLI가 100% 정밀하게 앱 생성, DB 구축, 자동 디버깅, Cloudflare 배포까지 단숨에 수행하는 **재사용 프롬프트 템플릿 모음집**입니다.
+        AI 에이전트를 조율하여 소스코드를 효율적으로 커밋/푸시하고 보안 키 유출 없이 100% 안전하게 저장소를 관리하는 **바이브 코딩 개발자 전용 GitHub 운영 가이드**입니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 함수형 파라미터 프롬프트</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 전권 제어</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 종결판 매뉴얼 & 트러블슈팅</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> .env.local 보안 유출 차단 100%</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> Conventional Commit 라벨링 전략</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> GitHub CLI (gh) 원클릭 푸시</div>
       </div>
     </header>
 
@@ -909,23 +910,19 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
       </div>
     </section>
 
-    <!-- NEW SECTION 12: FUNCTION PROMPT TEMPLATES -->
+    <!-- SECTION 12: FUNCTION PROMPT TEMPLATES -->
     <section id="sec-fn-prompts" class="doc-section">
       <div class="section-header">
         <div class="section-number">12</div>
         <h2 class="section-title">함수처럼 쓰는 바이브 코딩 프롬프트 템플릿 모음 (Function Prompts)</h2>
       </div>
 
-      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-        프로그래밍 함수처럼 파라미터 <code>[입력값]</code>만 변경해서 안티그래비티 CLI에 복사-붙여넣기하면 100% 오차 없이 작동하는 실전 템플릿 6종입니다.
-      </p>
-
       <!-- Fn 1 -->
       <div class="prompt-box" style="border-left: 4px solid var(--accent-primary);">
         <div class="prompt-label"><i class="fa-solid fa-cube"></i> [함수 1] fn_create_app(앱이름, 주요기능, 디자인)</div>
         <div class="prompt-text">@fn_create_app
 - 앱이름: [예: 실시간 주문 관리 시스템]
-- 주요기능: [1. 주문 목록 및 상태 변경 대시보드, 2. 신규 주문 등록 Modal, 3. 실시간 알림]
+- 주요기능: [1. 주문 목록 및 상태 변경 대시보드, 2. 신규 주문 등록 Modal, 3. 실시간 필터링]
 - 디자인스타일: [다크 테마, Tailwind CSS, Lucide Icons]
 
 터미널 명령어를 직접 실행해서 프로젝트 세팅과 패키지 설치까지 한 번에 완료해줘!</div>
@@ -953,45 +950,59 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
 
 프로덕션 배포 완료 후 최종 라이브 접속 URL을 출력해줘!</div>
       </div>
+    </section>
 
-      <!-- Fn 4 -->
-      <div class="prompt-box" style="border-left: 4px solid var(--accent-purple);">
-        <div class="prompt-label"><i class="fa-solid fa-wand-magic-sparkles"></i> [함수 4] fn_natural_db_alter(테이블명, 변경내용)</div>
-        <div class="prompt-text">@fn_natural_db_alter
-- 대상테이블: [예: test_inventory_items]
-- 변경내용: [brand (문자열) 컬럼 새로 추가하고 기본값 'Antigravity' 설정]
-
-CLI에서 Supabase DB 명령을 실행해서 테이블 변경을 바로 반영해줘!</div>
+    <!-- NEW SECTION 13: GITHUB MANAGEMENT STRATEGY -->
+    <section id="sec-github-mgmt" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">13</div>
+        <h2 class="section-title">바이브 코딩 개발자를 위한 GitHub 저장소 관리 5대 원칙</h2>
       </div>
 
-      <!-- Fn 5 -->
-      <div class="prompt-box" style="border-left: 4px solid #ef4444;">
-        <div class="prompt-label"><i class="fa-solid fa-bug"></i> [함수 5] fn_auto_debug(에러로그, 발생상황)</div>
-        <div class="prompt-text">@fn_auto_debug
-- 에러로그: [터미널 또는 브라우저 콘솔 오류 내역 복사]
-- 발생상황: [버튼 클릭 시 데이터가 안 넘어감]
-
-로그 원인을 분석하고 소스 코드를 자가 수정(Self-healing)한 뒤 재검증해줘!</div>
+      <div class="step-box" style="border-left: 4px solid var(--accent-cyan);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-cyan);">원칙 1</span>
+          <span class="step-box-title">보안 유출 방지 (Secret Protection)</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Supabase Access Token(`sbp_...`)이나 API Key는 <code>.env.local</code>에 보관하고 <code>.gitignore</code>에 추가하여 GitHub에 유출되지 않도록 차단합니다.
+        </p>
       </div>
 
-      <!-- Fn 6 -->
-      <div class="prompt-box" style="border-left: 4px solid var(--accent-cyan);">
-        <div class="prompt-label"><i class="fa-brands fa-github"></i> [함수 6] fn_github_sync(저장소명, 커밋메시지)</div>
-        <div class="prompt-text">@fn_github_sync
-- 저장소명: [예: joseki-korea/vibe-orders]
-- 공개여부: [Public]
-- 커밋메시지: [feat: initial release with Supabase & Cloudflare]
+      <div class="step-box" style="border-left: 4px solid var(--accent-primary);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-primary);">원칙 2</span>
+          <span class="step-box-title">시각적 커밋 라벨링 (Conventional Commits)</span>
+        </div>
+        <div style="font-size: 0.9rem; color: var(--text-muted);">
+          · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
+          · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
+          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v4.5</code>)
+        </div>
+      </div>
 
-.gitignore에 .env.local 유출 방지 설정 후 gh repo create 명령으로 커밋&푸시해줘!</div>
+      <div class="step-box" style="border-left: 4px solid var(--accent-success);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-success);">원칙 3</span>
+          <span class="step-box-title">올인원 문서화 (README + SQL + Live URL)</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          저장소 루트에 <code>README.md</code>, <code>schema.sql</code>, <code>antigravity-manual.html</code>, Cloudflare 배포 URL을 통합하여 누구나 저장소만 보면 100% 이해할 수 있도록 구성합니다.
+        </p>
+      </div>
+
+      <div class="prompt-box">
+        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> GitHub 원클릭 동기화 프롬프트</div>
+        <div class="prompt-text">현재 작업한 내용을 .env.local 유출 방지 체크 후, GitHub 저장소(joseki-korea/agy-vibe-coding)에 커밋 및 푸시를 완료해줘!</div>
       </div>
     </section>
 
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v4.0 Function Edition: 재사용 가능한 함수형 프롬프트 템플릿 포함
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v4.5 Master: 바이브 개발자 GitHub 관리 전략 수록 완료
       </div>
-      <a href="#sec-fn-prompts" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
+      <a href="#sec-github-mgmt" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
     </div>
 
   </main>
