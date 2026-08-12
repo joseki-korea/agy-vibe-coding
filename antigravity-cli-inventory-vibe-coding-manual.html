@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antigravity CLI 바이브 코딩 실전 가이드: GitHub + Supabase + Cloudflare (v11.0 Practical Edition)</title>
+  <title>Antigravity CLI 바이브 코딩 실전 가이드: macOS & Windows 동시 지원 (v12.0 Dual OS Edition)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -220,7 +220,35 @@
       color: var(--accent-success);
     }
 
-    /* Unified 4-Step Standard Layout Card */
+    /* OS Toggle Card Component */
+    .os-comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .os-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .os-box.mac { border-top: 3px solid #38bdf8; }
+    .os-box.win { border-top: 3px solid #00adef; }
+
+    .os-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Unified Practical Step Card */
     .practical-step-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -295,18 +323,18 @@
       background-color: var(--code-bg);
       border: 1px solid var(--border-color);
       border-radius: 10px;
-      margin: 0.75rem 0;
+      margin: 0.5rem 0;
       overflow: hidden;
     }
 
     .code-header {
       background-color: rgba(255, 255, 255, 0.03);
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.8rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--border-color);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: var(--text-dim);
       font-family: "Fira Code", monospace;
     }
@@ -314,7 +342,7 @@
     .code-lang {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
       color: var(--accent-cyan);
       font-weight: 600;
     }
@@ -336,34 +364,12 @@
     }
 
     pre {
-      padding: 1.1rem;
+      padding: 1rem;
       overflow-x: auto;
       font-family: "Fira Code", monospace;
       font-size: 0.86rem;
-      line-height: 1.6;
+      line-height: 1.55;
       color: #e5e7eb;
-    }
-
-    .checklist-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .checklist-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.92rem;
-      color: var(--text-main);
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .checklist-item:last-child {
-      border-bottom: none;
     }
 
     /* Sticky Footer */
@@ -411,33 +417,29 @@
   <aside class="sidebar">
     <div class="brand">
       <div class="brand-icon">
-        <i class="fa-solid fa-graduation-cap"></i>
+        <i class="fa-solid fa-desktop"></i>
       </div>
       <div class="brand-text">
-        <h1>Antigravity 바이브 가이드</h1>
-        <p>비개발자 실전 가이드 v11.0</p>
+        <h1>Antigravity 가이드</h1>
+        <p>macOS & Windows v12.0</p>
       </div>
     </div>
 
-    <div class="nav-group-title">사전 준비 및 안내</div>
+    <div class="nav-group-title">운영체제별 명령어</div>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-prep" class="active"><i class="fa-solid fa-list-check"></i> 1. 준비물 및 예상 시간 가이드</a></li>
-      <li class="nav-item"><a href="#sec-terms"><i class="fa-solid fa-book"></i> 2. 용어 쉽게 이해하기</a></li>
+      <li class="nav-item"><a href="#sec-os-setup" class="active"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> OS별 필수 프로그램 설치</a></li>
+      <li class="nav-item"><a href="#sec-step-agy"><i class="fa-solid fa-terminal"></i> 1. Antigravity CLI 실행</a></li>
+      <li class="nav-item"><a href="#sec-step-gh"><i class="fa-brands fa-github"></i> 2. GitHub CLI 세팅</a></li>
+      <li class="nav-item"><a href="#sec-step-ui"><i class="fa-solid fa-code"></i> 3. 로컬 재고 앱 생성</a></li>
+      <li class="nav-item"><a href="#sec-step-db"><i class="fa-solid fa-database"></i> 4. Supabase 연동 & `.env`</a></li>
+      <li class="nav-item"><a href="#sec-step-cf"><i class="fa-solid fa-cloud-arrow-up"></i> 5. Cloudflare Pages 배포</a></li>
     </ul>
 
-    <div class="nav-group-title">실전 구축 4단계 체계</div>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-step-agy"><i class="fa-solid fa-terminal"></i> 3. Antigravity CLI 실행</a></li>
-      <li class="nav-item"><a href="#sec-step-ui"><i class="fa-solid fa-laptop-code"></i> 4. 재고관리 화면 만들기</a></li>
-      <li class="nav-item"><a href="#sec-step-db"><i class="fa-solid fa-database"></i> 5. Supabase 안전한 연동</a></li>
-      <li class="nav-item"><a href="#sec-step-deploy"><i class="fa-solid fa-cloud-arrow-up"></i> 6. Cloudflare Pages 배포</a></li>
-    </ul>
-
-    <div class="nav-group-title">점검 및 문제 해결</div>
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-trouble"><i class="fa-solid fa-wrench"></i> 7. 단계별 오류 해결 (Trouble)</a></li>
-      <li class="nav-item"><a href="#sec-final-check"><i class="fa-solid fa-clipboard-check"></i> 8. 최종 기능 검증 체크리스트</a></li>
-    </ul>
+    <div class="nav-group-title" style="margin-top: auto;">System Status</div>
+    <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-cyan);">
+      <i class="fa-solid fa-circle-check"></i> AGY Engine v12.0 Dual OS<br>
+      <span style="color: var(--text-dim);">macOS & Windows Side-by-Side Active</span>
+    </div>
   </aside>
 
   <!-- Main Content -->
@@ -446,318 +448,238 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-circle-info"></i> 비개발자를 위한 과장 없는 4단계 실전 따라하기가이드 (v11.0)
+        <i class="fa-brands fa-apple"></i> &nbsp;<i class="fa-brands fa-windows"></i> macOS & Windows 완벽 분리 실전 매뉴얼 (v12.0)
       </div>
       <h1 class="hero-title">
         Antigravity CLI 바이브 코딩 실전 가이드<br>
-        <span>화면 생성부터 Supabase 연동 & Cloudflare 배포까지</span>
+        <span>맥(macOS) 버전 & 윈도우(Windows) 버전 명령어 전격 비교</span>
       </h1>
       <p class="hero-desc">
-        과장된 표현(1초 완성 등)을 배제하고 **[1. 할 일 → 2. 명령어/클릭 위치 → 3. 성공 기준 → 4. 오류 해결]** 4단계 표준 형식으로 작성된 비개발자 전용 실전 안내서입니다.
+        맥북(macOS Zsh)과 윈도우(Windows PowerShell) 환경에서 **단 하나의 명령어 오차 없이 따라 할 수 있도록** 운영체제별 터미널 명령어를 나란히 명시한 가이드입니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-clock"></i> 예상 소요 시간: 준비 완료 시 20~30분 (첫 시도 40~60분)</div>
-        <div class="stat-item"><i class="fa-solid fa-desktop"></i> macOS / Windows 명령어 구분 제공</div>
-        <div class="stat-item"><i class="fa-solid fa-shield-halved"></i> 보안 키 보호 및 RLS 접근 제어 안내</div>
+        <div class="stat-item"><i class="fa-brands fa-apple"></i> macOS (Terminal / Zsh) 지원</div>
+        <div class="stat-item"><i class="fa-brands fa-windows"></i> Windows (PowerShell / CMD) 지원</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 동일한 실행 결과 보장</div>
       </div>
     </header>
 
-    <!-- SECTION 1: PREPARATION & TIME GUIDE -->
-    <section id="sec-prep" class="doc-section">
+    <!-- SECTION: OS SETUP SETUP -->
+    <section id="sec-os-setup" class="doc-section">
       <div class="section-header">
-        <div class="section-number">1</div>
-        <h2 class="section-title">사전 준비물 및 정직한 소요 시간 가이드</h2>
+        <div class="section-number">💻</div>
+        <h2 class="section-title">운영체제별 필수 설치 프로그램 명령어 (Node.js & Git)</h2>
       </div>
 
-      <div class="practical-step-card">
-        <div class="practical-step-title">
-          <i class="fa-solid fa-hourglass-half" style="color: var(--accent-warning);"></i> 현실적인 예상 소요 시간 가이드
-        </div>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem;">
-          <li>⚡ <strong>모든 계정과 프로그램 설치 완료 시:</strong> 약 20분 ~ 30분</li>
-          <li>👤 <strong>계정 회원가입 및 프로그램 처음 설치 시:</strong> 약 40분 ~ 60분 (이메일 인증 및 서버 생성 시간 포함)</li>
-        </ul>
-      </div>
+      <div class="os-comparison-grid">
+        <!-- macOS -->
+        <div class="os-box mac">
+          <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS (MacBook) 환경 세팅</div>
+          <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            터미널(Terminal) 앱을 열고 아래 명령어를 순서대로 실행합니다.
+          </p>
 
-      <div class="practical-step-card">
-        <div class="practical-step-title">
-          <i class="fa-solid fa-boxes-packing" style="color: var(--accent-cyan);"></i> 시작 전 필요한 준비물
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.9rem;">
-          <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
-            <strong>1. 무료 계정 준비</strong><br>
-            · Google 계정<br>· GitHub 계정<br>· Supabase 계정<br>· Cloudflare 계정
+          <span style="font-size: 0.75rem; color: var(--text-dim);">1. Homebrew 및 Node.js 설치</span>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install node git gh</code></pre>
           </div>
-          <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
-            <strong>2. 설치 프로그램</strong><br>
-            · Node.js (v18 이상)<br>· Git 패키지<br>· 안티그래비티 CLI (`agy`)
+        </div>
+
+        <!-- Windows -->
+        <div class="os-box win">
+          <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows (PC) 환경 세팅</div>
+          <p style="font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <strong>PowerShell을 '관리자 권한으로 실행'</strong>하여 아래 명령어를 입력합니다.
+          </p>
+
+          <span style="font-size: 0.75rem; color: var(--text-dim);">1. winget으로 Node.js 및 Git 설치</span>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>winget install OpenJS.NodeJS
+winget install Git.Git
+winget install GitHub.cli</code></pre>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: EASY TERMS -->
-    <section id="sec-terms" class="doc-section">
-      <div class="section-header">
-        <div class="section-number">2</div>
-        <h2 class="section-title">처음 나오는 필수 용어 쉬운 말 정리</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
-          <strong style="color: var(--accent-cyan); font-size: 1.05rem;"><i class="fa-solid fa-terminal"></i> CLI (터미널)</strong>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
-            마우스로 버튼을 누르는 대신 텍스트 글자로 명령어를 입력하여 컴퓨터를 실행하는 창입니다.
-          </p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
-          <strong style="color: var(--accent-success); font-size: 1.05rem;"><i class="fa-solid fa-database"></i> DB (데이터베이스)</strong>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
-            웹 사이트를 새로고침하거나 브라우저를 꺼도 재고 수량이나 주문 내역이 사라지지 않게 보관하는 클라우드 엑셀표입니다.
-          </p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
-          <strong style="color: var(--accent-purple); font-size: 1.05rem;"><i class="fa-solid fa-shield-halved"></i> RLS (Row Level Security)</strong>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
-            아무나 내 데이터베이스에 접근해서 데이터를 지우거나 수정하지 못하도록 막아주는 출입 보안 규칙입니다.
-          </p>
-        </div>
-
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.25rem;">
-          <strong style="color: var(--accent-warning); font-size: 1.05rem;"><i class="fa-solid fa-cloud-arrow-up"></i> 배포 (Deployment)</strong>
-          <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.4rem;">
-            내 컴퓨터에서만 보이던 웹 앱을 전 세계 누구나 접속할 수 있는 실제 인터넷 주소(`https://...`)로 인터넷에 공개하는 작업입니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: STEP - ANTIGRAVITY CLI -->
+    <!-- SECTION 1: ANTIGRAVITY CLI -->
     <section id="sec-step-agy" class="doc-section">
       <div class="section-header">
-        <div class="section-number">3</div>
-        <h2 class="section-title">Step 1. Antigravity CLI 실행 및 로그인</h2>
+        <div class="section-number">1</div>
+        <h2 class="section-title">Step 1. Antigravity CLI 설치 & 구글 로그인</h2>
       </div>
 
-      <div class="practical-step-card">
-        <div class="practical-step-title">
-          <span style="background: var(--accent-primary); color: #fff; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem;">단계별 가이드</span>
-          Antigravity CLI 가입 및 로그인
-        </div>
+      <div class="os-comparison-grid">
+        <!-- macOS -->
+        <div class="os-box mac">
+          <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code># 글로벌 CLI 설치
+npm install -g agy
 
-        <!-- 1. 할 일 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-info"></i> 1. 이번 단계에서 할 일</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">
-            내 컴퓨터 터미널에서 Antigravity CLI 패키지를 실행하고 Google 계정으로 로그인합니다.
-          </p>
-        </div>
-
-        <!-- 2. 클릭할 위치 또는 명령어 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-terminal"></i> 2. 실행할 명령어 (운영체제별)</div>
-          
-          <div style="margin-bottom: 0.75rem;">
-            <span style="font-size: 0.8rem; color: var(--text-dim);">[macOS / Linux]</span>
-            <div class="code-container">
-              <div class="code-header"><span>Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-              <pre><code>npm install -g agy
+# 로그인 (브라우저 승인)
 agy login</code></pre>
-            </div>
-          </div>
-
-          <div>
-            <span style="font-size: 0.8rem; color: var(--text-dim);">[Windows - PowerShell 관리자 권한]</span>
-            <div class="code-container">
-              <div class="code-header"><span>PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-              <pre><code>npm install -g agy
-agy login</code></pre>
-            </div>
           </div>
         </div>
 
-        <!-- 3. 정상 완료 화면 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 3. 정상적으로 완료된 성공 기준</div>
-          <p style="font-size: 0.9rem; color: var(--accent-success);">
-            웹 브라우저가 열리며 <strong>"Successfully logged in to Antigravity AI Engine"</strong> 메시지가 뜨고, 터미널에 질문을 입력할 수 있는 상태가 됩니다.
-          </p>
-        </div>
+        <!-- Windows -->
+        <div class="os-box win">
+          <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code># 스크립트 실행 권한 허용 (최초 1회)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-        <!-- 4. 오류 해결 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> 4. 오류 발생 시 해결 방법</div>
-          <p style="font-size: 0.88rem; color: var(--text-muted);">
-            · <code>command not found: agy</code> 오류 발생 시: Node.js가 정상 설치되어 있는지 확인 후 <code>npm install -g agy</code>를 재실행합니다.
-          </p>
+# 글로벌 CLI 설치 & 로그인
+npm install -g agy
+agy login</code></pre>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: STEP - CREATE APP -->
+    <!-- SECTION 2: GITHUB CLI -->
+    <section id="sec-step-gh" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2 class="section-title">Step 2. GitHub CLI 로그인 (`gh auth login`)</h2>
+      </div>
+
+      <div class="os-comparison-grid">
+        <!-- macOS -->
+        <div class="os-box mac">
+          <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>gh auth login
+# 1. GitHub.com 선택
+# 2. HTTPS 선택
+# 3. Web browser 로그인 선택 (1초 승인)</code></pre>
+          </div>
+        </div>
+
+        <!-- Windows -->
+        <div class="os-box win">
+          <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>gh auth login
+# 1. GitHub.com 선택
+# 2. HTTPS 선택
+# 3. Web browser 로그인 선택 (1초 승인)</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WORKSPACE & APP CREATION -->
     <section id="sec-step-ui" class="doc-section">
       <div class="section-header">
-        <div class="section-number">4</div>
-        <h2 class="section-title">Step 2. 재고관리 화면 만들기 (로컬 실행)</h2>
+        <div class="section-number">3</div>
+        <h2 class="section-title">Step 3. 작업 폴더 이동 & 로컬 앱 생성</h2>
       </div>
 
-      <div class="practical-step-card">
-        <div class="practical-step-title">
-          <span style="background: var(--accent-primary); color: #fff; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem;">단계별 가이드</span>
-          로컬 React UI 생성 및 테스트
-        </div>
-
-        <!-- 1. 할 일 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-info"></i> 1. 이번 단계에서 할 일</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">
-            작업 폴더(`vibe-inventory`)를 생성하고 Vite + React 기반의 대시보드 화면을 생성합니다.
-          </p>
-        </div>
-
-        <!-- 2. 프롬프트 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-comment-dots"></i> 2. Antigravity CLI에 입력할 프롬프트</div>
-          <div class="prompt-box">
-            <div class="prompt-text">현재 폴더에 Vite + React 기반의 재고관리 대시보드 앱을 생성해줘.
-
-1. 재고 목록 대시보드 (제품명, SKU 코드, 카테고리, 수량, 단가)
-2. 재고 부족 알림 (안전재고 미만 시 빨간색 표시)
-3. 실시간 검색 및 카테고리 필터 기능
-4. npm run dev 로컬 서버 구동 명령어까지 확인해줘!</div>
+      <div class="os-comparison-grid">
+        <!-- macOS -->
+        <div class="os-box mac">
+          <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS 작업 폴더 생성을 위한 터미널 명령어</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>mkdir -p ~/orca/vibe-inventory
+cd ~/orca/vibe-inventory
+touch .env.local</code></pre>
           </div>
         </div>
 
-        <!-- 3. 성공 기준 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 3. 정상 완료 성공 기준</div>
-          <p style="font-size: 0.9rem; color: var(--accent-success);">
-            터미널에서 <code>npm run dev</code> 실행 시 `http://localhost:5173` 주소가 나타나고 웹 브라우저에서 재고 대시보드가 열립니다.
-          </p>
+        <!-- Windows -->
+        <div class="os-box win">
+          <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows 작업 폴더 생성을 위한 PowerShell 명령어</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code>New-Item -Path "$HOME\orca\vibe-inventory" -ItemType Directory -Force
+Set-Location "$HOME\orca\vibe-inventory"
+New-Item -Path .env.local -ItemType File</code></pre>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5: STEP - SUPABASE DB -->
+    <!-- SECTION 4: SUPABASE & ENV -->
     <section id="sec-step-db" class="doc-section">
       <div class="section-header">
-        <div class="section-number">5</div>
-        <h2 class="section-title">Step 3. Supabase 데이터베이스 연동 & 보안 설정</h2>
+        <div class="section-number">4</div>
+        <h2 class="section-title">Step 4. Supabase 연동 & `.env.local` 세팅</h2>
       </div>
 
       <div class="practical-step-card">
-        <div class="practical-step-title">
-          <span style="background: var(--accent-primary); color: #fff; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem;">단계별 가이드</span>
-          Supabase 연동 및 Publishable Key 설정
-        </div>
-
-        <!-- 1. 할 일 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-info"></i> 1. 이번 단계에서 할 일</div>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">
-            Supabase 프로젝트를 생성하고, 데이터베이스 테이블(`test_inventory_items`) 구축 및 `.env.local` 키 설정을 진행합니다.
-          </p>
-        </div>
-
-        <div class="callout danger">
-          <div class="callout-title"><i class="fa-solid fa-shield-cat"></i> 중요 보안 경고 (Publishable vs Secret Key)</div>
-          <div class="callout-content">
-            · **Publishable Key (Anon Key)**: 브라우저에 포함되어도 안전한 공개 키입니다.<br>
-            · **Secret Key (Service Role Key)**: 모든 데이터 변경 권한을 가진 마스터키이므로 **절대 웹 브라우저나 `.env.local` 코드에 포함해서는 안 됩니다!**
-          </div>
-        </div>
-
-        <!-- 2. 명령어 / 프롬프트 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-comment-dots"></i> 2. CLI 프롬프트 입력</div>
-          <div class="prompt-box">
-            <div class="prompt-text">현재 프로젝트를 Supabase 백엔드와 연동해줘.
-
-1. @supabase/supabase-js 라이브러리 설치
-2. test_inventory_schema.sql 파일 생성 및 RLS 보안 정책 추가
-3. .env.local 파일 생성 (VITE_SUPABASE_URL 및 VITE_SUPABASE_ANON_KEY 세팅)
-4. 소스 코드에서 Supabase 데이터를 async/await 로 동기화하도록 업데이트해줘!</div>
-          </div>
-        </div>
-
-        <!-- 3. 성공 기준 -->
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 3. 성공 기준</div>
-          <p style="font-size: 0.9rem; color: var(--accent-success);">
-            앱에서 새 상품을 추가하거나 입출고 시 Supabase 대시보드의 Table Editor에 실제 데이터가 실시간 저장됩니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: STEP - CLOUDFLARE DEPLOY -->
-    <section id="sec-step-deploy" class="doc-section">
-      <div class="section-header">
-        <div class="section-number">6</div>
-        <h2 class="section-title">Step 4. Cloudflare Pages 프로덕션 무료 배포</h2>
-      </div>
-
-      <div class="practical-step-card">
-        <div class="practical-step-title">
-          <span style="background: var(--accent-primary); color: #fff; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem;">단계별 가이드</span>
-          Cloudflare Pages 4단계 배포
-        </div>
+        <div class="practical-step-title"><i class="fa-solid fa-key" style="color: var(--accent-cyan);"></i> `.env.local` 파일 내용 (OS 공통)</div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          `.env.local` 파일을 열고 Supabase 대시보드에서 가져온 주소와 키를 입력합니다.
+        </p>
 
         <div class="code-container">
-          <div class="code-header"><span>Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-          <pre><code># 1. Cloudflare CLI 로그인
-npx wrangler login
-
-# 2. 빌드 검증 (dist 폴더 생성)
-npm run build
-
-# 3. 프로젝트 생성 (최초 1회)
-npx wrangler pages project create vibe-inventory --production-branch main
-
-# 4. 배포 실행
-npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
-        </div>
-
-        <div class="sub-step-block">
-          <div class="sub-step-label"><i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 성공 기준</div>
-          <p style="font-size: 0.9rem; color: var(--accent-success);">
-            터미널 마지막 줄에 <strong>"✨ Deployment complete! Take a peek over at https://vibe-inventory.pages.dev"</strong> 주소가 출력되며 모바일 및 PC에서 접속이 잘 됩니다.
-          </p>
+          <div class="code-header"><span class="code-lang">.env.local</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <pre><code>VITE_SUPABASE_URL=https://apwjwaryrlpqmdabilvu.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></pre>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7: FINAL CHECKLIST -->
-    <section id="sec-final-check" class="doc-section">
+    <!-- SECTION 5: CLOUDFLARE DEPLOYMENT -->
+    <section id="sec-step-cf" class="doc-section">
       <div class="section-header">
-        <div class="section-number">8</div>
-        <h2 class="section-title">최종 기능 및 보안 점검 체크리스트</h2>
+        <div class="section-number">5</div>
+        <h2 class="section-title">Step 5. Cloudflare Pages 프로덕션 무료 배포</h2>
       </div>
 
-      <div class="checklist-box">
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 재고 목록 조회, 검색, 카테고리 필터링이 잘 작동한다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 제품 추가 및 입출고 변경 결과가 Supabase DB에 실시간 저장된다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 브라우저를 새로고침해도 데이터가 유실되지 않고 유지된다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 있고 마스터키(Secret Key)가 코드에 포함되지 않았다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 등록되어 GitHub에 유출되지 않았다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소가 PC 및 모바일 브라우저에서 잘 열린다.</div>
-        <div class="checklist-item"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 서브페이지를 새로고침해도 404 Not Found 에러가 발생하지 않는다 (`public/_redirects`).</div>
+      <div class="os-comparison-grid">
+        <!-- macOS -->
+        <div class="os-box mac">
+          <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS 배포 명령어</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code># 빌드 검증
+npm run build
+
+# Cloudflare CLI 로그인 & 배포
+npx wrangler login
+npx wrangler pages project create vibe-inventory --production-branch main
+npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
+          </div>
+        </div>
+
+        <!-- Windows -->
+        <div class="os-box win">
+          <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows 배포 명령어</div>
+          <div class="code-container">
+            <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+            <pre><code># 빌드 검증
+npm run build
+
+# Cloudflare CLI 로그인 & 배포
+npx wrangler login
+npx wrangler pages project create vibe-inventory --production-branch main
+npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
+          </div>
+        </div>
       </div>
 
-      <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1rem; border-radius: 10px; font-size: 0.85rem; color: var(--text-muted);">
-        ⚠️ 본 프로젝트는 학습 및 포트폴리오용 예제입니다. 실제 고객 개인정보나 기업의 대규모 실시간 재고에 사용할 때에는 전문가의 별도 보안 검토를 권장합니다.
-      </div>
+      <p style="color: var(--accent-success); font-weight: 600; font-size: 0.9rem; margin-top: 1rem;">
+        ✨ 배포 성공 최종 URL: <u>https://vibe-inventory.pages.dev</u> (PC & 모바일 공통 접속)
+      </p>
     </section>
 
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v11.0 Practical Edition: 과장 없는 비개발자 실전 매뉴얼 개선 완료
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v12.0 Dual OS: macOS & Windows 분리 명령어 세팅 완료
       </div>
-      <a href="#sec-step-agy" class="btn"><i class="fa-solid fa-play"></i> 실전 구축 시작하기</a>
+      <a href="#sec-os-setup" class="btn"><i class="fa-solid fa-desktop"></i> OS 세팅 명령어 보기</a>
     </div>
 
   </main>
