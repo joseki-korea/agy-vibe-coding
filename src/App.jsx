@@ -435,6 +435,9 @@ export default function App() {
           </div>
         )}
 
+        <footer style={{ marginTop: '3rem', borderTop: '1px solid #1f293d', paddingTop: '1.5rem', textAlign: 'center', color: '#9ca3af', fontSize: '0.82rem' }}>
+          Created by <strong style={{ color: '#c084fc' }}>Solucionemos (솔루시오네모스)</strong> | Powered by Antigravity AI Engine
+        </footer>
       </main>
     </div>
   );
