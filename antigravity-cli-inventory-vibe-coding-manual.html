@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v6.0 10-Min Edition)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v6.5 Final Master)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -370,43 +370,6 @@
       color: #e5e7eb;
     }
 
-    /* Callouts & Alert Boxes */
-    .callout {
-      border-left: 4px solid var(--accent-primary);
-      background: rgba(59, 130, 246, 0.08);
-      border-radius: 0 10px 10px 0;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-    }
-
-    .callout.tip {
-      border-left-color: var(--accent-success);
-      background: rgba(16, 185, 129, 0.08);
-    }
-
-    .callout.warning {
-      border-left-color: var(--accent-warning);
-      background: rgba(245, 158, 11, 0.08);
-    }
-
-    .callout-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      margin-bottom: 0.35rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .callout.tip .callout-title { color: var(--accent-success); }
-    .callout.warning .callout-title { color: var(--accent-warning); }
-    .callout .callout-title { color: var(--accent-primary); }
-
-    .callout-content {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
     /* Step Box UI */
     .step-box {
       background: var(--bg-card);
@@ -458,7 +421,7 @@
       border: 1px solid var(--border-color);
       border-radius: 14px;
       padding: 1.75rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .timeline-item {
@@ -519,35 +482,6 @@
       font-weight: 600;
     }
 
-    /* Prompt Box */
-    .prompt-box {
-      background: linear-gradient(135deg, rgba(13, 19, 34, 0.95), rgba(17, 24, 39, 0.95));
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.25rem 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .prompt-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--accent-cyan);
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .prompt-text {
-      color: #f3f4f6;
-      font-size: 0.95rem;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
     /* Floating Action Bar */
     .quick-action-bar {
       position: sticky;
@@ -602,13 +536,13 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v6.0 10-Min</p>
+        <p>Vibe Masterclass v6.5 Table</p>
       </div>
     </div>
 
     <div class="nav-group-title">비개발자 입문 기초</div>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-stopwatch"></i> ⏱️ 10분 완성 타임라인</a></li>
+      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-table"></i> ⏱️ 소요시간 총괄 표</a></li>
       <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 1. 쉬운 개념 용어집</a></li>
       <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 2. GitHub Token & CLI 세팅</a></li>
       <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 3. Supabase Key & Project URL</a></li>
@@ -634,8 +568,8 @@
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine v6.0 Ready<br>
-      <span style="color: var(--text-dim);">10-Minute Vibe Coding Timeline Active</span>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine v6.5 Table Ready<br>
+      <span style="color: var(--text-dim);">10-Min Execution Time Table Printed</span>
     </div>
   </aside>
 
@@ -645,7 +579,7 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-stopwatch"></i> ⏱️ 총 소요시간: 단 10분! (Step-by-Step 타임라인 수록)
+        <i class="fa-solid fa-stopwatch"></i> ⏱️ 총 소요시간: 단 10분! (매뉴얼 북 총괄 요약 표 명시)
       </div>
       <h1 class="hero-title">
         GitHub + Supabase + Cloudflare<br>
@@ -657,18 +591,68 @@
 
       <div class="hero-stats">
         <div class="stat-item"><i class="fa-solid fa-clock"></i> 총 소요시간: 약 10분</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 초보자/비개발자 맞춤형 타임라인</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 매뉴얼 북 총괄 요약 표 수록</div>
         <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 라이브 무제한 배포 완료</div>
       </div>
     </header>
 
-    <!-- SECTION: TIMELINE (10 MINS) -->
+    <!-- SECTION: TIMELINE & EXPLICIT TABLE -->
     <section id="sec-timeline" class="doc-section">
       <div class="section-header">
         <div class="section-number">⏱️</div>
-        <h2 class="section-title">전체 바이브 코딩 단계별 예상 소요 시간 (총 10분 타임라인)</h2>
+        <h2 class="section-title">전체 바이브 코딩 단계별 소요 시간 총괄 표 (총 10분)</h2>
       </div>
 
+      <!-- Explicit Summary Table -->
+      <div style="margin-bottom: 2rem; overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+          <thead>
+            <tr style="background: rgba(59, 130, 246, 0.15); border-bottom: 1px solid var(--border-color); color: #fff;">
+              <th style="padding: 1rem 1.25rem;">구분 (단계)</th>
+              <th style="padding: 1rem 1.25rem;">핵심 작업 및 수행 내용</th>
+              <th style="padding: 1rem 1.25rem; text-align: center; width: 140px;">예상 소요 시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">1단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">GitHub CLI 로그인 및 계정 인증 (<code>gh auth login</code> 1초 원클릭)</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 1분</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">2단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">Supabase 무료 프로젝트 생성 및 Project URL / Anon Key (<code>.env.local</code>) 등록</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 2분</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">3단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">Cloudflare CLI 브라우저 인증 (<code>npx wrangler login</code> 1초 승인 클릭)</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 1분</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">4단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">Phase 1 로컬 앱 바이브 코딩 (Vite + React 대시보드 UI 프롬프트 생성)</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 2분</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">5단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">Phase 2 Supabase 연동 & SQL 자연어 데이터베이스 테이블 구축</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 2분</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">6단계</td>
+              <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">Phase 3 Cloudflare Pages 원클릭 프로덕션 무제한 무료 배포 (라이브 URL 생성)</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 2분</td>
+            </tr>
+            <tr style="background: rgba(16, 185, 129, 0.12);">
+              <td colSpan="2" style="padding: 1rem 1.25rem; font-weight: 800; color: #fff; text-align: right;">🚀 아이디어 구상부터 프로덕션 배포 완료까지 총 소요 시간:</td>
+              <td style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 800; font-size: 1.15rem;">총 10분!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Timeline visual -->
       <div class="timeline-container">
         <div class="timeline-item">
           <div class="timeline-icon"><i class="fa-brands fa-github"></i></div>
@@ -1175,7 +1159,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
         <div style="font-size: 0.9rem; color: var(--text-muted);">
           · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
           · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
-          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v6.0</code>)
+          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v6.5</code>)
         </div>
       </div>
 
@@ -1188,9 +1172,9 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v6.0 10-Min Edition: ⏱️ 10분 완성 타임라인 수록 완료
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v6.5 Final Master: ⏱️ 10분 소요시간 총괄 표 명시 완료
       </div>
-      <a href="#sec-timeline" class="btn"><i class="fa-solid fa-stopwatch"></i> 타임라인 보기</a>
+      <a href="#sec-timeline" class="btn"><i class="fa-solid fa-table"></i> 요약 표 보기</a>
     </div>
 
   </main>
