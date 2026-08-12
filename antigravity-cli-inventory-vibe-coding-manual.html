@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 백과사전 (v17.0 Clean Numbering)</title>
+  <title>Antigravity CLI로 재고관리 앱 만들기 | 비개발자를 위한 GitHub·Supabase·Cloudflare 실습 가이드</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -387,14 +387,34 @@
       font-family: "Fira Code", monospace;
     }
 
-    .token-meta-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.35rem;
-    }
-
     .token-meta-label { color: var(--text-dim); }
     .token-meta-val { color: var(--accent-cyan); font-weight: 600; }
+
+    /* Unified 5-Step Instruction Box UI */
+    .unified-step-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .step-meta-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .step-meta-item strong {
+      color: var(--accent-cyan);
+    }
 
     /* Code Blocks */
     .code-container {
@@ -451,40 +471,6 @@
       line-height: 1.6;
       color: #e5e7eb;
       white-space: pre;
-    }
-
-    /* Step Box UI */
-    .step-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .step-box-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .step-badge {
-      background: #8b5cf6;
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-
-    .step-box-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
     }
 
     /* Prompt Box */
@@ -574,7 +560,7 @@
       </div>
       <div class="brand-text">
         <h1>Solucionemos (솔루시오네모스)</h1>
-        <p>Official Master Edition v17.0</p>
+        <p>실습 가이드 v18.0</p>
       </div>
     </div>
 
@@ -584,36 +570,36 @@
 
     <div class="nav-group-title">기초 세팅 및 사전 안내</div>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-calculator"></i> 1. 소요시간 비교표 (7분 vs 25분)</a></li>
-      <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 2. 쉬운 개념 용어집</a></li>
+      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-clock"></i> 1. 예상 소요 시간 표기</a></li>
+      <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 2. 핵심 인증 용어 및 키 안내</a></li>
       <li class="nav-item"><a href="#sec-os-setup"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> 3. macOS & Windows 환경 세팅</a></li>
-      <li class="nav-item"><a href="#sec-agy-install"><i class="fa-solid fa-download"></i> 4. Antigravity CLI 회원가입 & 스크린샷</a></li>
-      <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 5. GitHub Token & CLI 스크린샷</a></li>
-      <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 6. Supabase Key & 스크린샷</a></li>
+      <li class="nav-item"><a href="#sec-agy-install"><i class="fa-solid fa-download"></i> 4. Antigravity CLI 공식 설치 & OAuth 로그인</a></li>
+      <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 5. GitHub Token & CLI 세팅</a></li>
+      <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 6. Supabase Key 발급 & 보안 RLS</a></li>
       <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 7. Cloudflare 초기 세팅 7단계</a></li>
       <li class="nav-item"><a href="#sec-env-secrets"><i class="fa-solid fa-key"></i> 8. .env 파일 & Key 보안 관리</a></li>
-      <li class="nav-item"><a href="#sec-natural-db"><i class="fa-solid fa-wand-magic-sparkles"></i> 9. 자연어 DB CRUD 세팅 (MCP)</a></li>
+      <li class="nav-item"><a href="#sec-natural-db"><i class="fa-solid fa-wand-magic-sparkles"></i> 9. MCP 연결 및 자연어 DB 제어</a></li>
     </ul>
 
     <div class="nav-group-title">실전 구축 단계</div>
     <ul class="nav-menu">
       <li class="nav-item"><a href="#sec-phase1"><i class="fa-solid fa-code"></i> 10. Phase 1: 로컬 재고 앱 생성</a></li>
-      <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 11. Phase 2: Supabase SQL 전문</a></li>
-      <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 12. Phase 3: Cloudflare Pages 배포</a></li>
-      <li class="nav-item"><a href="#sec-screenshots"><i class="fa-solid fa-image"></i> 13. 라이브 대시보드 스크린샷 갤러리</a></li>
+      <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 11. Phase 2: 안전한 Supabase SQL 스크립트</a></li>
+      <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 12. Phase 3: Cloudflare Pages 배포 & _redirects</a></li>
+      <li class="nav-item"><a href="#sec-screenshots"><i class="fa-solid fa-image"></i> 13. 라이브 재고 앱 스크린샷</a></li>
     </ul>
 
     <div class="nav-group-title">트러블슈팅 & 프롬프트 라이브러리</div>
     <ul class="nav-menu">
       <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 14. 트러블슈팅 Top 5 & 진단표</a></li>
-      <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 15. 함수형 프롬프트 라이브러리 (6종)</a></li>
-      <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 16. GitHub 관리 5대 원칙 및 최종 점검</a></li>
+      <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 15. 재사용 프롬프트 템플릿 (6종)</a></li>
+      <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 16. GitHub 저장소 관리 5대 원칙 및 점검</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: #c084fc;">
-      <i class="fa-solid fa-circle-check"></i> Solucionemos Certified v17.0<br>
-      <span style="color: var(--text-dim);">Clean Sequential Numbering 1 to 16</span>
+      <i class="fa-solid fa-circle-check"></i> Solucionemos Verified v18.0<br>
+      <span style="color: var(--text-dim);">기술 검증 & 보안 RLS 완료</span>
     </div>
   </aside>
 
@@ -623,128 +609,96 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-award"></i> Created by Solucionemos (솔루시오네모스) 제작 공식 인증 매뉴얼 (v17.0)
+        <i class="fa-solid fa-award"></i> Created by Solucionemos (솔루시오네모스) 실습 가이드 (v18.0)
       </div>
       <h1 class="hero-title">
-        Antigravity CLI + GitHub + Supabase + Cloudflare<br>
-        <span>바이브 코딩 마스터 종합 백과사전</span>
+        Antigravity CLI로 재고관리 앱 만들기<br>
+        <span>비개발자를 위한 GitHub·Supabase·Cloudflare 실습 가이드</span>
       </h1>
       <p class="hero-desc">
-        Solucionemos (솔루시오네모스)가 직접 기획 및 검증한 비개발자 전용 안티그래비티 CLI 가이드로, macOS & Windows 분리 명령어, 플랫폼 스크린샷 4종, 6대 함수형 프롬프트 라이브러리, 트러블슈팅 Top 5, SQL 스크립트 전문이 수록되어 있습니다.
+        Solucionemos (솔루시오네모스)가 제작한 실전 지침서입니다. 공식 설치 스크립트, 구글 OAuth 인증 절차, 안전한 Supabase RLS 보안 정책, 2026년 기준 Publishable Key 적용법 및 GitHub 5대 관리 원칙이 수록되어 있습니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-copyright"></i> Solucionemos (솔루시오네모스) 공식 워터마크 수록</div>
-        <div class="stat-item"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> macOS & Windows 완벽 분리 지원</div>
-        <div class="stat-item"><i class="fa-solid fa-list-check"></i> 1 ~ 16 순차 넘버링 완벽 정렬</div>
+        <div class="stat-item"><i class="fa-solid fa-copyright"></i> Solucionemos (솔루시오네모스) 제작</div>
+        <div class="stat-item"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> macOS & Windows 가이드 분리</div>
+        <div class="stat-item"><i class="fa-solid fa-shield-halved"></i> 안전한 RLS 권한 분리 적용</div>
       </div>
     </header>
 
-    <!-- SECTION 1: TIMELINE & REALISM -->
+    <!-- SECTION 1: ESTIMATED TIME -->
     <section id="sec-timeline" class="doc-section">
       <div class="section-header">
         <div class="section-number">1</div>
-        <h2 class="section-title">소요 시간 솔직 비교표 (⚡ 순수 AI: 7분 vs 👤 현실 첫 도전: 25분)</h2>
+        <h2 class="section-title">예상 소요 시간 (상황별 학습 가이드)</h2>
       </div>
 
       <div style="margin-bottom: 1.5rem; overflow-x: auto; width: 100%;">
         <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.92rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
           <thead>
             <tr style="background: rgba(139, 92, 246, 0.2); border-bottom: 1px solid var(--border-color); color: #fff;">
-              <th style="padding: 1rem 1.25rem;">단계</th>
-              <th style="padding: 1rem 1.25rem;">수행 작업 및 내용</th>
-              <th style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-cyan); width: 150px;">⚡ AI 순수 실행시간</th>
-              <th style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-warning); width: 170px;">👤 현실 첫 도전 시간</th>
+              <th style="padding: 1rem 1.25rem;">학습자 상황</th>
+              <th style="padding: 1rem 1.25rem;">수행 및 확인 과정</th>
+              <th style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-cyan); width: 220px;">⏱️ 예상 소요 시간</th>
             </tr>
           </thead>
           <tbody>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-purple);">1단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Antigravity CLI 설치 & 구글 1초 로그인 (<code>agy login</code>)</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (터미널 열기)</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-success);">계정 및 CLI 사전 준비 완료 시</td>
+              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Node.js, Git, CLI가 모두 설치되어 있고 로그인된 상태에서 프롬프트 실행 및 배포</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">20 ~ 40분</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">2단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">GitHub CLI 로그인 및 계정 연동 (<code>gh auth login</code>)</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">30초</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (비번/2단계 인증)</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">완전한 첫 시도 (계정 생성 포함)</td>
+              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">GitHub, Supabase, Cloudflare 가입, 2단계 인증, CLI 공식 설치 및 토큰 발급 전체 과정</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">45 ~ 90분</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">3단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Supabase 프로젝트 생성 & 이메일 인증 & DB 서버 준비</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">6분 (이메일인증 + 서버대기)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">4단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Cloudflare 회원가입 및 CLI 인증 (<code>npx wrangler login</code>)</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">30초</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">4분 (가입 및 약관동의)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">5단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 1 로컬 웹 앱 생성 (Vite + React UI 대시보드)</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">2분</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (프롬프트 읽기)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">6단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 2 Supabase SQL 연동 및 스키마 실행</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (Key 복사붙여넣기)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">7단계</td>
-              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 3 Cloudflare Pages 프로덕션 무료 배포</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
-              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (배포주소 접속)</td>
-            </tr>
-            <tr style="background: rgba(139, 92, 246, 0.15);">
-              <td colSpan="2" style="padding: 1rem 1.25rem; font-weight: 800; color: #fff; text-align: right;">🔥 최종 합계 비교:</td>
-              <td style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 800;">순수 AI: 7분</td>
-              <td style="padding: 1rem 1.25rem; text-align: center; color: #c084fc; font-weight: 800; font-size: 1.1rem;">첫 시도: 25분!</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-warning);">설치 또는 인증 오류 발생 시</td>
+              <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">터미널 권한 오류, 구글 OAuth 토큰 재발급, RLS 보안 설정 트러블슈팅 진행 시</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">1 ~ 2시간</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- SECTION 2: GLOSSARY -->
+    <!-- SECTION 2: GLOSSARY & KEY STANDARDS -->
     <section id="sec-glossary" class="doc-section">
       <div class="section-header">
         <div class="section-number">2</div>
-        <h2 class="section-title">비개발자를 위한 핵심 인증 용어 1분 정리</h2>
+        <h2 class="section-title">핵심 인증 용어 및 2026년 기준 Key 안내</h2>
       </div>
 
       <div class="token-grid">
         <div class="token-card github">
           <div class="token-title"><i class="fa-solid fa-id-card"></i> PAT (Personal Access Token)</div>
-          <div class="token-desc">아이디/비밀번호 대신 사용하는 <strong>'컴퓨터 전용 신분증'</strong>입니다. 안티그래비티 CLI가 내 GitHub 계정을 대신해서 소스코드를 저장소에 올릴 때 사용합니다.</div>
+          <div class="token-desc">아이디/비밀번호 대신 사용하는 <strong>'컴퓨터 전용 인증 키'</strong>입니다. CLI가 내 계정을 대신해서 소스코드를 올릴 때 사용합니다.</div>
           <div class="token-meta"><span class="token-meta-label">예시:</span> <span class="token-meta-val">ghp_a1b2c3d4e5...</span></div>
         </div>
 
         <div class="token-card supabase">
-          <div class="token-title"><i class="fa-solid fa-key"></i> Anon Key vs Service Role Key</div>
-          <div class="token-desc">Supabase 데이터베이스에 들어갈 수 있는 <strong>'출입증'</strong>입니다.<br>
-          · <strong>Anon Key (Publishable):</strong> 손님용 (브라우저에서 사용해도 안전)<br>
-          · <strong>Service Role Key (Secret):</strong> 마스터키 (절대 공개 금지)</div>
-          <div class="token-meta"><span class="token-meta-label">사용위치:</span> <span class="token-meta-val">.env.local</span></div>
+          <div class="token-title"><i class="fa-solid fa-key"></i> Publishable Key vs Service Role Key</div>
+          <div class="token-desc">Supabase 데이터베이스 접속 키 종류입니다.<br>
+          · <strong>Publishable Key (`sb_publishable_...`):</strong> 브라우저용 (권장)<br>
+          · <strong>Anon Key:</strong> 기존 프로젝트용 Legacy 키<br>
+          · <strong>Secret / Service Role Key:</strong> 서버 전용 (브라우저 사용 금지)</div>
+          <div class="token-meta"><span class="token-meta-label">보관위치:</span> <span class="token-meta-val">.env.local</span></div>
         </div>
 
         <div class="token-card cloudflare">
-          <div class="token-title"><i class="fa-solid fa-vault"></i> .env 파일 (환경변수 보관함)</div>
-          <div class="token-desc">비밀키나 서버 주소(URL)를 코드 안에 직접 적지 않고, <strong>'비밀 자금성 금고'</strong>처럼 텍스트 파일에 따로 모아두는 곳입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-vault"></i> .env.local (환경변수 보관함)</div>
+          <div class="token-desc">비밀키나 서버 주소(URL)를 소스코드에 직접 적지 않고 텍스트 파일로 안전하게 분리해두는 설정 파일입니다.</div>
           <div class="token-meta"><span class="token-meta-label">파일명:</span> <span class="token-meta-val">.env.local</span></div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: OS COMMAND SETUP -->
+    <!-- SECTION 3: OS COMMAND SETUP & ENVIRONMENT CHECK -->
     <section id="sec-os-setup" class="doc-section">
       <div class="section-header">
         <div class="section-number">3</div>
-        <h2 class="section-title">macOS vs Windows 운영체제별 필수 환경 세팅</h2>
+        <h2 class="section-title">macOS & Windows 필수 개발 환경 설치 및 검증</h2>
       </div>
 
       <div class="os-comparison-grid">
@@ -752,9 +706,9 @@
           <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS (MacBook Terminal / Zsh)</div>
           <div class="code-container">
             <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-            <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install node git gh
-npm install -g agy</code></pre>
+            <pre><code># Homebrew 및 필수 프로그램 설치
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install node git gh</code></pre>
           </div>
         </div>
 
@@ -762,43 +716,76 @@ npm install -g agy</code></pre>
           <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows (PowerShell - 관리자 권한)</div>
           <div class="code-container">
             <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-            <pre><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+            <pre><code># PowerShell 실행 권한 허용 및 프로그램 설치
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 winget install OpenJS.NodeJS
 winget install Git.Git
-winget install GitHub.cli
-npm install -g agy</code></pre>
+winget install GitHub.cli</code></pre>
           </div>
         </div>
       </div>
+
+      <div class="unified-step-box" style="margin-top: 1.25rem;">
+        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 0.75rem;"><i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> 설치 완료 확인 명령어 (Terminal / PowerShell 공통)</h3>
+        <div class="code-container">
+          <div class="code-header"><span class="code-lang">bash</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <pre><code>node --version
+npm --version
+git --version
+gh --version</code></pre>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;">
+          <strong>성공 기준:</strong> 각 프로그램의 버전 번호(예: `v20.x.x`, `10.x.x`, `git version 2.x`)가 정상 출력됩니다.
+        </p>
+      </div>
     </section>
 
-    <!-- SECTION 4: ANTIGRAVITY CLI & SCREENSHOT -->
+    <!-- SECTION 4: OFFICIAL ANTIGRAVITY INSTALL & AUTH -->
     <section id="sec-agy-install" class="doc-section">
       <div class="section-header">
         <div class="section-number">4</div>
-        <h2 class="section-title">Antigravity CLI 회원가입 & 공식 사이트 스크린샷</h2>
+        <h2 class="section-title">Antigravity CLI 공식 설치 스크립트 및 Google OAuth 인증</h2>
       </div>
 
-      <div class="screenshot-card">
-        <div class="screenshot-img-box">
-          <img src="antigravity_site_preview.jpg" alt="Google Antigravity AI Engine Screenshot" />
+      <div class="unified-step-box">
+        <div class="step-meta-row">
+          <div class="step-meta-item"><strong>1. 할 일:</strong> Antigravity CLI 공식 설치 및 구글 로그인</div>
+          <div class="step-meta-item"><strong>2. 실행 위치:</strong> 터미널 / PowerShell</div>
         </div>
-        <p style="font-size: 0.9rem; color: var(--text-muted);">
-          🌐 <strong>구글 안티그래비티 공식 포털</strong>: AI 에이전트 CLI 구동 및 개발자 전용 엔진 문서 제공
-        </p>
-      </div>
 
-      <div class="code-container">
-        <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><code>agy login</code></pre>
+        <div class="os-comparison-grid">
+          <div class="os-box mac">
+            <div class="os-header"><i class="fa-brands fa-apple" style="color: #38bdf8;"></i> macOS / Linux 공식 설치</div>
+            <div class="code-container">
+              <div class="code-header"><span class="code-lang">zsh</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>curl -fsSL https://antigravity.google/cli/install.sh | bash
+agy</code></pre>
+            </div>
+          </div>
+
+          <div class="os-box win">
+            <div class="os-header"><i class="fa-brands fa-windows" style="color: #00adef;"></i> Windows 공식 설치</div>
+            <div class="code-container">
+              <div class="code-header"><span class="code-lang">PowerShell</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>irm https://antigravity.google/cli/install.ps1 | iex
+agy</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <div><strong>3. Google OAuth 로그인 과정:</strong> `agy` 실행 시 브라우저가 열리며 Google 계정 선택 → 인증 코드 확인 → 서비스 약관 동의 → 작업 폴더 신뢰 승인 단계로 진행됩니다.</div>
+          <div><strong>4. 성공 기준:</strong> <code>agy --version</code> 입력 시 설치 버전이 표기되고 웰컴 메시지가 표시됩니다.</div>
+          <div><strong>5. 문제가 생기면:</strong> 터미널을 완전히 닫은 뒤 다시 열어 <code>agy</code> 명령을 실행해 보세요.</div>
+        </div>
       </div>
     </section>
 
-    <!-- SECTION 5: GITHUB CLI & SCREENSHOT -->
+    <!-- SECTION 5: GITHUB CLI & TOKEN -->
     <section id="sec-github-auth" class="doc-section">
       <div class="section-header">
         <div class="section-number">5</div>
-        <h2 class="section-title">GitHub Token & CLI 세팅 + 저장소 스크린샷</h2>
+        <h2 class="section-title">GitHub CLI 인증 및 저장소 연동</h2>
       </div>
 
       <div class="screenshot-card">
@@ -806,7 +793,7 @@ npm install -g agy</code></pre>
           <img src="github_repository_preview.jpg" alt="GitHub Repository Screenshot" />
         </div>
         <p style="font-size: 0.9rem; color: var(--text-muted);">
-          🐙 <strong>GitHub 저장소 화면</strong>: <code>joseki-korea/agy-vibe-coding</code> 소스 코드와 커밋 히스토리
+          🐙 <strong>GitHub 저장소 화면 예시</strong>: 소스 코드 커밋 및 버전 관리
         </p>
       </div>
 
@@ -816,11 +803,11 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 6: SUPABASE AUTH & SCREENSHOT -->
+    <!-- SECTION 6: SUPABASE KEY & SECURE RLS -->
     <section id="sec-supabase-auth" class="doc-section">
       <div class="section-header">
         <div class="section-number">6</div>
-        <h2 class="section-title">Supabase Key 발급 & Table Editor 스크린샷</h2>
+        <h2 class="section-title">Supabase Key 발급 및 역할 기반 RLS 보안 정책</h2>
       </div>
 
       <div class="screenshot-card">
@@ -828,7 +815,7 @@ npm install -g agy</code></pre>
           <img src="supabase_dashboard_preview.jpg" alt="Supabase Dashboard Screenshot" />
         </div>
         <p style="font-size: 0.9rem; color: var(--text-muted);">
-          ⚡ <strong>Supabase Table Editor 화면</strong>: 자연어 및 SQL로 구축된 <code>test_inventory_items</code> 데이터베이스
+          ⚡ <strong>Supabase Table Editor 화면</strong>: 테이블 스키마 및 데이터 조회
         </p>
       </div>
     </section>
@@ -837,13 +824,13 @@ npm install -g agy</code></pre>
     <section id="sec-cloudflare-auth" class="doc-section">
       <div class="section-header">
         <div class="section-number">7</div>
-        <h2 class="section-title">Cloudflare Pages 완전 무결 초기 세팅 7단계</h2>
+        <h2 class="section-title">Cloudflare Pages 프로젝트 세팅 7단계</h2>
       </div>
 
-      <div class="step-box" style="border-left: 4px solid var(--accent-warning);">
+      <div class="unified-step-box" style="border-left: 4px solid var(--accent-warning);">
         <div style="font-size: 0.92rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.6rem;">
           <div>1️⃣ <strong>Cloudflare 회원가입</strong>: <a href="https://dash.cloudflare.com/sign-up" target="_blank" style="color: var(--accent-cyan);">dash.cloudflare.com/sign-up</a></div>
-          <div>2️⃣ <strong>Wrangler CLI 인증</strong>: <code>npx wrangler login</code></div>
+          <div>2️⃣ <strong>Wrangler CLI 인증</strong>: <code>npx wrangler login</code> (브라우저 승인)</div>
           <div>3️⃣ <strong>프로덕션 빌드 검증</strong>: <code>npm run build</code></div>
           <div>4️⃣ <strong>SPA 404 방지 설정</strong>: <code>public/_redirects</code> 생성 후 <code>/* /index.html 200</code> 입력</div>
           <div>5️⃣ <strong>Pages 프로젝트 생성</strong>: <code>npx wrangler pages project create vibe-inventory --production-branch main</code></div>
@@ -857,28 +844,38 @@ npm install -g agy</code></pre>
     <section id="sec-env-secrets" class="doc-section">
       <div class="section-header">
         <div class="section-number">8</div>
-        <h2 class="section-title">.env 파일 생성 및 보안 키 유출 방지 관리</h2>
+        <h2 class="section-title">.env.local 파일 및 2026년 기준 Key 적용법</h2>
       </div>
 
       <div class="code-container">
         <div class="code-header"><span class="code-lang">.env.local</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><code>VITE_SUPABASE_URL=https://apwjwaryrlpqmdabilvu.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></pre>
+        <pre><code># 2026 Supabase 권장 Publishable Key 예시 (브라우저용)
+VITE_SUPABASE_URL=https://apwjwaryrlpqmdabilvu.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...your-key...</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 9: NATURAL DB CONTROL -->
+    <!-- SECTION 9: MCP CONNECTION & NATURAL DB -->
     <section id="sec-natural-db" class="doc-section">
       <div class="section-header">
         <div class="section-number">9</div>
-        <h2 class="section-title">안티그래비티 CLI로 자연어 DB 제어하기 (MCP & Access Token `sbp_...`)</h2>
+        <h2 class="section-title">MCP (Model Context Protocol) 연동 및 자연어 DB 제어 규칙</h2>
       </div>
 
-      <div class="prompt-box">
-        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> 자연어 DB 제어 프롬프트 예시</div>
-        <div class="prompt-text">· 💬 "test_inventory_items 테이블에 brand (문자열) 컬럼 새로 추가해줘"
-· 💬 "orders 테이블 만들고 주문일자, 고객명, 총금액 컬럼 세팅해줘"
-· 💬 "재고 수량이 0인 모든 상품 삭제해줘"</div>
+      <div class="unified-step-box">
+        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 0.75rem;"><i class="fa-solid fa-plug" style="color: var(--accent-purple);"></i> MCP 기본 연동 4단계 규칙</h3>
+        <div style="font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+          <div>1. <strong>OAuth 인증 & 토큰 설정:</strong> Supabase Access Token(`sbp_...`) 연결</div>
+          <div>2. <strong>대상 프로젝트 지정:</strong> <code>mcp.json</code>에 target project ref 설정</div>
+          <div>3. <strong>안전 읽기 우선 (`read_only=true`):</strong> 조회 작업 시 기본적으로 읽기 전용 옵션을 사용</div>
+          <div>4. <strong>수정·삭제 승인 규칙:</strong> 데이터베이스 구조 변경(ALTER, DROP) 전에는 반드시 사용자의 사전 승인을 받음</div>
+        </div>
+
+        <div class="prompt-box">
+          <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> 자연어 DB 제어 프롬프트 예시</div>
+          <div class="prompt-text">· 💬 "test_inventory_items 테이블의 스키마 구조를 조회해줘"
+· 💬 "brand 컬럼 추가 전 변경 SQL을 보여주고 승인을 요청해줘"</div>
+        </div>
       </div>
     </section>
 
@@ -886,27 +883,27 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></p
     <section id="sec-phase1" class="doc-section">
       <div class="section-header">
         <div class="section-number">10</div>
-        <h2 class="section-title">Phase 1: 로컬 재고관리 앱 바이브 코딩 (Vite + React UI)</h2>
+        <h2 class="section-title">Phase 1: 로컬 재고관리 앱 생성 (Vite + React UI)</h2>
       </div>
 
       <div class="prompt-box">
-        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> Step 1 프롬프트 (안티그래비티 CLI 입력용)</div>
+        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> Step 1 프롬프트 (Antigravity CLI 입력용)</div>
         <div class="prompt-text">Vite + React 기반의 실시간 재고관리(Inventory Management) 앱을 생성해줘.
 
-[필수 구현 기능]
+[구현 기능]
 1. 재고 목록 대시보드 (제품명, SKU 코드, 카테고리, 수량, 단가, 총 재고금액, 안전재고 수량)
-2. 재고 입출고(Inbound / Outbound) 기록 modal 및 수량 자동 계산
-3. 재고 부족 알림 경고 (안전재고 미만 제품 빨간색 하이라이트)
+2. 재고 입출고(Inbound / Outbound) 기록 modal 및 수량 계산
+3. 재고 부족 알림 경고 (안전재고 미만 제품 하이라이트)
 4. SKU 코드/제품명 실시간 검색 및 카테고리 필터링
-5. 다크 모드가 적용된 대시보드 UI (Lucide Icons 포함)</div>
+5. 다크 모드가 적용된 대시보드 UI</div>
       </div>
     </section>
 
-    <!-- SECTION 11: PHASE 2 - FULL SQL SCRIPT -->
+    <!-- SECTION 11: PHASE 2 - SECURE SQL SCRIPT -->
     <section id="sec-phase2" class="doc-section">
       <div class="section-header">
         <div class="section-number">11</div>
-        <h2 class="section-title">Phase 2: Supabase DB 구축을 위한 SQL 전문 수록 (`test_inventory_schema.sql`)</h2>
+        <h2 class="section-title">Phase 2: 안전한 Supabase DB 구축을 위한 SQL 스크립트 (`test_inventory_schema.sql`)</h2>
       </div>
 
       <div class="code-container">
@@ -925,43 +922,35 @@ CREATE TABLE IF NOT EXISTS test_inventory_items (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- 2. test_inventory_transactions 입출고 내역 테이블 생성
-CREATE TABLE IF NOT EXISTS test_inventory_transactions (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    item_id UUID REFERENCES test_inventory_items(id) ON DELETE CASCADE,
-    transaction_type VARCHAR(20) NOT NULL CHECK (transaction_type IN ('INBOUND', 'OUTBOUND')),
-    quantity INT NOT NULL CHECK (quantity > 0),
-    notes TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-
--- 3. Row Level Security(RLS) 정책 활성화 및 공개 읽기/쓰기 허용
+-- 2. Row Level Security(RLS) 정책 활성화 및 권한 분리
 ALTER TABLE test_inventory_items ENABLE ROW LEVEL SECURITY;
-ALTER TABLE test_inventory_transactions ENABLE ROW LEVEL SECURITY;
 
-CREATE POLICY "Allow public read access" ON test_inventory_items FOR SELECT USING (true);
-CREATE POLICY "Allow public insert access" ON test_inventory_items FOR INSERT WITH CHECK (true);
-CREATE POLICY "Allow public update access" ON test_inventory_items FOR UPDATE USING (true);
-CREATE POLICY "Allow public delete access" ON test_inventory_items FOR DELETE USING (true);
+-- [보안 정책] 비로그인 사용자: 읽기(SELECT) 전용 허용
+CREATE POLICY "Allow public read-only access" ON test_inventory_items 
+    FOR SELECT USING (true);
 
-CREATE POLICY "Allow public transaction read" ON test_inventory_transactions FOR SELECT USING (true);
-CREATE POLICY "Allow public transaction insert" ON test_inventory_transactions FOR INSERT WITH CHECK (true);</code></pre>
+-- [보안 정책] 인증된 사용자/관리자: 추가 및 수정 허용
+CREATE POLICY "Allow authenticated insert" ON test_inventory_items 
+    FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+
+CREATE POLICY "Allow authenticated update" ON test_inventory_items 
+    FOR UPDATE USING (auth.role() = 'authenticated');</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 12: PHASE 3 -->
+    <!-- SECTION 12: PHASE 3 - DEPLOYMENT & ROUTING FIX -->
     <section id="sec-phase3" class="doc-section">
       <div class="section-header">
         <div class="section-number">12</div>
-        <h2 class="section-title">Phase 3: Cloudflare Pages 배포 매뉴얼 튜토리얼 (`public/_redirects`)</h2>
+        <h2 class="section-title">Phase 3: Cloudflare Pages 배포 및 `_redirects` 라우팅 설정</h2>
       </div>
 
       <div class="code-container">
         <div class="code-header"><span class="code-lang">bash</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><code># public/_redirects 파일에 아래 라인 입력 (CORS / 404 방지)
+        <pre><code># public/_redirects 파일 설정 (React Router 서브페이지 새로고침 시 404 방지)
 /* /index.html 200
 
-# 빌드 및 배포
+# 프로덕션 빌드 및 배포
 npm run build
 npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
       </div>
@@ -971,7 +960,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
     <section id="sec-screenshots" class="doc-section">
       <div class="section-header">
         <div class="section-number">13</div>
-        <h2 class="section-title">완성된 바이브 재고관리 웹 앱 스크린샷 갤러리</h2>
+        <h2 class="section-title">완성된 재고관리 웹 앱 스크린샷 갤러리</h2>
       </div>
 
       <div class="screenshot-card">
@@ -979,7 +968,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
           <img src="dashboard_preview.jpg" alt="Live Inventory Dashboard Screenshot Preview" />
         </div>
         <p style="font-size: 0.9rem; color: var(--text-muted);">
-          📊 <strong>시각적 인터랙티브 대시보드</strong>: 카테고리별 재고 분포 바 차트, 안전재고 부족 품목 경고 하이라이트 및 실시간 데이터 필터링 기능 수록
+          📊 <strong>실제 재고 관리 대시보드 화면</strong>: 카테고리별 재고 분포 차트 및 실시간 필터링 UI
         </p>
       </div>
     </section>
@@ -988,176 +977,147 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
     <section id="sec-troubleshooting" class="doc-section">
       <div class="section-header">
         <div class="section-number">14</div>
-        <h2 class="section-title">초보자가 반드시 겪는 트러블슈팅 Top 5 & 자가 진단표</h2>
+        <h2 class="section-title">초보자가 자주 겪는 트러블슈팅 Top 5</h2>
       </div>
 
       <div class="token-grid">
         <div class="token-card" style="border-top: 4px solid #ef4444;">
-          <div class="token-title"><i class="fa-solid fa-shield-cat" style="color: #ef4444;"></i> [에러 1] GitHub Push 시 비밀 키 차단</div>
-          <div class="token-desc"><code>Push cannot contain secrets</code> 오류로 git push가 실패하는 현상입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-shield-cat" style="color: #ef4444;"></i> [오류 1] GitHub Push 시 비밀 키 차단</div>
+          <div class="token-desc"><code>Push cannot contain secrets</code> 오류로 push가 안 되는 현상입니다.</div>
           <div class="token-meta">
-            <span class="token-meta-label">원인:</span> <code>.env</code>에 비밀 키(Access Token)를 올리려고 함<br>
-            <span class="token-meta-label">해결:</span> <code>.gitignore</code>에 <code>.env.local</code>을 추가하여 제외시킴
+            <span class="token-meta-label">원인:</span> <code>.env</code>에 비밀 키를 포함시킴<br>
+            <span class="token-meta-label">해결:</span> <code>.gitignore</code>에 <code>.env.local</code> 추가 후 차단
           </div>
         </div>
 
         <div class="token-card" style="border-top: 4px solid var(--accent-warning);">
-          <div class="token-title"><i class="fa-solid fa-route" style="color: var(--accent-warning);"></i> [에러 2] Cloudflare 새로고침 시 404</div>
-          <div class="token-desc">Cloudflare Pages 서브페이지 새로고침 시 404 Not Found가 발생하는 현상입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-route" style="color: var(--accent-warning);"></i> [오류 2] Cloudflare 새로고침 시 404</div>
+          <div class="token-desc">서브페이지 새로고침 시 404 Not Found가 발생하는 현상입니다.</div>
           <div class="token-meta">
-            <span class="token-meta-label">원인:</span> SPA(Single Page App) 라우팅 미설정<br>
-            <span class="token-meta-label">해결:</span> <code>public/_redirects</code> 생성 후 <code>/* /index.html 200</code> 입력
+            <span class="token-meta-label">원인:</span> SPA 싱글 페이지 라우팅 미설정<br>
+            <span class="token-meta-label">해결:</span> <code>public/_redirects</code>에 <code>/* /index.html 200</code> 입력
           </div>
         </div>
 
         <div class="token-card" style="border-top: 4px solid var(--accent-cyan);">
-          <div class="token-title"><i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> [에러 3] Supabase PGRST205 에러</div>
-          <div class="token-desc"><code>Could not find table in schema cache</code> 메시지가 뜨는 현상입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> [오류 3] Supabase PGRST205 오류</div>
+          <div class="token-desc"><code>Could not find table in schema cache</code> 메시지가 발생할 때입니다.</div>
           <div class="token-meta">
-            <span class="token-meta-label">원인:</span> SQL 스크립트를 데이터베이스에서 실행하지 않음<br>
-            <span class="token-meta-label">해결:</span> Supabase SQL Editor에서 <code>test_inventory_schema.sql</code> 실행
+            <span class="token-meta-label">원인:</span> SQL 스크립트 미실행<br>
+            <span class="token-meta-label">해결:</span> Supabase SQL Editor에서 스키마 실행
           </div>
         </div>
 
         <div class="token-card" style="border-top: 4px solid var(--accent-purple);">
-          <div class="token-title"><i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-purple);"></i> [에러 4] Project does not exist</div>
-          <div class="token-desc">Wrangler 배포 시 Pages 프로젝트를 찾지 못하는 현상입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-purple);"></i> [오류 4] Project does not exist</div>
+          <div class="token-desc">Wrangler 배포 시 프로젝트를 찾지 못하는 현상입니다.</div>
           <div class="token-meta">
-            <span class="token-meta-label">원인:</span> 최초 1회 배포 프로젝트 미생성<br>
+            <span class="token-meta-label">원인:</span> 최초 1회 프로젝트 미생성<br>
             <span class="token-meta-label">해결:</span> <code>npx wrangler pages project create vibe-inventory</code> 실행
           </div>
         </div>
 
         <div class="token-card" style="border-top: 4px solid var(--accent-success);">
-          <div class="token-title"><i class="fa-solid fa-window-maximize" style="color: var(--accent-success);"></i> [에러 5] index.html 파일 안 열림</div>
-          <div class="token-desc">HTML 더블클릭 시 화면이 하얗게 나오거나 작동하지 않는 현상입니다.</div>
+          <div class="token-title"><i class="fa-solid fa-window-maximize" style="color: var(--accent-success);"></i> [오류 5] index.html 파일 실행 불가</div>
+          <div class="token-desc">더블클릭 시 화면이 작동하지 않는 현상입니다.</div>
           <div class="token-meta">
-            <span class="token-meta-label">원인:</span> 브라우저 CORS/모듈 보안 정책 (file:// 접속 차단)<br>
-            <span class="token-meta-label">해결:</span> 단일 스탠드얼론 HTML 사용 또는 <code>npm run dev</code> 실행
+            <span class="token-meta-label">원인:</span> 브라우저 보안 정책 (`file://` 모듈 차단)<br>
+            <span class="token-meta-label">해결:</span> 로컬 웹서버 실행(`npm run dev`)
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 15: FUNCTION PROMPTS LIBRARY -->
+    <!-- SECTION 15: PROMPTS LIBRARY -->
     <section id="sec-fn-prompts" class="doc-section">
       <div class="section-header">
         <div class="section-number">15</div>
-        <h2 class="section-title">함수처럼 쓰는 바이브 코딩 프롬프트 템플릿 모음 (6대 재사용 `@fn_...`)</h2>
+        <h2 class="section-title">재사용 가능한 프롬프트 템플릿 모음 (6종)</h2>
       </div>
 
       <!-- Fn 1 -->
       <div class="prompt-box" style="border-left: 4px solid var(--accent-primary);">
-        <div class="prompt-label"><i class="fa-solid fa-cube"></i> [함수 1] @fn_create_app(앱이름, 주요기능, 디자인)</div>
+        <div class="prompt-label"><i class="fa-solid fa-cube"></i> [템플릿 1] @fn_create_app(앱이름, 주요기능, 디자인)</div>
         <div class="prompt-text">@fn_create_app
 - 앱이름: [예: 실시간 주문 관리 시스템]
-- 주요기능: [1. 주문 목록 및 상태 변경 대시보드, 2. 신규 주문 등록 Modal, 3. 실시간 필터링]
+- 주요기능: [1. 주문 목록 대시보드, 2. 신규 주문 등록 Modal, 3. 실시간 필터링]
 - 디자인스타일: [다크 테마, Tailwind CSS, Lucide Icons]
 
-터미널 명령어를 직접 실행해서 프로젝트 세팅과 패키지 설치까지 한 번에 완료해줘!</div>
+프로젝트 세팅 명령어를 실행하고 기본 패키지를 설치해줘!</div>
       </div>
 
       <!-- Fn 2 -->
       <div class="prompt-box" style="border-left: 4px solid var(--accent-success);">
-        <div class="prompt-label"><i class="fa-solid fa-database"></i> [함수 2] @fn_connect_supabase(프로젝트REF, 테이블목록, 실시간구독)</div>
+        <div class="prompt-label"><i class="fa-solid fa-database"></i> [템플릿 2] @fn_connect_supabase(프로젝트REF, 테이블목록)</div>
         <div class="prompt-text">@fn_connect_supabase
 - 프로젝트REF: [예: apwjwaryrlpqmdabilvu]
-- 테이블목록: [1. orders (주문), 2. order_items (주문상세)]
-- RLS보안정책: [공개 익명 읽기/쓰기 허용]
-- 실시간구독: [Realtime postgres_changes 활성화]
+- 테이블목록: [1. orders, 2. order_items]
+- RLS보안정책: [비로그인 읽기 전용, 인증 사용자 추가 허용]
 
-`schema.sql` 스크립트를 작성하고, .env.local 연동과 Supabase SDK 연결 코드(App.jsx)까지 모두 완성해줘!</div>
+`schema.sql` 스크립트 작성 및 SDK 연결 코드를 생성해줘!</div>
       </div>
 
       <!-- Fn 3 -->
       <div class="prompt-box" style="border-left: 4px solid var(--accent-warning);">
-        <div class="prompt-label"><i class="fa-solid fa-cloud-arrow-up"></i> [함수 3] @fn_deploy_cloudflare(프로젝트명, 빌드검증)</div>
+        <div class="prompt-label"><i class="fa-solid fa-cloud-arrow-up"></i> [템플릿 3] @fn_deploy_cloudflare(프로젝트명)</div>
         <div class="prompt-text">@fn_deploy_cloudflare
 - 프로젝트명: [예: vibe-orders]
-- 빌드검증: [npm run build 실행 및 에러 자가 수정]
 - 배포명령: [npx wrangler pages deploy ./dist --project-name=vibe-orders]
 
-프로덕션 배포 완료 후 최종 라이브 접속 URL을 출력해줘!</div>
-      </div>
-
-      <!-- Fn 4 -->
-      <div class="prompt-box" style="border-left: 4px solid var(--accent-purple);">
-        <div class="prompt-label"><i class="fa-solid fa-wand-magic-sparkles"></i> [함수 4] @fn_natural_db_alter(테이블명, 변경내용)</div>
-        <div class="prompt-text">@fn_natural_db_alter
-- 대상테이블: [예: test_inventory_items]
-- 변경내용: [brand 문자열 컬럼 추가하고 기본값 'Antigravity'로 설정해줘]
-
-Supabase CLI 및 SDK 연동 코드까지 일괄 업데이트해줘!</div>
-      </div>
-
-      <!-- Fn 5 -->
-      <div class="prompt-box" style="border-left: 4px solid #ef4444;">
-        <div class="prompt-label"><i class="fa-solid fa-bug"></i> [함수 5] @fn_auto_debug(에러로그, 발생상황)</div>
-        <div class="prompt-text">@fn_auto_debug
-- 에러로그: [예: PGRST205 Could not find table in schema cache]
-- 발생상황: [Supabase 연동 후 데이터 불러올 때 발생]
-
-원인을 분석하고 코드 또는 SQL 스크립트를 자가 치유 수정해줘!</div>
-      </div>
-
-      <!-- Fn 6 -->
-      <div class="prompt-box" style="border-left: 4px solid var(--accent-cyan);">
-        <div class="prompt-label"><i class="fa-brands fa-github"></i> [함수 6] @fn_github_sync(저장소명, 커밋메시지)</div>
-        <div class="prompt-text">@fn_github_sync
-- 저장소명: [예: joseki-korea/agy-vibe-coding]
-- 커밋메시지: [feat: update interactive chart components]
-
-.env.local 비밀키 차단 확인 후 Git Commit & Push를 완결해줘!</div>
+빌드 검증 후 배포 접속 URL을 출력해줘!</div>
       </div>
     </section>
 
-    <!-- SECTION 16: GITHUB MANAGEMENT & FINAL CHECKLIST -->
+    <!-- SECTION 16: GITHUB 5 RULES & FINAL CHECKLIST -->
     <section id="sec-github-mgmt" class="doc-section">
       <div class="section-header">
         <div class="section-number">16</div>
-        <h2 class="section-title">바이브 코딩 개발자를 위한 GitHub 저장소 관리 5대 원칙 및 최종 점검</h2>
+        <h2 class="section-title">GitHub 저장소 관리 5대 원칙 및 최종 점검 체크리스트</h2>
       </div>
 
-      <div class="step-box" style="border-left: 4px solid var(--accent-cyan);">
-        <div class="step-box-header">
-          <span class="step-badge" style="background: var(--accent-cyan);">원칙 1</span>
-          <span class="step-box-title">보안 유출 방지 (Secret Protection)</span>
+      <div class="token-grid">
+        <div class="token-card" style="border-top: 4px solid var(--accent-cyan);">
+          <div class="token-title"><i class="fa-solid fa-key" style="color: var(--accent-cyan);"></i> 원칙 1. 비밀 정보 유출 방지</div>
+          <div class="token-desc">비밀키나 토큰은 <code>.env.local</code>에 보관하고 <code>.gitignore</code>에 추가하여 유출을 차단합니다.</div>
         </div>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">
-          Supabase Access Token(`sbp_...`)이나 API Key는 <code>.env.local</code>에 보관하고 <code>.gitignore</code>에 추가하여 GitHub에 유출되지 않도록 차단합니다.
-        </p>
-      </div>
 
-      <div class="step-box" style="border-left: 4px solid var(--accent-primary);">
-        <div class="step-box-header">
-          <span class="step-badge" style="background: var(--accent-primary);">원칙 2</span>
-          <span class="step-box-title">시각적 커밋 라벨링 (Conventional Commits)</span>
+        <div class="token-card" style="border-top: 4px solid var(--accent-primary);">
+          <div class="token-title"><i class="fa-solid fa-tag" style="color: var(--accent-primary);"></i> 원칙 2. Conventional Commits 사용</div>
+          <div class="token-desc"><code>feat:</code>(기능), <code>fix:</code>(수정), <code>docs:</code>(문서) 접두어를 사용해 명확히 기록합니다.</div>
         </div>
-        <div style="font-size: 0.9rem; color: var(--text-muted);">
-          · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
-          · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
-          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v17.0</code>)
+
+        <div class="token-card" style="border-top: 4px solid var(--accent-purple);">
+          <div class="token-title"><i class="fa-solid fa-code-branch" style="color: var(--accent-purple);"></i> 원칙 3. 기능별 브랜치 사용</div>
+          <div class="token-desc">새 기능 개발 시 메인 브랜치 직접 수정 대신 feature 브랜치를 활용합니다.</div>
+        </div>
+
+        <div class="token-card" style="border-top: 4px solid var(--accent-warning);">
+          <div class="token-title"><i class="fa-solid fa-code-pull-request" style="color: var(--accent-warning);"></i> 원칙 4. Pull Request 코드 검수</div>
+          <div class="token-desc">메인 브랜치 병합 전 PR(Pull Request)을 통해 변경 사항을 검토합니다.</div>
+        </div>
+
+        <div class="token-card" style="border-top: 4px solid var(--accent-success);">
+          <div class="token-title"><i class="fa-solid fa-vial" style="color: var(--accent-success);"></i> 원칙 5. 배포 전 빌드 검증</div>
+          <div class="token-desc"><code>npm run build</code>를 사전에 실행하여 문법 및 빌드 오류가 없는지 확인합니다.</div>
         </div>
       </div>
 
       <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem; margin-top: 1.5rem;">
         <h3 style="font-size: 1rem; color: #fff; margin-bottom: 0.85rem;"><i class="fa-solid fa-clipboard-check" style="color: var(--accent-success);"></i> 최종 기능 및 보안 점검 체크리스트</h3>
         <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 재고 목록 조회, 검색, 카테고리 필터링이 잘 작동한다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 제품 추가 및 입출고 변경 결과가 Supabase DB에 실시간 저장된다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 브라우저를 새로고침해도 데이터가 유실되지 않고 유지된다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 있고 마스터키(Secret Key)가 코드에 포함되지 않았다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 등록되어 GitHub에 유출되지 않았다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소가 PC 및 모바일 브라우저에서 잘 열린다.</div>
-        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 서브페이지를 새로고침해도 404 Not Found 에러가 발생하지 않는다 (`public/_redirects`).</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 제품 추가 및 입출고 변경 결과가 DB에 정상 반영된다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 비로그인 사용자는 읽기만 가능하다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 포함되어 비밀키가 보호된다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소 및 서브페이지 새로고침이 정상 동작한다 (`public/_redirects`).</div>
       </div>
     </section>
 
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-certificate" style="color: #c084fc;"></i> Created by Solucionemos (솔루시오네모스) 공식 제작 매뉴얼 (1~16 완벽 수순)
+        <i class="fa-solid fa-certificate" style="color: #c084fc;"></i> Created by Solucionemos (솔루시오네모스) 실습 가이드 v18.0
       </div>
-      <a href="#sec-timeline" class="btn"><i class="fa-solid fa-book-open"></i> 매뉴얼 처음부터 보기</a>
+      <a href="#sec-timeline" class="btn"><i class="fa-solid fa-book-open"></i> 가이드 처음부터 보기</a>
     </div>
 
   </main>
