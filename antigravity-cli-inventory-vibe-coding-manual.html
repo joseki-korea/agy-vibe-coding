@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v3.0)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v3.5 Final Edition)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,6 +389,11 @@
       background: rgba(245, 158, 11, 0.08);
     }
 
+    .callout.danger {
+      border-left-color: #ef4444;
+      background: rgba(239, 68, 68, 0.08);
+    }
+
     .callout-title {
       font-weight: 700;
       font-size: 0.95rem;
@@ -400,6 +405,7 @@
 
     .callout.tip .callout-title { color: var(--accent-success); }
     .callout.warning .callout-title { color: var(--accent-warning); }
+    .callout.danger .callout-title { color: #f87171; }
     .callout .callout-title { color: var(--accent-primary); }
 
     .callout-content {
@@ -535,7 +541,7 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v3.0</p>
+        <p>Vibe Masterclass v3.5 Final</p>
       </div>
     </div>
 
@@ -559,11 +565,12 @@
       <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 8. Phase 2: DB 스키마 구축</a></li>
       <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 9. Phase 3: Cloudflare 튜토리얼</a></li>
       <li class="nav-item"><a href="#sec-cheatsheet"><i class="fa-solid fa-paste"></i> 10. 올인원 프롬프트 복사</a></li>
+      <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 11. 트러블슈팅 & 진단표</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine Ready<br>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine Master Ready<br>
       <span style="color: var(--text-dim);">Supabase Live & Cloudflare Pages Active</span>
     </div>
   </aside>
@@ -574,20 +581,20 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-graduation-cap"></i> 비개발자 · 입문자 맞춤형 실전 매뉴얼 v3.0
+        <i class="fa-solid fa-crown"></i> 100% 완벽판 · 비개발자 바이브 코딩 마스터 가이드 v3.5 Final
       </div>
       <h1 class="hero-title">
         GitHub + Supabase + Cloudflare<br>
-        <span>자연어 DB 제어 & 재고관리 바이브 코딩 마스터</span>
+        <span>자연어 DB 제어 & 완벽 트러블슈팅 매뉴얼</span>
       </h1>
       <p class="hero-desc">
-        PAT, Anon Key, Access Token이 무엇인지 모르는 입문자도 따라 할 수 있는 가이드입니다. <strong>안티그래비티 CLI에 말 한마디만 하면 Supabase 테이블을 생성/수정/삭제하고 Cloudflare Pages로 무제한 무료 배포</strong>하는 튜토리얼을 다룹니다.
+        PAT, Anon Key, Access Token 개념부터 Supabase 자동 스키마 구축, Cloudflare Pages 무제한 무료 배포 튜토리얼, 그리고 초보자가 반드시 겪는 5가지 에러 완전 해결책까지 <strong>더 이상 추가할 필요가 없는 100% 종결판 매뉴얼</strong>입니다.
       </p>
 
       <div class="hero-stats">
         <div class="stat-item"><i class="fa-solid fa-check"></i> 개념 100% 쉽게 풀이</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 DB 연동</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Cloudflare Pages 원클릭 배포 튜토리얼</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 DB 전권 제어</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> Cloudflare Pages 튜토리얼 & 트러블슈팅</div>
       </div>
     </header>
 
@@ -850,29 +857,67 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
           <li>📁 <strong>Orca 직접 실행/수정 HTML 파일:</strong> <code>/Users/jungseok/orca/vibe-inventory/index.html</code></li>
         </ul>
       </div>
+    </section>
 
-      <div class="prompt-box">
-        <div class="prompt-label"><i class="fa-solid fa-wand-magic-sparkles"></i> 초보자용 원스톱 프롬프트</div>
-        <div class="prompt-text">안티그래비티 CLI 전용 초보자 바이브 코딩 미션:
+    <!-- NEW SECTION 11: TROUBLESHOOTING & SELF-DIAGNOSIS -->
+    <section id="sec-troubleshooting" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">11</div>
+        <h2 class="section-title">초보자가 반드시 겪는 트러블슈팅 Top 5 & 자가 진단표</h2>
+      </div>
 
-너는 최고의 풀스택 에이전트야. 현재 폴더에 Supabase + Cloudflare 기반의 모던 재고관리 웹 앱을 완성하고 배포까지 끝마쳐줘.
+      <div class="token-grid">
+        <div class="token-card" style="border-top: 3px solid #ef4444;">
+          <div class="token-title"><i class="fa-solid fa-shield-cat" style="color: #ef4444;"></i> [에러 1] GitHub Push 시 비밀 키 차단</div>
+          <div class="token-desc"><code>Push cannot contain secrets</code> 오류로 git push가 실패하는 현상입니다.</div>
+          <div class="token-meta">
+            <span class="token-meta-label">원인:</span> <code>.env</code>에 비밀 키(Access Token)를 올리려고 함<br>
+            <span class="token-meta-label">해결:</span> <code>.gitignore</code>에 <code>.env.local</code>을 추가하여 제외시킴
+          </div>
+        </div>
 
-[1단계: 프로젝트 구조 생성]
-- Vite + React 세팅 및 재고 목록 CRUD, 입출고 모달 UI 구현
+        <div class="token-card" style="border-top: 3px solid var(--accent-warning);">
+          <div class="token-title"><i class="fa-solid fa-route" style="color: var(--accent-warning);"></i> [에러 2] Cloudflare 새로고침 시 404</div>
+          <div class="token-desc">Cloudflare Pages 서브페이지 새로고침 시 404 Not Found가 발생하는 현상입니다.</div>
+          <div class="token-meta">
+            <span class="token-meta-label">원인:</span> SPA(Single Page App) 라우팅 미설정<br>
+            <span class="token-meta-label">해결:</span> <code>public/_redirects</code> 생성 후 <code>/* /index.html 200</code> 입력
+          </div>
+        </div>
 
-[2단계: Supabase 연결 및 .env.local 연동]
-- `test_inventory_schema.sql` 작성 및 Supabase 데이터베이스 연결
+        <div class="token-card" style="border-top: 3px solid var(--accent-cyan);">
+          <div class="token-title"><i class="fa-solid fa-database" style="color: var(--accent-cyan);"></i> [에러 3] Supabase PGRST205 에러</div>
+          <div class="token-desc"><code>Could not find table in schema cache</code> 메시지가 뜨는 현상입니다.</div>
+          <div class="token-meta">
+            <span class="token-meta-label">원인:</span> SQL 스크립트를 데이터베이스에서 실행하지 않음<br>
+            <span class="token-meta-label">해결:</span> Supabase SQL Editor에서 <code>test_inventory_schema.sql</code> 실행
+          </div>
+        </div>
 
-[3단계: 빌드 및 Cloudflare Pages 배포]
-- `npm run build` 검증 및 `npx wrangler pages deploy ./dist --project-name=vibe-inventory` 배포
-- 최종 라이브 URL 결과 출력</div>
+        <div class="token-card" style="border-top: 3px solid var(--accent-purple);">
+          <div class="token-title"><i class="fa-solid fa-cloud-arrow-down" style="color: var(--accent-purple);"></i> [에러 4] Project does not exist</div>
+          <div class="token-desc">Wrangler 배포 시 Pages 프로젝트를 찾지 못하는 현상입니다.</div>
+          <div class="token-meta">
+            <span class="token-meta-label">원인:</span> 최초 1회 배포 프로젝트 미생성<br>
+            <span class="token-meta-label">해결:</span> <code>npx wrangler pages project create vibe-inventory</code> 실행
+          </div>
+        </div>
+
+        <div class="token-card" style="border-top: 3px solid var(--accent-success);">
+          <div class="token-title"><i class="fa-solid fa-window-maximize" style="color: var(--accent-success);"></i> [에러 5] index.html 파일 안 열림</div>
+          <div class="token-desc">HTML 더블클릭 시 화면이 하얗게 나오거나 작동하지 않는 현상입니다.</div>
+          <div class="token-meta">
+            <span class="token-meta-label">원인:</span> 브라우저 CORS/모듈 보안 정책 (file:// 접속 차단)<br>
+            <span class="token-meta-label">해결:</span> 단일 스탠드얼론 HTML 사용 또는 <code>npm run dev</code> 실행
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 비개발자도 10분 만에 웹 서비스 배포 가능!
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v3.5 Final Edition: 트러블슈팅 & 튜토리얼 100% 완벽 수록
       </div>
       <a href="#sec-cheatsheet" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
     </div>
