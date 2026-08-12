@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v3.5 Final Edition)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v4.0 Function Edition)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -389,11 +389,6 @@
       background: rgba(245, 158, 11, 0.08);
     }
 
-    .callout.danger {
-      border-left-color: #ef4444;
-      background: rgba(239, 68, 68, 0.08);
-    }
-
     .callout-title {
       font-weight: 700;
       font-size: 0.95rem;
@@ -405,7 +400,6 @@
 
     .callout.tip .callout-title { color: var(--accent-success); }
     .callout.warning .callout-title { color: var(--accent-warning); }
-    .callout.danger .callout-title { color: #f87171; }
     .callout .callout-title { color: var(--accent-primary); }
 
     .callout-content {
@@ -541,7 +535,7 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v3.5 Final</p>
+        <p>Vibe Masterclass v4.0 Function</p>
       </div>
     </div>
 
@@ -566,12 +560,13 @@
       <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 9. Phase 3: Cloudflare 튜토리얼</a></li>
       <li class="nav-item"><a href="#sec-cheatsheet"><i class="fa-solid fa-paste"></i> 10. 올인원 프롬프트 복사</a></li>
       <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 11. 트러블슈팅 & 진단표</a></li>
+      <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 12. 함수형 프롬프트 라이브러리</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine Master Ready<br>
-      <span style="color: var(--text-dim);">Supabase Live & Cloudflare Pages Active</span>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine v4.0 Ready<br>
+      <span style="color: var(--text-dim);">Function Prompts & Realtime DB Active</span>
     </div>
   </aside>
 
@@ -581,20 +576,20 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-crown"></i> 100% 완벽판 · 비개발자 바이브 코딩 마스터 가이드 v3.5 Final
+        <i class="fa-solid fa-code-branch"></i> 함수형 바이브 코딩 템플릿 포함 v4.0
       </div>
       <h1 class="hero-title">
         GitHub + Supabase + Cloudflare<br>
-        <span>자연어 DB 제어 & 완벽 트러블슈팅 매뉴얼</span>
+        <span>함수처럼 쓰는 바이브 코딩 프롬프트 템플릿</span>
       </h1>
       <p class="hero-desc">
-        PAT, Anon Key, Access Token 개념부터 Supabase 자동 스키마 구축, Cloudflare Pages 무제한 무료 배포 튜토리얼, 그리고 초보자가 반드시 겪는 5가지 에러 완전 해결책까지 <strong>더 이상 추가할 필요가 없는 100% 종결판 매뉴얼</strong>입니다.
+        프로그래밍 함수처럼 파라미터 <code>[입력값]</code>만 넣으면 안티그래비티 CLI가 100% 정밀하게 앱 생성, DB 구축, 자동 디버깅, Cloudflare 배포까지 단숨에 수행하는 **재사용 프롬프트 템플릿 모음집**입니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 개념 100% 쉽게 풀이</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 DB 전권 제어</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> Cloudflare Pages 튜토리얼 & 트러블슈팅</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 함수형 파라미터 프롬프트</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 전권 제어</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 종결판 매뉴얼 & 트러블슈팅</div>
       </div>
     </header>
 
@@ -859,7 +854,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
       </div>
     </section>
 
-    <!-- NEW SECTION 11: TROUBLESHOOTING & SELF-DIAGNOSIS -->
+    <!-- SECTION 11: TROUBLESHOOTING & SELF-DIAGNOSIS -->
     <section id="sec-troubleshooting" class="doc-section">
       <div class="section-header">
         <div class="section-number">11</div>
@@ -914,12 +909,89 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
       </div>
     </section>
 
+    <!-- NEW SECTION 12: FUNCTION PROMPT TEMPLATES -->
+    <section id="sec-fn-prompts" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">12</div>
+        <h2 class="section-title">함수처럼 쓰는 바이브 코딩 프롬프트 템플릿 모음 (Function Prompts)</h2>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        프로그래밍 함수처럼 파라미터 <code>[입력값]</code>만 변경해서 안티그래비티 CLI에 복사-붙여넣기하면 100% 오차 없이 작동하는 실전 템플릿 6종입니다.
+      </p>
+
+      <!-- Fn 1 -->
+      <div class="prompt-box" style="border-left: 4px solid var(--accent-primary);">
+        <div class="prompt-label"><i class="fa-solid fa-cube"></i> [함수 1] fn_create_app(앱이름, 주요기능, 디자인)</div>
+        <div class="prompt-text">@fn_create_app
+- 앱이름: [예: 실시간 주문 관리 시스템]
+- 주요기능: [1. 주문 목록 및 상태 변경 대시보드, 2. 신규 주문 등록 Modal, 3. 실시간 알림]
+- 디자인스타일: [다크 테마, Tailwind CSS, Lucide Icons]
+
+터미널 명령어를 직접 실행해서 프로젝트 세팅과 패키지 설치까지 한 번에 완료해줘!</div>
+      </div>
+
+      <!-- Fn 2 -->
+      <div class="prompt-box" style="border-left: 4px solid var(--accent-success);">
+        <div class="prompt-label"><i class="fa-solid fa-database"></i> [함수 2] fn_connect_supabase(프로젝트REF, 테이블목록, 실시간구독)</div>
+        <div class="prompt-text">@fn_connect_supabase
+- 프로젝트REF: [예: apwjwaryrlpqmdabilvu]
+- 테이블목록: [1. orders (주문), 2. order_items (주문상세)]
+- RLS보안정책: [공개 익명 읽기/쓰기 허용]
+- 실시간구독: [Realtime postgres_changes 활성화]
+
+`schema.sql` 스크립트를 작성하고, .env.local 연동과 Supabase SDK 연결 코드(App.jsx)까지 모두 완성해줘!</div>
+      </div>
+
+      <!-- Fn 3 -->
+      <div class="prompt-box" style="border-left: 4px solid var(--accent-warning);">
+        <div class="prompt-label"><i class="fa-solid fa-cloud-arrow-up"></i> [함수 3] fn_deploy_cloudflare(프로젝트명, 빌드검증)</div>
+        <div class="prompt-text">@fn_deploy_cloudflare
+- 프로젝트명: [예: vibe-orders]
+- 빌드검증: [npm run build 실행 및 에러 자가 수정]
+- 배포명령: [npx wrangler pages deploy ./dist --project-name=vibe-orders]
+
+프로덕션 배포 완료 후 최종 라이브 접속 URL을 출력해줘!</div>
+      </div>
+
+      <!-- Fn 4 -->
+      <div class="prompt-box" style="border-left: 4px solid var(--accent-purple);">
+        <div class="prompt-label"><i class="fa-solid fa-wand-magic-sparkles"></i> [함수 4] fn_natural_db_alter(테이블명, 변경내용)</div>
+        <div class="prompt-text">@fn_natural_db_alter
+- 대상테이블: [예: test_inventory_items]
+- 변경내용: [brand (문자열) 컬럼 새로 추가하고 기본값 'Antigravity' 설정]
+
+CLI에서 Supabase DB 명령을 실행해서 테이블 변경을 바로 반영해줘!</div>
+      </div>
+
+      <!-- Fn 5 -->
+      <div class="prompt-box" style="border-left: 4px solid #ef4444;">
+        <div class="prompt-label"><i class="fa-solid fa-bug"></i> [함수 5] fn_auto_debug(에러로그, 발생상황)</div>
+        <div class="prompt-text">@fn_auto_debug
+- 에러로그: [터미널 또는 브라우저 콘솔 오류 내역 복사]
+- 발생상황: [버튼 클릭 시 데이터가 안 넘어감]
+
+로그 원인을 분석하고 소스 코드를 자가 수정(Self-healing)한 뒤 재검증해줘!</div>
+      </div>
+
+      <!-- Fn 6 -->
+      <div class="prompt-box" style="border-left: 4px solid var(--accent-cyan);">
+        <div class="prompt-label"><i class="fa-brands fa-github"></i> [함수 6] fn_github_sync(저장소명, 커밋메시지)</div>
+        <div class="prompt-text">@fn_github_sync
+- 저장소명: [예: joseki-korea/vibe-orders]
+- 공개여부: [Public]
+- 커밋메시지: [feat: initial release with Supabase & Cloudflare]
+
+.gitignore에 .env.local 유출 방지 설정 후 gh repo create 명령으로 커밋&푸시해줘!</div>
+      </div>
+    </section>
+
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v3.5 Final Edition: 트러블슈팅 & 튜토리얼 100% 완벽 수록
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v4.0 Function Edition: 재사용 가능한 함수형 프롬프트 템플릿 포함
       </div>
-      <a href="#sec-cheatsheet" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
+      <a href="#sec-fn-prompts" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
     </div>
 
   </main>
