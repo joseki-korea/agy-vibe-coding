@@ -594,6 +594,7 @@
       <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 14. 트러블슈팅 Top 5 & 진단표</a></li>
       <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 15. 재사용 프롬프트 템플릿 (6종)</a></li>
       <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 16. GitHub 저장소 관리 5대 원칙 및 점검</a></li>
+      <li class="nav-item"><a href="#sec-one-shot"><i class="fa-solid fa-wand-magic-sparkles"></i> 17. 1초 원샷 CLI 자동 세팅</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
@@ -1124,6 +1125,31 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
         <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 비로그인 사용자는 읽기만 가능하다.</div>
         <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 포함되어 비밀키가 보호된다.</div>
         <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소 및 서브페이지 새로고침이 정상 동작한다 (`public/_redirects`).</div>
+      </div>
+    </section>
+
+    <!-- SECTION 17: ONE-SHOT CLI SETUP GUIDE -->
+    <section id="sec-one-shot" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">17</div>
+        <h2 class="section-title">✨ 1초 한 줄 실행: Antigravity CLI 원샷(One-Shot) 자동 세팅 가이드</h2>
+      </div>
+
+      <div class="unified-step-box" style="border-left: 4px solid var(--accent-purple);">
+        <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.75rem;"><i class="fa-solid fa-wand-magic-sparkles" style="color: #c084fc;"></i> 마크다운 지침 파일 입력 한 줄 명령어</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+          복잡한 단계를 직접 프롬프트로 입력할 필요 없이, 아래 명령어를 터미널이나 PowerShell에 복사하여 붙여넣으면 Antigravity CLI가 <code>vibe-coding-one-prompt-setup.md</code> 지침을 읽고 프로젝트 세팅부터 DB 구축, 빌드, Cloudflare 배포까지 **자동 원샷 실행**합니다!
+        </p>
+
+        <div class="code-container">
+          <div class="code-header"><span class="code-lang">CLI Single Command</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+          <pre><code># Antigravity CLI 원샷 자동 세팅 한 줄 명령어
+agy "Read ./vibe-coding-one-prompt-setup.md and execute all phases sequentially from scratch to deployment"</code></pre>
+        </div>
+
+        <div style="background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.4); padding: 0.85rem 1rem; border-radius: 8px; margin-top: 1rem; font-size: 0.88rem; color: #c084fc;">
+          <i class="fa-solid fa-circle-info"></i> <strong>지침 파일 위치:</strong> <code>./vibe-coding-one-prompt-setup.md</code> (저장소 루트에 수록됨)
+        </div>
       </div>
     </section>
 
