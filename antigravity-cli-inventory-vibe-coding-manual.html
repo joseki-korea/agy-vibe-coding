@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 백과사전 (v16.0 Solucionemos Watermark)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 백과사전 (v17.0 Clean Numbering)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,7 +107,6 @@
       font-weight: 700;
     }
 
-    /* Solucionemos Watermark Badge */
     .watermark-badge {
       background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
       border: 1px solid rgba(139, 92, 246, 0.4);
@@ -488,21 +487,6 @@
       color: #fff;
     }
 
-    .step-path {
-      background: rgba(0,0,0,0.4);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: var(--accent-cyan);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: "Fira Code", monospace;
-      word-break: break-all;
-    }
-
     /* Prompt Box */
     .prompt-box {
       background: linear-gradient(135deg, rgba(13, 19, 34, 0.95), rgba(17, 24, 39, 0.95));
@@ -571,9 +555,7 @@
       flex-shrink: 0;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-    }
+    .btn:hover { opacity: 0.9; }
 
     @media (max-width: 1080px) {
       body { flex-direction: column; }
@@ -592,7 +574,7 @@
       </div>
       <div class="brand-text">
         <h1>Solucionemos (솔루시오네모스)</h1>
-        <p>Official Master Edition v16.0</p>
+        <p>Official Master Edition v17.0</p>
       </div>
     </div>
 
@@ -602,37 +584,36 @@
 
     <div class="nav-group-title">기초 세팅 및 사전 안내</div>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-calculator"></i> 0. 소요시간 비교표 (7분 vs 25분)</a></li>
-      <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 1. 쉬운 개념 용어집</a></li>
-      <li class="nav-item"><a href="#sec-os-setup"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> 2. macOS & Windows 환경 세팅</a></li>
-      <li class="nav-item"><a href="#sec-agy-install"><i class="fa-solid fa-download"></i> 3. Antigravity CLI 회원가입 & 스크린샷</a></li>
-      <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 4. GitHub Token & CLI 스크린샷</a></li>
-      <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 5. Supabase Key & 스크린샷</a></li>
-      <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 6. Cloudflare 초기 세팅 7단계</a></li>
-      <li class="nav-item"><a href="#sec-env-secrets"><i class="fa-solid fa-key"></i> 7. .env 파일 & Key 보안 관리</a></li>
-      <li class="nav-item"><a href="#sec-natural-db"><i class="fa-solid fa-wand-magic-sparkles"></i> 8. 자연어 DB CRUD 세팅 (MCP)</a></li>
+      <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-calculator"></i> 1. 소요시간 비교표 (7분 vs 25분)</a></li>
+      <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 2. 쉬운 개념 용어집</a></li>
+      <li class="nav-item"><a href="#sec-os-setup"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> 3. macOS & Windows 환경 세팅</a></li>
+      <li class="nav-item"><a href="#sec-agy-install"><i class="fa-solid fa-download"></i> 4. Antigravity CLI 회원가입 & 스크린샷</a></li>
+      <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 5. GitHub Token & CLI 스크린샷</a></li>
+      <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 6. Supabase Key & 스크린샷</a></li>
+      <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 7. Cloudflare 초기 세팅 7단계</a></li>
+      <li class="nav-item"><a href="#sec-env-secrets"><i class="fa-solid fa-key"></i> 8. .env 파일 & Key 보안 관리</a></li>
+      <li class="nav-item"><a href="#sec-natural-db"><i class="fa-solid fa-wand-magic-sparkles"></i> 9. 자연어 DB CRUD 세팅 (MCP)</a></li>
     </ul>
 
     <div class="nav-group-title">실전 구축 단계</div>
     <ul class="nav-menu">
-      <li class="nav-item"><a href="#sec-phase1"><i class="fa-solid fa-code"></i> 9. Phase 1: 로컬 재고 앱 생성</a></li>
-      <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 10. Phase 2: Supabase SQL 전문</a></li>
-      <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 11. Phase 3: Cloudflare Pages 배포</a></li>
-      <li class="nav-item"><a href="#sec-screenshots"><i class="fa-solid fa-image"></i> 12. 라이브 대시보드 스크린샷 갤러리</a></li>
+      <li class="nav-item"><a href="#sec-phase1"><i class="fa-solid fa-code"></i> 10. Phase 1: 로컬 재고 앱 생성</a></li>
+      <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 11. Phase 2: Supabase SQL 전문</a></li>
+      <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 12. Phase 3: Cloudflare Pages 배포</a></li>
+      <li class="nav-item"><a href="#sec-screenshots"><i class="fa-solid fa-image"></i> 13. 라이브 대시보드 스크린샷 갤러리</a></li>
     </ul>
 
     <div class="nav-group-title">트러블슈팅 & 프롬프트 라이브러리</div>
     <ul class="nav-menu">
       <li class="nav-item"><a href="#sec-troubleshooting"><i class="fa-solid fa-bug"></i> 14. 트러블슈팅 Top 5 & 진단표</a></li>
       <li class="nav-item"><a href="#sec-fn-prompts"><i class="fa-solid fa-code-branch"></i> 15. 함수형 프롬프트 라이브러리 (6종)</a></li>
-      <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 16. GitHub 저장소 관리 5대 원칙</a></li>
-      <li class="nav-item"><a href="#sec-final-check"><i class="fa-solid fa-clipboard-check"></i> 17. 최종 기능 & 보안 점검 체크리스트</a></li>
+      <li class="nav-item"><a href="#sec-github-mgmt"><i class="fa-brands fa-git-alt"></i> 16. GitHub 관리 5대 원칙 및 최종 점검</a></li>
     </ul>
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: #c084fc;">
-      <i class="fa-solid fa-circle-check"></i> Solucionemos Certified v16.0<br>
-      <span style="color: var(--text-dim);">Created by Solucionemos (솔루시오네모스)</span>
+      <i class="fa-solid fa-circle-check"></i> Solucionemos Certified v17.0<br>
+      <span style="color: var(--text-dim);">Clean Sequential Numbering 1 to 16</span>
     </div>
   </aside>
 
@@ -642,7 +623,7 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-award"></i> Created by Solucionemos (솔루시오네모스) 제작 공식 인증 매뉴얼 (v16.0)
+        <i class="fa-solid fa-award"></i> Created by Solucionemos (솔루시오네모스) 제작 공식 인증 매뉴얼 (v17.0)
       </div>
       <h1 class="hero-title">
         Antigravity CLI + GitHub + Supabase + Cloudflare<br>
@@ -655,14 +636,14 @@
       <div class="hero-stats">
         <div class="stat-item"><i class="fa-solid fa-copyright"></i> Solucionemos (솔루시오네모스) 공식 워터마크 수록</div>
         <div class="stat-item"><i class="fa-brands fa-apple"></i> <i class="fa-brands fa-windows"></i> macOS & Windows 완벽 분리 지원</div>
-        <div class="stat-item"><i class="fa-solid fa-shield-halved"></i> 100% 실전 배포 검증 완료</div>
+        <div class="stat-item"><i class="fa-solid fa-list-check"></i> 1 ~ 16 순차 넘버링 완벽 정렬</div>
       </div>
     </header>
 
-    <!-- SECTION 0: TIMELINE & REALISM -->
+    <!-- SECTION 1: TIMELINE & REALISM -->
     <section id="sec-timeline" class="doc-section">
       <div class="section-header">
-        <div class="section-number">0</div>
+        <div class="section-number">1</div>
         <h2 class="section-title">소요 시간 솔직 비교표 (⚡ 순수 AI: 7분 vs 👤 현실 첫 도전: 25분)</h2>
       </div>
 
@@ -678,43 +659,43 @@
           </thead>
           <tbody>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-purple);">0단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-purple);">1단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Antigravity CLI 설치 & 구글 1초 로그인 (<code>agy login</code>)</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (터미널 열기)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">1단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">2단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">GitHub CLI 로그인 및 계정 연동 (<code>gh auth login</code>)</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">30초</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (비번/2단계 인증)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">2단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">3단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Supabase 프로젝트 생성 & 이메일 인증 & DB 서버 준비</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">6분 (이메일인증 + 서버대기)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">3단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">4단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Cloudflare 회원가입 및 CLI 인증 (<code>npx wrangler login</code>)</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">30초</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">4분 (가입 및 약관동의)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">4단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">5단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 1 로컬 웹 앱 생성 (Vite + React UI 대시보드)</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">2분</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (프롬프트 읽기)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">5단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">6단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 2 Supabase SQL 연동 및 스키마 실행</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (Key 복사붙여넣기)</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">6단계</td>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">7단계</td>
               <td style="padding: 0.85rem 1.25rem; color: #f3f4f6;">Phase 3 Cloudflare Pages 프로덕션 무료 배포</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">1분</td>
               <td style="padding: 0.85rem 1.25rem; text-align: center; color: var(--accent-warning); font-weight: 700;">3분 (배포주소 접속)</td>
@@ -729,10 +710,10 @@
       </div>
     </section>
 
-    <!-- SECTION 1: GLOSSARY -->
+    <!-- SECTION 2: GLOSSARY -->
     <section id="sec-glossary" class="doc-section">
       <div class="section-header">
-        <div class="section-number">1</div>
+        <div class="section-number">2</div>
         <h2 class="section-title">비개발자를 위한 핵심 인증 용어 1분 정리</h2>
       </div>
 
@@ -759,10 +740,10 @@
       </div>
     </section>
 
-    <!-- SECTION 2: OS COMMAND SETUP -->
+    <!-- SECTION 3: OS COMMAND SETUP -->
     <section id="sec-os-setup" class="doc-section">
       <div class="section-header">
-        <div class="section-number">2</div>
+        <div class="section-number">3</div>
         <h2 class="section-title">macOS vs Windows 운영체제별 필수 환경 세팅</h2>
       </div>
 
@@ -791,10 +772,10 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 3: ANTIGRAVITY CLI & SCREENSHOT -->
+    <!-- SECTION 4: ANTIGRAVITY CLI & SCREENSHOT -->
     <section id="sec-agy-install" class="doc-section">
       <div class="section-header">
-        <div class="section-number">3</div>
+        <div class="section-number">4</div>
         <h2 class="section-title">Antigravity CLI 회원가입 & 공식 사이트 스크린샷</h2>
       </div>
 
@@ -813,10 +794,10 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 4: GITHUB CLI & SCREENSHOT -->
+    <!-- SECTION 5: GITHUB CLI & SCREENSHOT -->
     <section id="sec-github-auth" class="doc-section">
       <div class="section-header">
-        <div class="section-number">4</div>
+        <div class="section-number">5</div>
         <h2 class="section-title">GitHub Token & CLI 세팅 + 저장소 스크린샷</h2>
       </div>
 
@@ -835,10 +816,10 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 5: SUPABASE AUTH & SCREENSHOT -->
+    <!-- SECTION 6: SUPABASE AUTH & SCREENSHOT -->
     <section id="sec-supabase-auth" class="doc-section">
       <div class="section-header">
-        <div class="section-number">5</div>
+        <div class="section-number">6</div>
         <h2 class="section-title">Supabase Key 발급 & Table Editor 스크린샷</h2>
       </div>
 
@@ -852,10 +833,10 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 6: CLOUDFLARE 7 STEPS -->
+    <!-- SECTION 7: CLOUDFLARE 7 STEPS -->
     <section id="sec-cloudflare-auth" class="doc-section">
       <div class="section-header">
-        <div class="section-number">6</div>
+        <div class="section-number">7</div>
         <h2 class="section-title">Cloudflare Pages 완전 무결 초기 세팅 7단계</h2>
       </div>
 
@@ -872,10 +853,10 @@ npm install -g agy</code></pre>
       </div>
     </section>
 
-    <!-- SECTION 7: ENV & SECRETS -->
+    <!-- SECTION 8: ENV & SECRETS -->
     <section id="sec-env-secrets" class="doc-section">
       <div class="section-header">
-        <div class="section-number">7</div>
+        <div class="section-number">8</div>
         <h2 class="section-title">.env 파일 생성 및 보안 키 유출 방지 관리</h2>
       </div>
 
@@ -886,10 +867,10 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></p
       </div>
     </section>
 
-    <!-- SECTION 8: NATURAL DB CONTROL -->
+    <!-- SECTION 9: NATURAL DB CONTROL -->
     <section id="sec-natural-db" class="doc-section">
       <div class="section-header">
-        <div class="section-number">8</div>
+        <div class="section-number">9</div>
         <h2 class="section-title">안티그래비티 CLI로 자연어 DB 제어하기 (MCP & Access Token `sbp_...`)</h2>
       </div>
 
@@ -901,10 +882,10 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></p
       </div>
     </section>
 
-    <!-- SECTION 9: PHASE 1 -->
+    <!-- SECTION 10: PHASE 1 -->
     <section id="sec-phase1" class="doc-section">
       <div class="section-header">
-        <div class="section-number">9</div>
+        <div class="section-number">10</div>
         <h2 class="section-title">Phase 1: 로컬 재고관리 앱 바이브 코딩 (Vite + React UI)</h2>
       </div>
 
@@ -921,10 +902,10 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</code></p
       </div>
     </section>
 
-    <!-- SECTION 10: PHASE 2 - FULL SQL SCRIPT -->
+    <!-- SECTION 11: PHASE 2 - FULL SQL SCRIPT -->
     <section id="sec-phase2" class="doc-section">
       <div class="section-header">
-        <div class="section-number">10</div>
+        <div class="section-number">11</div>
         <h2 class="section-title">Phase 2: Supabase DB 구축을 위한 SQL 전문 수록 (`test_inventory_schema.sql`)</h2>
       </div>
 
@@ -968,10 +949,10 @@ CREATE POLICY "Allow public transaction insert" ON test_inventory_transactions F
       </div>
     </section>
 
-    <!-- SECTION 11: PHASE 3 -->
+    <!-- SECTION 12: PHASE 3 -->
     <section id="sec-phase3" class="doc-section">
       <div class="section-header">
-        <div class="section-number">11</div>
+        <div class="section-number">12</div>
         <h2 class="section-title">Phase 3: Cloudflare Pages 배포 매뉴얼 튜토리얼 (`public/_redirects`)</h2>
       </div>
 
@@ -1130,11 +1111,11 @@ Supabase CLI 및 SDK 연동 코드까지 일괄 업데이트해줘!</div>
       </div>
     </section>
 
-    <!-- SECTION 16: GITHUB MANAGEMENT -->
+    <!-- SECTION 16: GITHUB MANAGEMENT & FINAL CHECKLIST -->
     <section id="sec-github-mgmt" class="doc-section">
       <div class="section-header">
         <div class="section-number">16</div>
-        <h2 class="section-title">바이브 코딩 개발자를 위한 GitHub 저장소 관리 5대 원칙</h2>
+        <h2 class="section-title">바이브 코딩 개발자를 위한 GitHub 저장소 관리 5대 원칙 및 최종 점검</h2>
       </div>
 
       <div class="step-box" style="border-left: 4px solid var(--accent-cyan);">
@@ -1155,33 +1136,26 @@ Supabase CLI 및 SDK 연동 코드까지 일괄 업데이트해줘!</div>
         <div style="font-size: 0.9rem; color: var(--text-muted);">
           · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
           · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
-          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v16.0</code>)
+          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v17.0</code>)
         </div>
       </div>
-    </section>
 
-    <!-- SECTION 17: FINAL CHECKLIST -->
-    <section id="sec-final-check" class="doc-section">
-      <div class="section-header">
-        <div class="section-number">17</div>
-        <h2 class="section-title">최종 기능 및 보안 점검 체크리스트</h2>
-      </div>
-
-      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem;">
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 재고 목록 조회, 검색, 카테고리 필터링이 잘 작동한다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 제품 추가 및 입출고 변경 결과가 Supabase DB에 실시간 저장된다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 브라우저를 새로고침해도 데이터가 유실되지 않고 유지된다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 있고 마스터키(Secret Key)가 코드에 포함되지 않았다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 등록되어 GitHub에 유출되지 않았다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소가 PC 및 모바일 브라우저에서 잘 열린다.</div>
-        <div style="padding: 0.4rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 서브페이지를 새로고침해도 404 Not Found 에러가 발생하지 않는다 (`public/_redirects`).</div>
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; padding: 1.5rem; margin-top: 1.5rem;">
+        <h3 style="font-size: 1rem; color: #fff; margin-bottom: 0.85rem;"><i class="fa-solid fa-clipboard-check" style="color: var(--accent-success);"></i> 최종 기능 및 보안 점검 체크리스트</h3>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 재고 목록 조회, 검색, 카테고리 필터링이 잘 작동한다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 제품 추가 및 입출고 변경 결과가 Supabase DB에 실시간 저장된다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 브라우저를 새로고침해도 데이터가 유실되지 않고 유지된다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] RLS 보안 정책이 활성화되어 있고 마스터키(Secret Key)가 코드에 포함되지 않았다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] `.env.local` 파일이 `.gitignore`에 등록되어 GitHub에 유출되지 않았다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] Cloudflare Pages 라이브 주소가 PC 및 모바일 브라우저에서 잘 열린다.</div>
+        <div style="padding: 0.35rem 0;"><i class="fa-solid fa-square-check" style="color: var(--accent-success);"></i> [ ] 서브페이지를 새로고침해도 404 Not Found 에러가 발생하지 않는다 (`public/_redirects`).</div>
       </div>
     </section>
 
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-certificate" style="color: #c084fc;"></i> Created by Solucionemos (솔루시오네모스) 공식 제작 매뉴얼
+        <i class="fa-solid fa-certificate" style="color: #c084fc;"></i> Created by Solucionemos (솔루시오네모스) 공식 제작 매뉴얼 (1~16 완벽 수순)
       </div>
       <a href="#sec-timeline" class="btn"><i class="fa-solid fa-book-open"></i> 매뉴얼 처음부터 보기</a>
     </div>
