@@ -908,33 +908,48 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...your-key...</code></pre>
 
       <div class="code-container">
         <div class="code-header"><span class="code-lang">sql</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-        <pre><code>-- 1. test_inventory_items 테이블 생성
-CREATE TABLE IF NOT EXISTS test_inventory_items (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    item_code VARCHAR(50) UNIQUE NOT NULL,
-    name VARCHAR(250) NOT NULL,
-    category VARCHAR(100) NOT NULL,
-    location VARCHAR(100) DEFAULT '창고 A-1',
-    stock_quantity INT DEFAULT 0 CHECK (stock_quantity >= 0),
-    safety_stock INT DEFAULT 10,
-    unit_price NUMERIC(12, 2) DEFAULT 0,
-    status VARCHAR(50) DEFAULT '정상',
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+        <pre><code>-- 비개발자 실습용 안전한 재고관리 스키마 (Supabase, test_inventory_schema.sql)
+CREATE TABLE IF NOT EXISTS public.test_inventory_items (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  owner_id UUID NOT NULL DEFAULT auth.uid() REFERENCES auth.users(id) ON DELETE CASCADE,
+  item_code TEXT NOT NULL,
+  name TEXT NOT NULL,
+  category TEXT NOT NULL DEFAULT '일반',
+  stock_quantity INTEGER NOT NULL DEFAULT 0 CHECK (stock_quantity >= 0),
+  safety_stock INTEGER NOT NULL DEFAULT 10 CHECK (safety_stock >= 0),
+  unit_price NUMERIC(12, 2) NOT NULL DEFAULT 0 CHECK (unit_price >= 0),
+  warehouse_location TEXT NOT NULL DEFAULT '창고 A-1',
+  status TEXT NOT NULL DEFAULT 'NORMAL' CHECK (status IN ('NORMAL', 'LOW_STOCK', 'OUT_OF_STOCK')),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE (owner_id, item_code)
 );
 
--- 2. Row Level Security(RLS) 정책 활성화 및 권한 분리
-ALTER TABLE test_inventory_items ENABLE ROW LEVEL SECURITY;
+CREATE TABLE IF NOT EXISTS public.test_inventory_transactions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  owner_id UUID NOT NULL DEFAULT auth.uid() REFERENCES auth.users(id) ON DELETE CASCADE,
+  item_id UUID NOT NULL REFERENCES public.test_inventory_items(id) ON DELETE CASCADE,
+  transaction_type TEXT NOT NULL CHECK (transaction_type IN ('INBOUND', 'OUTBOUND')),
+  quantity INTEGER NOT NULL CHECK (quantity > 0),
+  notes TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
 
--- [보안 정책] 비로그인 사용자: 읽기(SELECT) 전용 허용
-CREATE POLICY "Allow public read-only access" ON test_inventory_items 
-    FOR SELECT USING (true);
+-- Row Level Security(RLS) 사용자별 격리 정책
+ALTER TABLE public.test_inventory_items ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.test_inventory_transactions ENABLE ROW LEVEL SECURITY;
 
--- [보안 정책] 인증된 사용자/관리자: 추가 및 수정 허용
-CREATE POLICY "Allow authenticated insert" ON test_inventory_items 
-    FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "Users select own inventory" ON public.test_inventory_items 
+    FOR SELECT TO authenticated USING ((select auth.uid()) = owner_id);
 
-CREATE POLICY "Allow authenticated update" ON test_inventory_items 
-    FOR UPDATE USING (auth.role() = 'authenticated');</code></pre>
+CREATE POLICY "Users insert own inventory" ON public.test_inventory_items 
+    FOR INSERT TO authenticated WITH CHECK ((select auth.uid()) = owner_id);
+
+CREATE POLICY "Users update own inventory" ON public.test_inventory_items 
+    FOR UPDATE TO authenticated USING ((select auth.uid()) = owner_id);
+
+CREATE POLICY "Users delete own inventory" ON public.test_inventory_items 
+    FOR DELETE TO authenticated USING ((select auth.uid()) = owner_id);</code></pre>
       </div>
     </section>
 

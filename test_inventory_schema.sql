@@ -1,69 +1,136 @@
--- ========================================================
--- 안티그래비티 바이브코딩 테스트용 신규 재고관리 DB 스키마
--- ========================================================
+-- 비개발자 실습용 안전한 재고관리 스키마 (Supabase, 2026)
+-- Supabase SQL Editor에서 한 번 실행합니다.
 
--- 1. 창고 정보 테이블 (test_warehouses)
-CREATE TABLE IF NOT EXISTS public.test_warehouses (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    name TEXT NOT NULL UNIQUE,
-    location TEXT NOT NULL,
-    manager_contact TEXT,
-    created_at TIMESTAMPTZ DEFAULT NOW()
+create table if not exists public.test_inventory_items (
+  id uuid primary key default gen_random_uuid(),
+  owner_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  item_code text not null,
+  name text not null,
+  category text not null default '일반',
+  stock_quantity integer not null default 0 check (stock_quantity >= 0),
+  safety_stock integer not null default 10 check (safety_stock >= 0),
+  unit_price numeric(12, 2) not null default 0 check (unit_price >= 0),
+  warehouse_location text not null default '창고 A-1',
+  status text not null default 'NORMAL' check (status in ('NORMAL', 'LOW_STOCK', 'OUT_OF_STOCK')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (owner_id, item_code)
 );
 
--- 2. 신규 재고 제품 테이블 (test_inventory_items)
-CREATE TABLE IF NOT EXISTS public.test_inventory_items (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    item_code TEXT UNIQUE NOT NULL,
-    name TEXT NOT NULL,
-    category TEXT NOT NULL DEFAULT '일반',
-    stock_quantity INT NOT NULL DEFAULT 0 CHECK (stock_quantity >= 0),
-    safety_stock INT NOT NULL DEFAULT 10 CHECK (safety_stock >= 0),
-    unit_price INT NOT NULL DEFAULT 0 CHECK (unit_price >= 0),
-    warehouse_id UUID REFERENCES public.test_warehouses(id) ON DELETE SET NULL,
-    warehouse_location TEXT DEFAULT '본사 A동 창고',
-    status TEXT DEFAULT 'NORMAL' CHECK (status IN ('NORMAL', 'LOW_STOCK', 'OUT_OF_STOCK')),
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW()
+create table if not exists public.test_inventory_transactions (
+  id uuid primary key default gen_random_uuid(),
+  owner_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
+  item_id uuid not null references public.test_inventory_items(id) on delete cascade,
+  transaction_type text not null check (transaction_type in ('INBOUND', 'OUTBOUND')),
+  quantity integer not null check (quantity > 0),
+  notes text,
+  created_at timestamptz not null default now()
 );
 
--- 3. 신규 입출고 이력 테이블 (test_inventory_transactions)
-CREATE TABLE IF NOT EXISTS public.test_inventory_transactions (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    item_id UUID REFERENCES public.test_inventory_items(id) ON DELETE CASCADE,
-    transaction_type TEXT NOT NULL CHECK (transaction_type IN ('INBOUND', 'OUTBOUND', 'ADJUSTMENT')),
-    quantity INT NOT NULL CHECK (quantity > 0),
-    unit_price INT NOT NULL DEFAULT 0,
-    handler_name TEXT DEFAULT '안티그래비티 에이전트',
-    notes TEXT,
-    created_at TIMESTAMPTZ DEFAULT NOW()
+alter table public.test_inventory_items enable row level security;
+alter table public.test_inventory_transactions enable row level security;
+
+-- 2026년 Data API 노출 정책 변경에 대비한 명시적 테이블 권한
+revoke all on public.test_inventory_items from anon;
+revoke all on public.test_inventory_transactions from anon;
+grant select, insert, update, delete on public.test_inventory_items to authenticated;
+grant select, insert on public.test_inventory_transactions to authenticated;
+
+drop policy if exists "Users select own inventory" on public.test_inventory_items;
+drop policy if exists "Users insert own inventory" on public.test_inventory_items;
+drop policy if exists "Users update own inventory" on public.test_inventory_items;
+drop policy if exists "Users delete own inventory" on public.test_inventory_items;
+
+create policy "Users select own inventory"
+on public.test_inventory_items for select to authenticated
+using ((select auth.uid()) = owner_id);
+
+create policy "Users insert own inventory"
+on public.test_inventory_items for insert to authenticated
+with check ((select auth.uid()) = owner_id);
+
+create policy "Users update own inventory"
+on public.test_inventory_items for update to authenticated
+using ((select auth.uid()) = owner_id)
+with check ((select auth.uid()) = owner_id);
+
+create policy "Users delete own inventory"
+on public.test_inventory_items for delete to authenticated
+using ((select auth.uid()) = owner_id);
+
+drop policy if exists "Users select own transactions" on public.test_inventory_transactions;
+drop policy if exists "Users insert own transactions" on public.test_inventory_transactions;
+
+create policy "Users select own transactions"
+on public.test_inventory_transactions for select to authenticated
+using ((select auth.uid()) = owner_id);
+
+create policy "Users insert own transactions"
+on public.test_inventory_transactions for insert to authenticated
+with check (
+  (select auth.uid()) = owner_id
+  and exists (
+    select 1 from public.test_inventory_items item
+    where item.id = item_id and item.owner_id = (select auth.uid())
+  )
 );
 
--- 4. RLS 보안 정책 설정 (공용 테스트 허용)
-ALTER TABLE public.test_warehouses ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.test_inventory_items ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.test_inventory_transactions ENABLE ROW LEVEL SECURITY;
+-- 재고 변경과 입출고 이력 기록을 하나의 DB 트랜잭션으로 처리합니다.
+create or replace function public.adjust_inventory_stock(
+  target_item_id uuid,
+  movement_type text,
+  movement_quantity integer,
+  movement_notes text default null
+)
+returns public.test_inventory_items
+language plpgsql
+security invoker
+set search_path = ''
+as $$
+declare
+  updated_item public.test_inventory_items;
+begin
+  if movement_type not in ('INBOUND', 'OUTBOUND') then
+    raise exception '입출고 유형은 INBOUND 또는 OUTBOUND여야 합니다.';
+  end if;
+  if movement_quantity <= 0 then
+    raise exception '수량은 1 이상이어야 합니다.';
+  end if;
 
-CREATE POLICY "Allow public all on test_warehouses" ON public.test_warehouses FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "Allow public all on test_inventory_items" ON public.test_inventory_items FOR ALL USING (true) WITH CHECK (true);
-CREATE POLICY "Allow public all on test_inventory_transactions" ON public.test_inventory_transactions FOR ALL USING (true) WITH CHECK (true);
+  update public.test_inventory_items
+  set stock_quantity = case
+        when movement_type = 'INBOUND' then stock_quantity + movement_quantity
+        else stock_quantity - movement_quantity
+      end,
+      status = case
+        when movement_type = 'OUTBOUND' and stock_quantity - movement_quantity = 0 then 'OUT_OF_STOCK'
+        when movement_type = 'OUTBOUND' and stock_quantity - movement_quantity < safety_stock then 'LOW_STOCK'
+        when movement_type = 'INBOUND' and stock_quantity + movement_quantity < safety_stock then 'LOW_STOCK'
+        else 'NORMAL'
+      end,
+      updated_at = now()
+  where id = target_item_id
+    and owner_id = (select auth.uid())
+    and (movement_type = 'INBOUND' or stock_quantity >= movement_quantity)
+  returning * into updated_item;
 
--- 5. 샘플 데이터 시드 (초기 테스트용 데이터)
-INSERT INTO public.test_warehouses (name, location, manager_contact)
-VALUES 
-    ('제1 메인 물류센터', '경기도 용인시 기흥구', '010-1234-5678'),
-    ('제2 남부 수도권 창고', '인천광역시 서구 물류단지', '010-9876-5432')
-ON CONFLICT (name) DO NOTHING;
+  if updated_item.id is null then
+    raise exception '품목을 찾을 수 없거나 출고 수량이 현재 재고보다 많습니다.';
+  end if;
 
-INSERT INTO public.test_inventory_items (item_code, name, category, stock_quantity, safety_stock, unit_price, warehouse_location, status)
-VALUES 
-    ('AGY-TEST-001', '안티그래비티 AI 센서 모듈 v1', '전자부품', 150, 30, 45000, '창고 A-12', 'NORMAL'),
-    ('AGY-TEST-002', '고성능 임베디드 코어 제어판', '핵심부품', 8, 15, 120000, '창고 B-03', 'LOW_STOCK'),
-    ('AGY-TEST-003', '초고속 데이터 전송 케이블 2m', '소모품', 500, 100, 8500, '창고 A-05', 'NORMAL'),
-    ('AGY-TEST-004', '지능형 모터 드라이버 가이드', '기계부품', 3, 10, 89000, '창고 C-01', 'LOW_STOCK'),
-    ('AGY-TEST-005', '알루미늄 프레임 거치대 (대형)', '외장재', 85, 20, 35000, '창고 A-08', 'NORMAL')
-ON CONFLICT (item_code) DO NOTHING;
+  insert into public.test_inventory_transactions
+    (owner_id, item_id, transaction_type, quantity, notes)
+  values
+    ((select auth.uid()), target_item_id, movement_type, movement_quantity, movement_notes);
 
--- 6. Supabase Realtime 게시 등록
-ALTER PUBLICATION supabase_realtime ADD TABLE public.test_inventory_items;
-ALTER PUBLICATION supabase_realtime ADD TABLE public.test_inventory_transactions;
+  return updated_item;
+end;
+$$;
+
+revoke all on function public.adjust_inventory_stock(uuid, text, integer, text) from public, anon;
+grant execute on function public.adjust_inventory_stock(uuid, text, integer, text) to authenticated;
+
+create index if not exists test_inventory_items_owner_idx
+  on public.test_inventory_items(owner_id);
+create index if not exists test_inventory_transactions_owner_created_idx
+  on public.test_inventory_transactions(owner_id, created_at desc);

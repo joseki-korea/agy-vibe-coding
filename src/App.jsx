@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { 
-  Package, AlertTriangle, Plus, ArrowUpRight, ArrowDownRight, 
-  Search, Filter, RefreshCw, Database, History, Trash2, CheckCircle2, X, PlusCircle, Building2, BarChart3, PieChart
+  Package, AlertTriangle,
+  Search, Filter, RefreshCw, Database, Trash2, CheckCircle2, PlusCircle, BarChart3, PieChart, LogIn, LogOut
 } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from './lib/supabase';
 
@@ -21,6 +21,10 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [selectedStatusFilter, setSelectedStatusFilter] = useState('ALL'); // 'ALL' | 'LOW_STOCK' | 'NORMAL'
   const [loading, setLoading] = useState(false);
+  const [session, setSession] = useState(null);
+  const [authEmail, setAuthEmail] = useState('');
+  const [authPassword, setAuthPassword] = useState('');
+  const [authMessage, setAuthMessage] = useState('');
 
   // Modals
   const [isStockModalOpen, setIsStockModalOpen] = useState(false);
@@ -34,22 +38,50 @@ export default function App() {
     item_code: '', name: '', category: '전자부품', stock_quantity: 20, safety_stock: 10, unit_price: 50000, warehouse_location: '창고 A-01'
   });
 
-  const fetchTestItems = async () => {
-    if (!isSupabaseConfigured || !supabase) return;
+  const fetchTestItems = useCallback(async () => {
+    if (!isSupabaseConfigured || !supabase || !session) return;
     setLoading(true);
     try {
       const { data, error } = await supabase.from('test_inventory_items').select('*').order('created_at', { ascending: false });
-      if (!error && data && data.length > 0) setItems(data);
+      if (error) throw error;
+      setItems(data || []);
     } catch (err) {
       console.error('Fetch error:', err);
     } finally {
       setLoading(false);
     }
-  };
+  }, [session]);
 
   useEffect(() => {
-    fetchTestItems();
+    if (!isSupabaseConfigured || !supabase) return undefined;
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+      setSession(nextSession);
+    });
+    return () => listener.subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (session) fetchTestItems();
+    else if (isSupabaseConfigured) setItems([]);
+  }, [session, fetchTestItems]);
+
+  const handleAuth = async (mode) => {
+    if (!supabase || !authEmail || authPassword.length < 6) {
+      setAuthMessage('이메일과 6자 이상의 비밀번호를 입력하세요.');
+      return;
+    }
+    setLoading(true);
+    const result = mode === 'signup'
+      ? await supabase.auth.signUp({ email: authEmail, password: authPassword })
+      : await supabase.auth.signInWithPassword({ email: authEmail, password: authPassword });
+    setLoading(false);
+    setAuthMessage(result.error
+      ? result.error.message
+      : mode === 'signup' && !result.data.session
+        ? '확인 이메일을 열어 가입을 완료하세요.'
+        : '로그인되었습니다.');
+  };
 
   const handleStockUpdate = async (e) => {
     e.preventDefault();
@@ -59,10 +91,18 @@ export default function App() {
     let newQty = transactionType === 'INBOUND' ? selectedItem.stock_quantity + amount : Math.max(0, selectedItem.stock_quantity - amount);
     const newStatus = newQty < selectedItem.safety_stock ? 'LOW_STOCK' : 'NORMAL';
 
-    setItems(prev => prev.map(i => i.id === selectedItem.id ? { ...i, stock_quantity: newQty, status: newStatus } : i));
-
     if (isSupabaseConfigured && supabase) {
-      await supabase.from('test_inventory_items').update({ stock_quantity: newQty, status: newStatus }).eq('id', selectedItem.id);
+      if (!session) return setAuthMessage('입출고 처리는 로그인이 필요합니다.');
+      const { error } = await supabase.rpc('adjust_inventory_stock', {
+        target_item_id: selectedItem.id,
+        movement_type: transactionType,
+        movement_quantity: amount,
+        movement_notes: null,
+      });
+      if (error) return setAuthMessage(error.message);
+      await fetchTestItems();
+    } else {
+      setItems(prev => prev.map(i => i.id === selectedItem.id ? { ...i, stock_quantity: newQty, status: newStatus } : i));
     }
 
     setIsStockModalOpen(false);
@@ -88,7 +128,9 @@ export default function App() {
     };
 
     if (isSupabaseConfigured && supabase) {
-      const { data } = await supabase.from('test_inventory_items').insert([itemData]).select();
+      if (!session) return setAuthMessage('품목 등록은 로그인이 필요합니다.');
+      const { data, error } = await supabase.from('test_inventory_items').insert([itemData]).select();
+      if (error) return setAuthMessage(error.message);
       if (data && data[0]) setItems(prev => [data[0], ...prev]);
     } else {
       setItems(prev => [{ ...itemData, id: Date.now().toString() }, ...prev]);
@@ -100,10 +142,12 @@ export default function App() {
 
   const handleDeleteItem = async (id, name) => {
     if (!confirm(`'${name}' 상품을 삭제하시겠습니까?`)) return;
-    setItems(prev => prev.filter(i => i.id !== id));
     if (isSupabaseConfigured && supabase) {
-      await supabase.from('test_inventory_items').delete().eq('id', id);
+      if (!session) return setAuthMessage('품목 삭제는 로그인이 필요합니다.');
+      const { error } = await supabase.from('test_inventory_items').delete().eq('id', id);
+      if (error) return setAuthMessage(error.message);
     }
+    setItems(prev => prev.filter(i => i.id !== id));
   };
 
   // Filter Logic
@@ -161,10 +205,36 @@ export default function App() {
           <div style={{ background: isSupabaseConfigured ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)', border: isSupabaseConfigured ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(245, 158, 11, 0.3)', color: isSupabaseConfigured ? '#10b981' : '#f59e0b', padding: '0.4rem 0.85rem', borderRadius: 20, fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
             <Database size={14} /> {isSupabaseConfigured ? 'Supabase Live Connected' : 'Local Mock Mode'}
           </div>
+          {isSupabaseConfigured && (session ? (
+            <button onClick={() => supabase.auth.signOut()} style={{ background: '#1f293d', border: '1px solid #374151', color: '#e5e7eb', padding: '0.4rem 0.75rem', borderRadius: 8, cursor: 'pointer', display: 'flex', gap: 5 }}>
+              <LogOut size={15} /> 로그아웃
+            </button>
+          ) : (
+            <span style={{ color: '#f59e0b', fontSize: '0.8rem' }}>읽기·수정 전 로그인 필요</span>
+          ))}
         </div>
       </header>
 
       <main style={{ maxWidth: 1200, margin: '0 auto', padding: '2rem' }}>
+
+        {isSupabaseConfigured && !session && (
+          <section style={{ background: '#111827', border: '1px solid #374151', borderRadius: 14, padding: '1.25rem', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, fontWeight: 700 }}><LogIn size={18} /> Supabase 이메일 로그인</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <input type="email" value={authEmail} onChange={e => setAuthEmail(e.target.value)} placeholder="email@example.com" style={{ flex: 1, minWidth: 220, background: '#090d16', border: '1px solid #374151', borderRadius: 8, padding: '0.6rem', color: '#fff' }} />
+              <input type="password" value={authPassword} onChange={e => setAuthPassword(e.target.value)} placeholder="비밀번호 6자 이상" style={{ flex: 1, minWidth: 180, background: '#090d16', border: '1px solid #374151', borderRadius: 8, padding: '0.6rem', color: '#fff' }} />
+              <button onClick={() => handleAuth('signin')} disabled={loading} style={{ background: '#3b82f6', color: '#fff', border: 0, borderRadius: 8, padding: '0.6rem 1rem', cursor: 'pointer' }}>로그인</button>
+              <button onClick={() => handleAuth('signup')} disabled={loading} style={{ background: '#1f293d', color: '#fff', border: '1px solid #374151', borderRadius: 8, padding: '0.6rem 1rem', cursor: 'pointer' }}>회원가입</button>
+            </div>
+            {authMessage && <p style={{ margin: '0.75rem 0 0', color: '#fbbf24', fontSize: '0.85rem' }}>{authMessage}</p>}
+          </section>
+        )}
+        {session && authMessage && (
+          <div role="status" style={{ background: 'rgba(245, 158, 11, 0.12)', border: '1px solid rgba(245, 158, 11, 0.35)', color: '#fbbf24', borderRadius: 10, padding: '0.75rem 1rem', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between' }}>
+            <span>{authMessage}</span>
+            <button onClick={() => setAuthMessage('')} aria-label="메시지 닫기" style={{ background: 'transparent', border: 0, color: '#fbbf24', cursor: 'pointer' }}>×</button>
+          </div>
+        )}
 
         {/* Interactive Stats Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginBottom: '2rem' }}>
