@@ -12,7 +12,7 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- React & Babel CDNs for standalone file:// opening -->
+  <!-- React & Babel CDNs -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -122,24 +122,48 @@
       padding: 2rem;
     }
 
-    .stats-grid {
+    /* Interactive Stats & Visual Chart Section */
+    .interactive-dashboard {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.25rem;
       margin-bottom: 2rem;
     }
 
-    .stat-card {
+    .stat-card-interactive {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1.25rem;
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .stat-label {
-      font-size: 0.85rem;
+    .stat-card-interactive:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-primary);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+    }
+
+    .stat-card-interactive.active {
+      border-color: var(--accent-cyan);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(17, 24, 39, 0.95));
+      box-shadow: 0 0 0 2px var(--accent-cyan);
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-title {
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 0.4rem;
+      font-weight: 600;
       display: flex;
       align-items: center;
       gap: 0.4rem;
@@ -149,6 +173,86 @@
       font-size: 1.8rem;
       font-weight: 800;
       color: #fff;
+    }
+
+    /* Category Visual Distribution Chart */
+    .chart-container-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .chart-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .chart-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .category-bars-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .cat-bar-item {
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .cat-bar-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .cat-bar-item.active {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid var(--accent-primary);
+    }
+
+    .cat-info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease-out;
+    }
+
+    .active-filter-banner {
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.6rem 1.25rem;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--accent-cyan);
+      font-size: 0.88rem;
     }
 
     .toolbar {
@@ -215,18 +319,9 @@
       transition: all 0.2s;
     }
 
-    .btn:hover {
-      background: var(--accent-primary-hover);
-    }
-
-    .btn-secondary {
-      background: var(--border-color);
-      color: var(--text-muted);
-    }
-
-    .btn-cyan {
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-primary));
-    }
+    .btn:hover { background: var(--accent-primary-hover); }
+    .btn-secondary { background: var(--border-color); color: var(--text-muted); }
+    .btn-cyan { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-primary)); }
 
     .table-container {
       background: var(--bg-card);
@@ -255,8 +350,6 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    tr:last-child td { border-bottom: none; }
-
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -279,27 +372,9 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .form-group input {
-      width: 100%;
-      background: var(--code-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 0.6rem 1rem;
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-    }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .form-group input { width: 100%; background: var(--code-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.6rem 1rem; color: #fff; font-size: 0.95rem; outline: none; }
   </style>
 </head>
 <body>
@@ -308,7 +383,6 @@
   <script type="text/babel">
     const { useState, useEffect } = React;
 
-    // Supabase Live Client Setup
     const SUPABASE_URL = "https://apwjwaryrlpqmdabilvu.supabase.co";
     const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwd2p3YXJ5cmxwcW1kYWJpbHZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY0OTY2NjcsImV4cCI6MjEwMjA3MjY2N30.LLz1pxuo70srzLGRckNAPLIvgzb9rDeP8ZjWLx7ZH08";
     const supabaseClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
@@ -321,10 +395,13 @@
       { id: '5', item_code: 'AGY-TEST-005', name: '알루미늄 프레임 거치대 (대형)', category: '외장재', stock_quantity: 85, safety_stock: 20, unit_price: 35000, warehouse_location: '창고 A-08', status: 'NORMAL' },
     ];
 
+    const COLOR_PALETTE = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#06b6d4', '#ec4899'];
+
     function App() {
       const [items, setItems] = useState(INITIAL_ITEMS);
       const [searchTerm, setSearchTerm] = useState('');
       const [selectedCategory, setSelectedCategory] = useState('ALL');
+      const [selectedStatusFilter, setSelectedStatusFilter] = useState('ALL'); // 'ALL' | 'LOW_STOCK' | 'NORMAL'
       const [loading, setLoading] = useState(false);
       const [isLiveConnected, setIsLiveConnected] = useState(false);
 
@@ -336,15 +413,8 @@
       // Form States
       const [txType, setTxType] = useState('INBOUND');
       const [changeQty, setChangeQty] = useState(1);
-
       const [newItem, setNewItem] = useState({
-        item_code: '',
-        name: '',
-        category: '전자부품',
-        stock_quantity: 10,
-        safety_stock: 5,
-        unit_price: 30000,
-        warehouse_location: '창고 A-01'
+        item_code: '', name: '', category: '전자부품', stock_quantity: 10, safety_stock: 5, unit_price: 30000, warehouse_location: '창고 A-01'
       });
 
       const fetchLiveItems = async () => {
@@ -426,51 +496,159 @@
         }
       };
 
+      // Filtered List
       const filtered = items.filter(i => {
         const matchesSearch = i.name.includes(searchTerm) || i.item_code.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'ALL' || i.category === selectedCategory;
-        return matchesSearch && matchesCategory;
+        const isLow = (i.stock_quantity || 0) < (i.safety_stock || 0);
+        const matchesStatus = selectedStatusFilter === 'ALL' 
+          || (selectedStatusFilter === 'LOW_STOCK' && isLow)
+          || (selectedStatusFilter === 'NORMAL' && !isLow);
+
+        return matchesSearch && matchesCategory && matchesStatus;
       });
 
+      // Global Stats
       const totalStock = items.reduce((acc, i) => acc + (i.stock_quantity || 0), 0);
       const lowStockCount = items.filter(i => (i.stock_quantity || 0) < (i.safety_stock || 0)).length;
+      const normalStockCount = items.length - lowStockCount;
       const totalValuation = items.reduce((acc, i) => acc + ((i.stock_quantity || 0) * (i.unit_price || 0)), 0);
-      const categories = ['ALL', ...Array.from(new Set(items.map(i => i.category)))];
+
+      // Category Stock Analytics Chart Calculation
+      const categoryMap = {};
+      items.forEach(i => {
+        const cat = i.category || '기타';
+        categoryMap[cat] = (categoryMap[cat] || 0) + (i.stock_quantity || 0);
+      });
+      const categoryList = Object.keys(categoryMap).map((catName, idx) => ({
+        name: catName,
+        count: categoryMap[catName],
+        percentage: totalStock > 0 ? Math.round((categoryMap[catName] / totalStock) * 100) : 0,
+        color: COLOR_PALETTE[idx % COLOR_PALETTE.length]
+      })).sort((a, b) => b.count - a.count);
+
+      const allCategoriesDropdown = ['ALL', ...Array.from(new Set(items.map(i => i.category)))];
+
+      const clearAllFilters = () => {
+        setSelectedCategory('ALL');
+        setSelectedStatusFilter('ALL');
+        setSearchTerm('');
+      };
 
       return (
         <div>
           <header>
             <div className="brand">
-              <div className="brand-icon"><i className="fa-solid fa-boxes-stacked"></i></div>
+              <div className="brand-icon"><i className="fa-solid fa-chart-pie"></i></div>
               <div className="brand-text">
-                <h1>안티그래비티 재고관리 시스템</h1>
-                <p>Orca 스탠드얼론 파일(index.html) 직접 수정 및 조작 모드</p>
+                <h1>안티그래비티 대시보드 (인터랙티브 차트 모드)</h1>
+                <p>차트 / 카드를 클릭하면 하단 재고 테이블이 즉시 인터랙티브하게 필터링됩니다</p>
               </div>
             </div>
             <div className={`badge ${isLiveConnected ? 'badge-success' : 'badge-warning'}`}>
               <i className="fa-solid fa-database"></i>
-              {isLiveConnected ? 'Supabase DB 실시간 연동 완료' : 'StandAlone 로컬 테스트 모드'}
+              {isLiveConnected ? 'Supabase DB 실시간 연동' : 'StandAlone 차트 모드'}
             </div>
           </header>
 
           <main>
-            {/* Stat Cards */}
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-label">전체 보유 재고량</div>
+            {/* Interactive Stats Card Grid */}
+            <div className="interactive-dashboard">
+              <div 
+                className={`stat-card-interactive ${selectedStatusFilter === 'ALL' && selectedCategory === 'ALL' ? 'active' : ''}`}
+                onClick={clearAllFilters}
+              >
+                <div className="stat-header">
+                  <span className="stat-title"><i className="fa-solid fa-boxes-stacked" style={{color: '#3b82f6'}}></i> 전체 보유 재고</span>
+                  <span style={{fontSize: '0.72rem', color: '#3b82f6', background: 'rgba(59,130,246,0.15)', padding: '0.15rem 0.5rem', borderRadius: 10}}>클릭 시 전체보기</span>
+                </div>
                 <div className="stat-val">{totalStock.toLocaleString()} <span style={{fontSize: '1rem', color: '#6b7280'}}>개</span></div>
+                <div style={{fontSize: '0.78rem', color: '#9ca3af', marginTop: '0.4rem'}}>총 {items.length}개 품목 보유 중</div>
               </div>
-              <div className="stat-card" style={{borderColor: lowStockCount > 0 ? 'rgba(239,68,68,0.5)' : ''}}>
-                <div className="stat-label" style={{color: lowStockCount > 0 ? '#f87171' : ''}}>
-                  <i className="fa-solid fa-triangle-exclamation"></i> 안전재고 부족 품목
+
+              <div 
+                className={`stat-card-interactive ${selectedStatusFilter === 'LOW_STOCK' ? 'active' : ''}`}
+                onClick={() => { setSelectedStatusFilter(selectedStatusFilter === 'LOW_STOCK' ? 'ALL' : 'LOW_STOCK'); }}
+              >
+                <div className="stat-header">
+                  <span className="stat-title" style={{color: lowStockCount > 0 ? '#f87171' : ''}}>
+                    <i className="fa-solid fa-triangle-exclamation" style={{color: '#ef4444'}}></i> 안전재고 부족 품목
+                  </span>
+                  <span style={{fontSize: '0.72rem', color: '#ef4444', background: 'rgba(239,68,68,0.15)', padding: '0.15rem 0.5rem', borderRadius: 10}}>클릭 시 필터</span>
                 </div>
                 <div className="stat-val" style={{color: lowStockCount > 0 ? '#ef4444' : '#fff'}}>{lowStockCount} <span style={{fontSize: '1rem', color: '#6b7280'}}>개 경고</span></div>
+                <div style={{fontSize: '0.78rem', color: '#f87171', marginTop: '0.4rem'}}>재고 보충이 필요한 상품만 필터링</div>
               </div>
-              <div className="stat-card">
-                <div className="stat-label">총 재고 자산 평가액</div>
+
+              <div 
+                className="stat-card-interactive"
+                onClick={() => alert(`총 자산가치: ₩${totalValuation.toLocaleString()}`)}
+              >
+                <div className="stat-header">
+                  <span className="stat-title"><i className="fa-solid fa-vault" style={{color: '#60a5fa'}}></i> 총 재고 자산 평가액</span>
+                  <span style={{fontSize: '0.72rem', color: '#60a5fa', background: 'rgba(96,165,250,0.15)', padding: '0.15rem 0.5rem', borderRadius: 10}}>자산 평가</span>
+                </div>
                 <div className="stat-val" style={{color: '#60a5fa'}}>₩{totalValuation.toLocaleString()}</div>
+                <div style={{fontSize: '0.78rem', color: '#9ca3af', marginTop: '0.4rem'}}>단가 × 수량 통합 집계</div>
               </div>
             </div>
+
+            {/* Visual Interactive Category Distribution Bar Chart */}
+            <div className="chart-container-box">
+              <div className="chart-title-row">
+                <div className="chart-title">
+                  <i className="fa-solid fa-chart-column" style={{color: '#06b6d4'}}></i> 카테고리별 재고 분포 (바 클릭 시 자동 필터링)
+                </div>
+                {selectedCategory !== 'ALL' && (
+                  <button className="btn btn-secondary" style={{fontSize: '0.75rem', padding: '0.25rem 0.65rem'}} onClick={() => setSelectedCategory('ALL')}>
+                    <i className="fa-solid fa-xmark"></i> 필터 해제
+                  </button>
+                )}
+              </div>
+
+              <div className="category-bars-grid">
+                {categoryList.map(cat => {
+                  const isSelected = selectedCategory === cat.name;
+                  return (
+                    <div 
+                      key={cat.name} 
+                      className={`cat-bar-item ${isSelected ? 'active' : ''}`}
+                      onClick={() => setSelectedCategory(isSelected ? 'ALL' : cat.name)}
+                    >
+                      <div className="cat-info-row">
+                        <span style={{fontWeight: 600, color: isSelected ? '#38bdf8' : '#fff'}}>
+                          {cat.name} {isSelected && <span style={{fontSize: '0.75rem', color: '#06b6d4'}}>(선택됨)</span>}
+                        </span>
+                        <span style={{color: '#9ca3af', fontFamily: 'Fira Code'}}>
+                          {cat.count.toLocaleString()} 개 ({cat.percentage}%)
+                        </span>
+                      </div>
+                      <div className="progress-track">
+                        <div 
+                          className="progress-fill" 
+                          style={{width: `${cat.percentage}%`, background: cat.color}}
+                        ></div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Active Filter Banner */}
+            {(selectedCategory !== 'ALL' || selectedStatusFilter !== 'ALL' || searchTerm !== '') && (
+              <div className="active-filter-banner">
+                <span>
+                  <i className="fa-solid fa-filter"></i> 현재 적용된 인터랙티브 필터: 
+                  {selectedCategory !== 'ALL' && <strong> [카테고리: {selectedCategory}]</strong>}
+                  {selectedStatusFilter !== 'ALL' && <strong> [상태: {selectedStatusFilter === 'LOW_STOCK' ? '재고부족' : '정상'}]</strong>}
+                  {searchTerm !== '' && <strong> [검색: "{searchTerm}"]</strong>}
+                </span>
+                <button className="btn btn-secondary" style={{fontSize: '0.75rem', padding: '0.25rem 0.65rem'}} onClick={clearAllFilters}>
+                  전체 필터 초기화
+                </button>
+              </div>
+            )}
 
             {/* Toolbar */}
             <div className="toolbar">
@@ -485,7 +663,7 @@
               </div>
 
               <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
-                {categories.map(c => <option key={c} value={c}>{c === 'ALL' ? '전체 카테고리' : c}</option>)}
+                {allCategoriesDropdown.map(c => <option key={c} value={c}>{c === 'ALL' ? '전체 카테고리' : c}</option>)}
               </select>
 
               <div style={{display: 'flex', gap: '0.75rem'}}>
@@ -511,7 +689,7 @@
                 </thead>
                 <tbody>
                   {filtered.length === 0 ? (
-                    <tr><td colSpan="8" style={{textAlign: 'center', padding: '3rem', color: '#6b7280'}}>등록된 품목이 없습니다.</td></tr>
+                    <tr><td colSpan="8" style={{textAlign: 'center', padding: '3rem', color: '#6b7280'}}>필터링된 조건의 품목이 없습니다.</td></tr>
                   ) : (
                     filtered.map(item => {
                       const isLow = (item.stock_quantity || 0) < (item.safety_stock || 0);
@@ -527,9 +705,13 @@
                           <td style={{color: '#e5e7eb'}}>₩{(item.unit_price || 0).toLocaleString()}</td>
                           <td>
                             {isLow ? (
-                              <span className="badge badge-danger"><i className="fa-solid fa-triangle-exclamation"></i> 재고부족</span>
+                              <span className="badge badge-danger" onClick={() => setSelectedStatusFilter('LOW_STOCK')} style={{cursor: 'pointer'}} title="클릭하여 재고부족 품목만 필터링">
+                                <i className="fa-solid fa-triangle-exclamation"></i> 재고부족
+                              </span>
                             ) : (
-                              <span className="badge badge-success"><i className="fa-solid fa-check"></i> 정상</span>
+                              <span className="badge badge-success" onClick={() => setSelectedStatusFilter('NORMAL')} style={{cursor: 'pointer'}} title="클릭하여 정상 품목만 필터링">
+                                <i className="fa-solid fa-check"></i> 정상
+                              </span>
                             )}
                           </td>
                           <td style={{textAlign: 'right'}}>
