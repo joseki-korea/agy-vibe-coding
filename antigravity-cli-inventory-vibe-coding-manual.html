@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v6.5 Final Master)</title>
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v7.0 Ultimate)</title>
   <!-- Google Fonts: Pretendard & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -415,71 +415,33 @@
       font-family: "Fira Code", monospace;
     }
 
-    /* Timeline Box */
-    .timeline-container {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item {
-      display: flex;
-      gap: 1.25rem;
-      padding-bottom: 1.25rem;
-      position: relative;
-    }
-
-    .timeline-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .timeline-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 19px;
-      top: 36px;
-      bottom: 0;
-      width: 2px;
-      background: var(--border-color);
-    }
-
-    .timeline-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid var(--accent-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-primary);
-      font-weight: 700;
-      flex-shrink: 0;
-      z-index: 2;
-    }
-
-    .timeline-content {
-      flex: 1;
-    }
-
-    .timeline-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .timeline-time {
-      font-size: 0.82rem;
-      color: var(--accent-success);
-      background: rgba(16, 185, 129, 0.15);
-      padding: 0.2rem 0.6rem;
+    /* Prompt Box */
+    .prompt-box {
+      background: linear-gradient(135deg, rgba(13, 19, 34, 0.95), rgba(17, 24, 39, 0.95));
+      border: 1px solid rgba(59, 130, 246, 0.3);
       border-radius: 12px;
-      font-weight: 600;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .prompt-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .prompt-text {
+      color: #f3f4f6;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
     /* Floating Action Bar */
@@ -536,13 +498,14 @@
       </div>
       <div class="brand-text">
         <h1>Antigravity CLI</h1>
-        <p>Vibe Masterclass v6.5 Table</p>
+        <p>Vibe Masterclass v7.0 Ultimate</p>
       </div>
     </div>
 
     <div class="nav-group-title">비개발자 입문 기초</div>
     <ul class="nav-menu">
       <li class="nav-item"><a href="#sec-timeline" class="active"><i class="fa-solid fa-table"></i> ⏱️ 소요시간 총괄 표</a></li>
+      <li class="nav-item"><a href="#sec-agy-install"><i class="fa-solid fa-download"></i> 0. 안티그래비티 CLI 가입 & 설치</a></li>
       <li class="nav-item"><a href="#sec-glossary"><i class="fa-solid fa-book-open"></i> 1. 쉬운 개념 용어집</a></li>
       <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 2. GitHub Token & CLI 세팅</a></li>
       <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 3. Supabase Key & Project URL</a></li>
@@ -568,8 +531,8 @@
 
     <div class="nav-group-title" style="margin-top: auto;">System Status</div>
     <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
-      <i class="fa-solid fa-circle-check"></i> AGY Engine v6.5 Table Ready<br>
-      <span style="color: var(--text-dim);">10-Min Execution Time Table Printed</span>
+      <i class="fa-solid fa-circle-check"></i> AGY Engine v7.0 Ultimate<br>
+      <span style="color: var(--text-dim);">Antigravity CLI Installation Section Active</span>
     </div>
   </aside>
 
@@ -579,20 +542,20 @@
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-badge">
-        <i class="fa-solid fa-stopwatch"></i> ⏱️ 총 소요시간: 단 10분! (매뉴얼 북 총괄 요약 표 명시)
+        <i class="fa-solid fa-rocket"></i> 안티그래비티 CLI 가입·설치부터 배포까지 총 12분 완성 (v7.0)
       </div>
       <h1 class="hero-title">
-        GitHub + Supabase + Cloudflare<br>
-        <span>단 10분 만에 완성하는 바이브 코딩 풀스택 앱</span>
+        Antigravity CLI + GitHub + Supabase + Cloudflare<br>
+        <span>단 12분 만에 완벽 정복하는 바이브 코딩 마스터북</span>
       </h1>
       <p class="hero-desc">
-        아이디어 구상부터 로컬 앱 생성, Supabase 백엔드 연동, 자연어 DB 구축, Cloudflare Pages 프로덕션 무료 배포까지 **전체 프로세스가 단 10분 만에 완료**되는 완전 가이드입니다.
+        안티그래비티 CLI 설치부터 가입, 로컬 앱 바이브 코딩, Supabase 자연어 DB 제어, Cloudflare 무제한 무료 배포까지 **처음 접하는 비개발자도 12분 만에 완벽 구현**하는 종결판 매뉴얼입니다.
       </p>
 
       <div class="hero-stats">
-        <div class="stat-item"><i class="fa-solid fa-clock"></i> 총 소요시간: 약 10분</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 매뉴얼 북 총괄 요약 표 수록</div>
-        <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 라이브 무제한 배포 완료</div>
+        <div class="stat-item"><i class="fa-solid fa-clock"></i> 총 소요시간: 약 12분 (CLI 설치 포함)</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 안티그래비티 CLI 원클릭 가입·설치 포함</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 100% 프로덕션 무제한 무료 배포</div>
       </div>
     </header>
 
@@ -600,7 +563,7 @@
     <section id="sec-timeline" class="doc-section">
       <div class="section-header">
         <div class="section-number">⏱️</div>
-        <h2 class="section-title">전체 바이브 코딩 단계별 소요 시간 총괄 표 (총 10분)</h2>
+        <h2 class="section-title">전체 바이브 코딩 단계별 소요 시간 총괄 표 (총 12분)</h2>
       </div>
 
       <!-- Explicit Summary Table -->
@@ -614,6 +577,11 @@
             </tr>
           </thead>
           <tbody>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(59, 130, 246, 0.04);">
+              <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-purple);">0단계 (신규)</td>
+              <td style="padding: 0.9rem 1.25rem; color: #fff; font-weight: 600;">안티그래비티 CLI 가입 & 설치 (<code>npm install -g agy</code> & <code>agy login</code>)</td>
+              <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-cyan); font-weight: 700;">약 2분</td>
+            </tr>
             <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
               <td style="padding: 0.9rem 1.25rem; font-weight: 700; color: var(--accent-cyan);">1단계</td>
               <td style="padding: 0.9rem 1.25rem; color: #f3f4f6;">GitHub CLI 로그인 및 계정 인증 (<code>gh auth login</code> 1초 원클릭)</td>
@@ -645,92 +613,63 @@
               <td style="padding: 0.9rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 700;">약 2분</td>
             </tr>
             <tr style="background: rgba(16, 185, 129, 0.12);">
-              <td colSpan="2" style="padding: 1rem 1.25rem; font-weight: 800; color: #fff; text-align: right;">🚀 아이디어 구상부터 프로덕션 배포 완료까지 총 소요 시간:</td>
-              <td style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 800; font-size: 1.15rem;">총 10분!</td>
+              <td colSpan="2" style="padding: 1rem 1.25rem; font-weight: 800; color: #fff; text-align: right;">🚀 CLI 가입/설치부터 라이브 배포까지 총 소요 시간:</td>
+              <td style="padding: 1rem 1.25rem; text-align: center; color: var(--accent-success); font-weight: 800; font-size: 1.15rem;">총 12분!</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
 
-      <!-- Timeline visual -->
-      <div class="timeline-container">
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-brands fa-github"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              1단계: GitHub CLI 1초 웹 인증 (`gh auth login`)
-              <span class="timeline-time">소요시간: 1분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              PAT 복사 없이 <code>gh auth login</code> 명령어로 1초 만에 계정 인증 완료
-            </p>
+    <!-- NEW SECTION 0: ANTIGRAVITY CLI INSTALL & SIGNUP -->
+    <section id="sec-agy-install" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">0</div>
+        <h2 class="section-title">안티그래비티(Antigravity) CLI 회원가입 및 내 컴퓨터 설치 방법</h2>
+      </div>
+
+      <div class="step-box" style="border-left: 4px solid var(--accent-purple);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-purple);">STEP 0-1</span>
+          <span class="step-box-title">안티그래비티 CLI 패키지 설치</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;">
+          내 맥북(Mac) 또는 윈도우 컴퓨터 터미널에서 아래 설치 명령어를 실행합니다.
+        </p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-terminal"></i> Terminal</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           </div>
+          <pre><code># npm 패키지 매니저로 글로벌 설치
+npm install -g agy
+
+# 설치 확인
+agy --version</code></pre>
+        </div>
+      </div>
+
+      <div class="step-box" style="border-left: 4px solid var(--accent-cyan);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-cyan);">STEP 0-2</span>
+          <span class="step-box-title">계정 회원가입 및 1초 로그인 (`agy login`)</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;">
+          터미널에 <code>agy login</code> 명령어를 입력하면 자동으로 브라우저 창이 열리며 Google 계정으로 1초 만에 무료 회원가입 및 승인이 끝납니다.
+        </p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-terminal"></i> Terminal</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <pre><code>agy login</code></pre>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-database"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              2단계: Supabase 무료 프로젝트 생성 & Key 가져오기
-              <span class="timeline-time">소요시간: 2분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              프로젝트 생성 및 Project URL, Anon Key 복사하여 <code>.env.local</code>에 설정
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-cloud"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              3단계: Cloudflare CLI 인증 (`npx wrangler login`)
-              <span class="timeline-time">소요시간: 1분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              웹 브라우저가 자동으로 열리며 <strong>[Allow / 승인]</strong> 버튼 1초 만에 클릭
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-code"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              4단계: Phase 1 로컬 앱 생성 (React UI 대시보드)
-              <span class="timeline-time">소요시간: 2분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              안티그래비티 CLI가 프롬프트를 해석하여 Vite + React 프로젝트 패키지 자동 설치
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-server"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              5단계: Phase 2 Supabase 연동 & SQL 테이블 스키마 자동 구축
-              <span class="timeline-time">소요시간: 2분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              SQL 스크립트 실행 및 Supabase SDK 연결 코드를 CLI가 자가 생성
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-          <div class="timeline-content">
-            <div class="timeline-title">
-              6단계: Phase 3 Cloudflare Pages 원클릭 프로덕션 무제한 무료 배포
-              <span class="timeline-time">소요시간: 2분</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem;">
-              <code>npm run build</code> 검증 후 <code>npx wrangler pages deploy</code>로 라이브 주소 생성
-            </p>
-          </div>
-        </div>
+        <p style="color: var(--accent-success); font-weight: 600; font-size: 0.88rem; margin-top: 0.5rem;">
+          <i class="fa-solid fa-circle-check"></i> 인증 성공 메시지: "Successfully logged in to Antigravity AI Engine!"
+        </p>
       </div>
     </section>
 
@@ -1159,7 +1098,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
         <div style="font-size: 0.9rem; color: var(--text-muted);">
           · <code>feat:</code> 신규 기능 구현 (예: <code>feat: add stock movement modal</code>)<br>
           · <code>fix:</code> 버그 자가 치유 수정 (예: <code>fix: resolve 404 routing issue</code>)<br>
-          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v6.5</code>)
+          · <code>docs:</code> 매뉴얼 및 문서 업데이트 (예: <code>docs: update vibe manual v7.0</code>)
         </div>
       </div>
 
@@ -1172,9 +1111,9 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory</code></pre>
     <!-- Sticky Footer -->
     <div class="quick-action-bar">
       <div style="font-size: 0.85rem; color: var(--text-muted);">
-        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v6.5 Final Master: ⏱️ 10분 소요시간 총괄 표 명시 완료
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> v7.0 Ultimate: 안티그래비티 CLI 회원가입 & 설치 가이드 수록 완료
       </div>
-      <a href="#sec-timeline" class="btn"><i class="fa-solid fa-table"></i> 요약 표 보기</a>
+      <a href="#sec-agy-install" class="btn"><i class="fa-solid fa-download"></i> CLI 설치 가이드</a>
     </div>
 
   </main>
