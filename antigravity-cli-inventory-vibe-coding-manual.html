@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>안티그래비티 CLI 100% 활용: GitHub + Supabase + Cloudflare 바이브 코딩 마스터 매뉴얼 (v2.5)</title>
+  <!-- Google Fonts: Pretendard & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --bg-card: #111827;
+      --bg-card-hover: #1f293d;
+      --bg-sidebar: #0d1322;
+      --border-color: #1f293d;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      --accent-primary: #3b82f6;
+      --accent-primary-hover: #2563eb;
+      --accent-success: #10b981;
+      --accent-warning: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-cyan: #06b6d4;
+      --accent-pink: #ec4899;
+      --code-bg: #090d16;
+      --sidebar-width: 310px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    aside.sidebar {
+      width: var(--sidebar-width);
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      z-index: 100;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-purple));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .nav-group-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      font-weight: 700;
+      margin: 1.25rem 0 0.5rem 0.5rem;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.55rem 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .nav-item a:hover, .nav-item a.active {
+      background-color: rgba(59, 130, 246, 0.12);
+      color: #fff;
+    }
+
+    .nav-item a.active {
+      color: var(--accent-primary);
+      font-weight: 600;
+      border-left: 3px solid var(--accent-primary);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .nav-item i {
+      width: 18px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Main Content Area */
+    main.main-content {
+      margin-left: var(--sidebar-width);
+      flex: 1;
+      padding: 2.5rem 3.5rem;
+      max-width: 1200px;
+    }
+
+    /* Header Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%),
+                  radial-gradient(circle at top right, rgba(139, 92, 246, 0.2), transparent 60%);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #c084fc;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #60a5fa, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.25rem;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .stat-item i {
+      color: var(--accent-success);
+    }
+
+    /* Section Component */
+    .doc-section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-number {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-primary);
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    /* Concept & Token Card Grids */
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .token-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .token-card.github { border-top: 3px solid #24292e; }
+    .token-card.supabase { border-top: 3px solid var(--accent-success); }
+    .token-card.cloudflare { border-top: 3px solid var(--accent-warning); }
+
+    .token-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .token-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .token-meta {
+      background: rgba(0,0,0,0.3);
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-family: "Fira Code", monospace;
+    }
+
+    .token-meta-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.35rem;
+    }
+
+    .token-meta-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .token-meta-label { color: var(--text-dim); }
+    .token-meta-val { color: var(--accent-cyan); font-weight: 600; }
+
+    /* Code Blocks */
+    .code-container {
+      background-color: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin: 1.25rem 0;
+      overflow: hidden;
+    }
+
+    .code-header {
+      background-color: rgba(255, 255, 255, 0.03);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: "Fira Code", monospace;
+    }
+
+    .code-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-primary);
+      color: #fff;
+      border-color: var(--accent-primary);
+    }
+
+    pre {
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: "Fira Code", monospace;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #e5e7eb;
+    }
+
+    code {
+      font-family: "Fira Code", monospace;
+    }
+
+    .inline-code {
+      background-color: rgba(59, 130, 246, 0.12);
+      color: #93c5fd;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-family: "Fira Code", monospace;
+    }
+
+    /* Callouts & Alert Boxes */
+    .callout {
+      border-left: 4px solid var(--accent-primary);
+      background: rgba(59, 130, 246, 0.08);
+      border-radius: 0 10px 10px 0;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .callout.tip {
+      border-left-color: var(--accent-success);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .callout.warning {
+      border-left-color: var(--accent-warning);
+      background: rgba(245, 158, 11, 0.08);
+    }
+
+    .callout.danger {
+      border-left-color: #ef4444;
+      background: rgba(239, 68, 68, 0.08);
+    }
+
+    .callout.purple {
+      border-left-color: var(--accent-purple);
+      background: rgba(139, 92, 246, 0.08);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .callout.tip .callout-title { color: var(--accent-success); }
+    .callout.warning .callout-title { color: var(--accent-warning); }
+    .callout.danger .callout-title { color: #f87171; }
+    .callout.purple .callout-title { color: var(--accent-purple); }
+    .callout .callout-title { color: var(--accent-primary); }
+
+    .callout-content {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Step-by-Step UI Guide Box */
+    .step-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-box-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-badge {
+      background: var(--accent-primary);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .step-box-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .step-path {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--accent-cyan);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: "Fira Code", monospace;
+    }
+
+    /* Prompt Box */
+    .prompt-box {
+      background: linear-gradient(135deg, rgba(13, 19, 34, 0.95), rgba(17, 24, 39, 0.95));
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.25rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .prompt-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .prompt-text {
+      color: #f3f4f6;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: inherit;
+    }
+
+    /* Floating Action Bar */
+    .quick-action-bar {
+      position: sticky;
+      bottom: 20px;
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      margin-top: 3rem;
+      z-index: 90;
+    }
+
+    .btn {
+      background: var(--accent-primary);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--accent-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Color Tokens for Fake Highlighting */
+    .token-keyword { color: #f43f5e; }
+    .token-string { color: #10b981; }
+    .token-comment { color: #6b7280; font-style: italic; }
+    .token-function { color: #60a5fa; }
+    .token-number { color: #fbbf24; }
+
+    @media (max-width: 900px) {
+      aside.sidebar { display: none; }
+      main.main-content { margin-left: 0; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">
+        <i class="fa-solid fa-rocket"></i>
+      </div>
+      <div class="brand-text">
+        <h1>Antigravity CLI</h1>
+        <p>Vibe Masterclass v2.5</p>
+      </div>
+    </div>
+
+    <div class="nav-group-title">비개발자 입문 기초</div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#sec-glossary" class="active"><i class="fa-solid fa-book-open"></i> 1. 쉬운 개념 용어집</a></li>
+      <li class="nav-item"><a href="#sec-github-auth"><i class="fa-brands fa-github"></i> 2. GitHub Token & CLI 세팅</a></li>
+      <li class="nav-item"><a href="#sec-supabase-auth"><i class="fa-solid fa-database"></i> 3. Supabase Key & URL 발급</a></li>
+      <li class="nav-item"><a href="#sec-cloudflare-auth"><i class="fa-solid fa-cloud"></i> 4. Cloudflare Token & Wrangler</a></li>
+      <li class="nav-item"><a href="#sec-env-secrets"><i class="fa-solid fa-key"></i> 5. .env 파일 & Secrets 관리</a></li>
+    </ul>
+
+    <div class="nav-group-title">자연어 DB 제어 세팅</div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#sec-natural-db"><i class="fa-solid fa-wand-magic-sparkles"></i> 6. 자연어 DB CRUD 세팅 (MCP)</a></li>
+    </ul>
+
+    <div class="nav-group-title">실전 바이브 코딩</div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#sec-phase1"><i class="fa-solid fa-code"></i> 7. Phase 1: 로컬 앱 생성</a></li>
+      <li class="nav-item"><a href="#sec-phase2"><i class="fa-solid fa-server"></i> 8. Phase 2: DB 스키마 구축</a></li>
+      <li class="nav-item"><a href="#sec-phase3"><i class="fa-solid fa-cloud-arrow-up"></i> 9. Phase 3: Cloudflare 배포</a></li>
+      <li class="nav-item"><a href="#sec-cheatsheet"><i class="fa-solid fa-paste"></i> 10. 올인원 프롬프트 복사</a></li>
+    </ul>
+
+    <div class="nav-group-title" style="margin-top: auto;">System Status</div>
+    <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.78rem; color: var(--accent-success);">
+      <i class="fa-solid fa-circle-check"></i> AGY Engine Ready<br>
+      <span style="color: var(--text-dim);">Supabase Natural DB Enabled</span>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Hero Banner -->
+    <header class="hero-banner">
+      <div class="hero-badge">
+        <i class="fa-solid fa-graduation-cap"></i> 비개발자 · 입문자 맞춤형 가이드 v2.5
+      </div>
+      <h1 class="hero-title">
+        GitHub + Supabase + Cloudflare<br>
+        <span>자연어 DB 제어 & 재고관리 바이브 코딩</span>
+      </h1>
+      <p class="hero-desc">
+        PAT, Anon Key, API Token이 무엇인지 모르는 입문자도 따라 할 수 있는 가이드입니다. 특히 <strong>안티그래비티 CLI에 말 한마디만 하면 Supabase 테이블을 생성/수정/삭제하고 데이터까지 자유롭게 조작하는 3가지 세팅법</strong>을 공개합니다.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 개념 100% 쉽게 풀이</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> Supabase MCP 자연어 DB 연동</div>
+        <div class="stat-item"><i class="fa-solid fa-check"></i> 토큰/보안 키 유출 방지 노하우</div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: GLOSSARY -->
+    <section id="sec-glossary" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <h2 class="section-title">비개발자를 위한 핵심 인증 용어 1분 정리</h2>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">
+        개발을 몰라도 이 4가지 개념만 이해하면 세상의 모든 서버리스 앱을 만들 수 있습니다.
+      </p>
+
+      <div class="token-grid">
+        <div class="token-card github">
+          <div class="token-title"><i class="fa-solid fa-id-card"></i> PAT (Personal Access Token)</div>
+          <div class="token-desc">아이디/비밀번호 대신 사용하는 <strong>'컴퓨터 전용 신분증'</strong>입니다. 안티그래비티 CLI가 내 GitHub 계정을 대신해서 소스코드를 저장소에 올릴 때 사용합니다.</div>
+          <div class="token-meta">
+            <div class="token-meta-item"><span class="token-meta-label">예시:</span> <span class="token-meta-val">ghp_a1b2c3d4e5...</span></div>
+            <div class="token-meta-item"><span class="token-meta-label">보안등급:</span> <span class="token-meta-val" style="color: #ef4444;">최고 보안 (유출금지)</span></div>
+          </div>
+        </div>
+
+        <div class="token-card supabase">
+          <div class="token-title"><i class="fa-solid fa-key"></i> Anon Key vs Service Role Key</div>
+          <div class="token-desc">Supabase 데이터베이스에 들어갈 수 있는 <strong>'출입증'</strong>입니다.<br>
+          · <strong>Anon Key:</strong> 손님용 (브라우저에서 사용해도 안전)<br>
+          · <strong>Service Role Key:</strong> 마스터키 (절대 공개금지)</div>
+          <div class="token-meta">
+            <div class="token-meta-item"><span class="token-meta-label">예시:</span> <span class="token-meta-val">eyJhbGciOiJIUzI1...</span></div>
+            <div class="token-meta-item"><span class="token-meta-label">사용위치:</span> <span class="token-meta-val">.env.local / Cloudflare</span></div>
+          </div>
+        </div>
+
+        <div class="token-card cloudflare">
+          <div class="token-title"><i class="fa-solid fa-vault"></i> .env 파일 (환경변수 보관함)</div>
+          <div class="token-desc">비밀키나 서버 주소(URL)를 코드 안에 직접 적지 않고, <strong>'비밀 자금성 금고'</strong>처럼 텍스트 파일에 따로 모아두는 곳입니다.</div>
+          <div class="token-meta">
+            <div class="token-meta-item"><span class="token-meta-label">파일명:</span> <span class="token-meta-val">.env.local</span></div>
+            <div class="token-meta-item"><span class="token-meta-label">Git 차단:</span> <span class="token-meta-val">.gitignore 필수</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: GITHUB AUTH -->
+    <section id="sec-github-auth" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2 class="section-title">GitHub 환경 세팅 & CLI 인증 (`gh auth login`)</h2>
+      </div>
+
+      <div class="step-box">
+        <div class="step-box-header">
+          <span class="step-badge">STEP 1</span>
+          <span class="step-box-title">GitHub CLI 로그인 (가장 추천하는 1초 원클릭 방법)</span>
+        </div>
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-terminal"></i> Terminal</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <pre><code><span class="token-comment"># 1. GitHub CLI 설치 (Mac brew 예시)</span>
+brew install gh
+
+<span class="token-comment"># 2. 로그인 명령 실행</span>
+gh auth login</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SUPABASE AUTH -->
+    <section id="sec-supabase-auth" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <h2 class="section-title">Supabase Key & Project URL 발급 방법</h2>
+      </div>
+
+      <div class="step-box">
+        <div class="step-box-header">
+          <span class="step-badge">STEP 1</span>
+          <span class="step-box-title">Project URL과 Anon Key 가져오기</span>
+        </div>
+        <div class="step-path">
+          <i class="fa-solid fa-route"></i> Supabase 대시보드 로그인 → 내 프로젝트 선택 → Project Settings (톱니바퀴) → API 메뉴
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CLOUDFLARE AUTH -->
+    <section id="sec-cloudflare-auth" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <h2 class="section-title">Cloudflare API Token & Wrangler CLI 인증</h2>
+      </div>
+
+      <div class="step-box">
+        <div class="step-box-header">
+          <span class="step-badge">추천 방법</span>
+          <span class="step-box-title">`npx wrangler login` (1초 웹 브라우저 자동 인증)</span>
+        </div>
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-terminal"></i> Terminal</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <pre><code>npx wrangler login</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ENV & SECRETS -->
+    <section id="sec-env-secrets" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">5</div>
+        <h2 class="section-title">.env 파일 생성 및 Cloudflare 환경변수 등록</h2>
+      </div>
+
+      <div class="code-container">
+        <div class="code-header">
+          <span class="code-lang"><i class="fa-solid fa-file-code"></i> `.env.local`</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><code>VITE_SUPABASE_URL=<span class="token-string">https://your-project-id.supabase.co</span>
+VITE_SUPABASE_ANON_KEY=<span class="token-string">eyJhbGciOiJIUzI1NiIsInR5cCI6...your-anon-key...</span></code></pre>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 6: NATURAL LANGUAGE DB CONTROL -->
+    <section id="sec-natural-db" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">6</div>
+        <h2 class="section-title">안티그래비티 CLI로 자연어 DB 제어하기 (테이블 생성/수정/삭제 & CRUD 세팅)</h2>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        안티그래비티 CLI에게 **"products 테이블에 brand 컬럼 추가해줘"**, **"수량 0개인 제품 지워줘"**처럼 말하면 알아서 Supabase DB에 반영되도록 세팅하는 3가지 방법입니다.
+      </p>
+
+      <!-- Option 1: Supabase MCP -->
+      <div class="step-box" style="border-left: 4px solid var(--accent-purple);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-purple);">방법 1. 가장 스마트함</span>
+          <span class="step-box-title">Supabase MCP Server 연동 세팅</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;">
+          안티그래비티 MCP 설정 파일에 Supabase 토큰을 등록하여 에이전트가 직접 Supabase DB 툴을 전권 제어하는 방식입니다.
+        </p>
+
+        <div class="step-path">
+          <i class="fa-solid fa-folder"></i> 설정 파일 위치: <code>~/.gemini/antigravity-cli/mcp.json</code>
+        </div>
+
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-code"></i> mcp.json</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <pre><code>{
+  <span class="token-keyword">"mcpServers"</span>: {
+    <span class="token-keyword">"supabase"</span>: {
+      <span class="token-keyword">"command"</span>: <span class="token-string">"npx"</span>,
+      <span class="token-keyword">"args"</span>: [<span class="token-string">"-y"</span>, <span class="token-string">"@supabase/mcp-server-supabase@latest"</span>],
+      <span class="token-keyword">"env"</span>: {
+        <span class="token-keyword">"SUPABASE_ACCESS_TOKEN"</span>: <span class="token-string">"sbp_발급받은_액세스_토큰"</span>,
+        <span class="token-keyword">"SUPABASE_PROJECT_REF"</span>: <span class="token-string">"내_프로젝트_REF_코드"</span>
+      }
+    }
+  }
+}</code></pre>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title"><i class="fa-solid fa-comment"></i> MCP 세팅 후 사용할 수 있는 자연어 프롬프트 예시</div>
+          <div class="callout-content">
+            · 💬 <em>"products 테이블에 brand (문자열) 컬럼 새로 추가해줘"</em><br>
+            · 💬 <em>"orders 테이블 만들고 주문일자, 고객명, 총금액 컬럼 세팅해줘"</em><br>
+            · 💬 <em>"재고 수량이 0인 모든 상품 삭제해줘"</em>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option 2: Direct Connection String -->
+      <div class="step-box" style="border-left: 4px solid var(--accent-success);">
+        <div class="step-box-header">
+          <span class="step-badge" style="background: var(--accent-success);">방법 2. 가장 간단함</span>
+          <span class="step-box-title">DATABASE_URL (Direct Connection) `.env` 세팅</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;">
+          Supabase Direct PostgreSQL 연결 문자열을 `.env`에 등록해두면 안티그래비티 CLI가 터미널 SQL 커맨드로 즉시 DB를 조작합니다.
+        </p>
+
+        <div class="step-path">
+          <i class="fa-solid fa-route"></i> Supabase 대시보드 → Project Settings → Database → Connection String (Direct Connection URI)
+        </div>
+
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang"><i class="fa-solid fa-file-code"></i> `.env`</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <pre><code>DATABASE_URL=<span class="token-string">postgresql://postgres:내DB비밀번호@db.abcdefg.supabase.co:5432/postgres</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PHASE 1 -->
+    <section id="sec-phase1" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">7</div>
+        <h2 class="section-title">Phase 1: 로컬 재고관리 앱 바이브 코딩</h2>
+      </div>
+
+      <div class="prompt-box">
+        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> Step 1 프롬프트 (안티그래비티 CLI 입력용)</div>
+        <div class="prompt-text">Vite + React + Tailwind CSS 기반의 실시간 재고관리(Inventory Management) 앱을 생성해줘.
+
+[필수 구현 기능]
+1. 재고 목록 대시보드 (제품명, SKU 코드, 카테고리, 수량, 단가, 총 재고금액, 안전재고 수량)
+2. 재고 입출고(Inbound / Outbound) 기록 modal 및 수량 자동 계산
+3. 재고 부족 알림 경고 (안전재고 미만 제품 빨간색 하이라이트)
+4. SKU 코드/제품명 실시간 검색 및 카테고리 필터링
+5. 다크 모드가 적용된 대시보드 UI (Lucide Icons 포함)
+
+터미널 명령어를 직접 실행해서 프로젝트 폴더 세팅과 패키지 설치까지 모두 마쳐줘.</div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: PHASE 2 -->
+    <section id="sec-phase2" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">8</div>
+        <h2 class="section-title">Phase 2: Supabase 연동 & SQL 자동 구축</h2>
+      </div>
+
+      <div class="prompt-box">
+        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> Step 2 프롬프트 (안티그래비티 CLI 입력용)</div>
+        <div class="prompt-text">현재 재고관리 앱을 Supabase 백엔드와 연동해줘.
+
+1. @supabase/supabase-js 라이브러리를 설치해줘.
+2. Supabase DB 구축을 위한 SQL 스크립트(`supabase_schema.sql`)를 프로젝트 루트에 생성해줘:
+   - `products` 테이블: id, sku, name, category, quantity, min_quantity, unit_price, created_at
+   - `inventory_logs` 테이블: id, product_id, type('IN'|'OUT'), amount, reason, created_at
+   - Row Level Security(RLS) 정책 추가 (익명 읽기/쓰기 허용 정책)
+3. `.env.local` 파일에 VITE_SUPABASE_URL 및 VITE_SUPABASE_ANON_KEY 템플릿 생성해줘.
+4. 기존 로컬 mock 데이터를 Supabase 연동 코드(async fetch/insert/update)로 교체해줘.
+5. Supabase Realtime 구독을 추가해서 다른 클라이언트가 재고 변경 시 즉시 화면에 반영되게 해줘.</div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: PHASE 3 -->
+    <section id="sec-phase3" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">9</div>
+        <h2 class="section-title">Phase 3: Cloudflare Pages 원클릭 배포</h2>
+      </div>
+
+      <div class="prompt-box">
+        <div class="prompt-label"><i class="fa-solid fa-comment-dots"></i> Step 3 프롬프트 (안티그래비티 CLI 입력용)</div>
+        <div class="prompt-text">이 프로젝트를 Cloudflare Pages에 프로덕션 배포해줘.
+
+1. 먼저 `npm run build`를 실행해서 빌드 오류가 없는지 검증해줘. (오류가 있다면 스스로 수정해줘)
+2. `npx wrangler pages deploy ./dist --project-name=my-inventory-vibe` 명령을 실행해줘.
+3. 배포 성공 후 생성된 Cloudflare Pages 라이브 URL을 출력하고, 필요사항을 점검해줘.</div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: ALL IN ONE -->
+    <section id="sec-cheatsheet" class="doc-section">
+      <div class="section-header">
+        <div class="section-number">10</div>
+        <h2 class="section-title">올인원(All-in-One) 바이브 코딩 치트시트</h2>
+      </div>
+
+      <div class="prompt-box">
+        <div class="prompt-label"><i class="fa-solid fa-wand-magic-sparkles"></i> 초보자용 원스톱 프롬프트</div>
+        <div class="prompt-text">안티그래비티 CLI 전용 초보자 바이브 코딩 미션:
+
+너는 최고의 풀스택 에이전트야. 현재 폴더에 Supabase + Cloudflare 기반의 모던 재고관리 웹 앱을 완성하고 배포까지 끝마쳐줘.
+
+[1단계: 프로젝트 구조 생성]
+- Vite + React + Tailwind CSS 세팅 및 패키지 설치
+- 재고 목록 CRUD, 입출고 모달, 안전재고 알림 UI 구현
+
+[2단계: Supabase 연결 및 .env.local 연동]
+- `supabase_schema.sql` 파일 작성 (products, inventory_logs 테이블 + RLS 정책)
+- `.env.local` 파일 생성 및 Supabase 클라이언트 SDK 설정
+
+[3단계: 빌드 및 Cloudflare Pages 배포]
+- `npm run build` 오류 자동 자가 수정
+- `npx wrangler pages deploy ./dist --project-name=vibe-inventory` 명령 실행
+- 최종 배포 완료된 접속 주소(URL) 결과 출력
+
+모든 터미널 명령어를 직접 수행해줘!</div>
+      </div>
+    </section>
+
+    <!-- Sticky Footer -->
+    <div class="quick-action-bar">
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        <i class="fa-solid fa-circle-check" style="color: var(--accent-success);"></i> 비개발자도 10분 만에 웹 서비스 배포 가능!
+      </div>
+      <a href="#sec-cheatsheet" class="btn"><i class="fa-solid fa-copy"></i> 프롬프트 복사하기</a>
+    </div>
+
+  </main>
+
+  <script>
+    function copyCode(button) {
+      const pre = button.parentElement.nextElementSibling;
+      const codeText = pre.innerText;
+      
+      navigator.clipboard.writeText(codeText).then(() => {
+        const originalText = button.innerText;
+        button.innerText = 'Copied!';
+        button.style.background = 'var(--accent-success)';
+        button.style.color = '#fff';
+        
+        setTimeout(() => {
+          button.innerText = originalText;
+          button.style.background = '';
+          button.style.color = '';
+        }, 2000);
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.doc-section');
+      const navLinks = document.querySelectorAll('.nav-item a');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
