@@ -1,44 +1,91 @@
 ---
 id: agy-vibe-coding/docs/ARCHITECTURE.md
-title: Repository Architecture and Directory Map
+title: "Repository Architecture and Migration Design"
 repo: joseki-korea/agy-vibe-coding
 device_scope: all
 doc_type: architecture
 tags:
   - architecture
-  - directory-map
+  - directory-design
+  - migration-plan
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: docs/ARCHITECTURE.md
 ---
 
-# Repository Architecture and Directory Map
+# Repository Architecture and Migration Design
 
-## Overview
-Antigravity CLI, React, Supabase Auth/RLS, GitHub, Cloudflare Pages를 학습하기 위한 비개발자용 예제입니다.
+## 1. Overview
+This document specifies the current baseline directory structure, target standard architecture, migration mappings, safety verifications, and rollback protocols for `agy-vibe-coding`.
 
-## Directory Map
-- `README.md`: Root configuration or source artifact
-- `antigravity_site_preview.jpg`: Root configuration or source artifact
-- `assets/`: Media, reusable components, source snippets, and binaries tracking (5 items)
-- `dashboard_preview.jpg`: Root configuration or source artifact
-- `docs/`: Repository documentation, governance rules, roles, architecture, and guides (7 items)
-- `github_repository_preview.jpg`: Root configuration or source artifact
-- `handoffs/`: Session handoff records and state persistence logs (1 items)
-- `index.html`: Root configuration or source artifact
-- `mcp.json`: Root configuration or source artifact
-- `package-lock.json`: Root configuration or source artifact
-- `package.json`: Root configuration or source artifact
-- `public/`: Public static web assets, templates, and hosting resources (5 items)
-- `rag-manifest.json`: Root configuration or source artifact
-- `scripts/`: Automation, build, and maintenance scripts (2 items)
-- `src/`: Primary application source code and implementation logic (8 items)
-- `supabase_dashboard_preview.jpg`: Root configuration or source artifact
-- `supabase_schema.sql`: Root configuration or source artifact
-- `test_inventory_schema.sql`: Root configuration or source artifact
-- `vite.config.js`: Root configuration or source artifact
-- `안티그래비티-매뉴얼.html`: Root configuration or source artifact
-- `안티그래비티_바이브코딩_매뉴얼.html`: Root configuration or source artifact
+## 2. Baseline Architecture (CURRENT Tree)
+Pre-migration directory layout on default branch `origin/main` (depth ≤ 3):
 
-## Data Flow and Component Interactions
-Modules and assets interact according to standard separation of concerns. Unknown details remain TBD (not found in repo).
+- `public/`
+- `scripts/`
+- `src/`
+- `src/assets/`
+- `src/components/`
+- `src/lib/`
+
+## 3. Target Standard Architecture (TARGET Tree)
+Target directory structure conforming to `REPO-STANDARD-ALL-20261107`:
+
+- `assets/`
+- `assets/binaries/`
+- `assets/components/`
+- `assets/images/`
+- `assets/src/`
+- `docs/`
+- `handoffs/`
+- `public/`
+- `scripts/`
+- `src/`
+- `src/assets/`
+- `src/components/`
+- `src/lib/`
+
+## 4. Current → Target Mapping Table
+Status of directory and file movements relative to `origin/main`:
+
+| Source Baseline Path | Target Architecture Path | Migration Status | Classification / Rationale |
+| :--- | :--- | :--- | :--- |
+| `antigravity-manual-reevaluation.md` | `docs/antigravity-manual-reevaluation.md` | Already Staged (`pending design PASS`) | Standalone documentation reorganization |
+| `non-developer-manual-improvements.md` | `docs/non-developer-manual-improvements.md` | Already Staged (`pending design PASS`) | Standalone documentation reorganization |
+| `vibe-coding-one-prompt-setup.md` | `docs/vibe-coding-one-prompt-setup.md` | Already Staged (`pending design PASS`) | Standalone documentation reorganization |
+
+> [!NOTE]
+> All relocations staged in this PR are held in status `pending design PASS`. No additional filesystem relocations will be performed without explicit reviewer approval.
+
+## 5. Move-Safety Validation & Grep Evidence
+Verification that file relocations do not disrupt import paths, runtime execution, or build automation:
+
+- **Path**: `antigravity-manual-reevaluation.md` → `docs/antigravity-manual-reevaluation.md`
+  - Import/Require Scan: Clean (no runtime code dependencies)
+  - Build/CI Config Scan: Clean (not referenced in build workflows)
+  - Evidence: 3 reference(s) found in repository documentation links.
+
+- **Path**: `non-developer-manual-improvements.md` → `docs/non-developer-manual-improvements.md`
+  - Import/Require Scan: Clean (no runtime code dependencies)
+  - Build/CI Config Scan: Clean (not referenced in build workflows)
+  - Evidence: 3 reference(s) found in repository documentation links.
+
+- **Path**: `vibe-coding-one-prompt-setup.md` → `docs/vibe-coding-one-prompt-setup.md`
+  - Import/Require Scan: Clean (no runtime code dependencies)
+  - Build/CI Config Scan: Clean (not referenced in build workflows)
+  - Evidence: 11 reference(s) found in repository documentation links.
+
+## 6. Migration Execution & Rollback Plan
+
+### Migration Protocol
+1. File movements are performed exclusively via `git mv` to preserve commit history.
+2. Ingestible documentation files are indexed in `rag-manifest.json` with verified SHA8 signatures.
+3. Build and test scripts are executed post-relocation to confirm zero functional regression.
+
+### Rollback Commands
+In the event that reviewer assessment requires reverting staged relocations, execute:
+```bash
+git mv 'docs/antigravity-manual-reevaluation.md' 'antigravity-manual-reevaluation.md'
+git mv 'docs/non-developer-manual-improvements.md' 'non-developer-manual-improvements.md'
+git mv 'docs/vibe-coding-one-prompt-setup.md' 'vibe-coding-one-prompt-setup.md'
+```
