@@ -1,6 +1,6 @@
 ---
 id: agy-vibe-coding/docs/ROLES.md
-title: Agent Roles and Session Allocation
+title: "Agent Roles and Session Allocation"
 repo: joseki-korea/agy-vibe-coding
 device_scope: all
 doc_type: roles
@@ -21,14 +21,15 @@ Operations in this repository follow a coordinated multi-agent model with segreg
 ## Session Roles
 
 ### PM Session (Project Management and Dispatch)
+- Claude serves as control and monitoring lead only.
 - Oversees task intake, dependency mapping, and dispatching.
 - Synthesizes findings from work sessions and prepares deliverables.
 - Verifies adherence to repository standards before merging or publishing.
 
 ### Work Sessions
+- Work sessions are **Codex Terra** and **Antigravity** only.
 - **Antigravity (AGY)**: Full-stack implementation, architecture refactoring, and multi-file workflows.
-- **Codex Terra**: Algorithmic implementation, core logic routines, and test automation.
-- **Claude Haiku**: Rapid transformations, style normalization, and lightweight linting.
+- **Codex Terra**: Core computational routines, algorithmic implementation, and test suite automation.
 
 ### Janitor Session (Context-Overload Watchdog)
 - Dedicated context watchdog monitoring session saturation.

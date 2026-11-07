@@ -24,3 +24,32 @@ scripts/deploy_schema.js
 *.njsproj
 *.sln
 *.sw?
+
+# Assets ignore rules (Addendum 2 & 5)
+assets/images/*
+!assets/images/.gitignore
+!assets/images/README.md
+!assets/images/drive-manifest.json
+
+assets/binaries/*
+!assets/binaries/.gitignore
+!assets/binaries/README.md
+!assets/binaries/drive-manifest.json
+
+assets/videos/*
+!assets/videos/.gitignore
+!assets/videos/README.md
+!assets/videos/drive-manifest.json
+
+# Common binary and media extensions outside assets (untracked only)
+*.zip
+*.tar
+*.gz
+*.pdf
+*.hwp
+*.mp4
+*.mov
+*.avi
+*.mkv
+__pycache__/
+*.pyc

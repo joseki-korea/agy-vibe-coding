@@ -14,6 +14,17 @@
       "sha8": "98adee90"
     },
     {
+      "path": "antigravity-manual-reevaluation.md",
+      "id": "agy-vibe-coding/antigravity-manual-reevaluation.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "dbba3832"
+    },
+    {
       "path": "assets/README.md",
       "id": "agy-vibe-coding/assets/README.md",
       "doc_type": "asset-index",
@@ -69,6 +80,17 @@
       "sha8": "26a001a0"
     },
     {
+      "path": "assets/videos/README.md",
+      "id": "agy-vibe-coding/assets/videos/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "851d4347"
+    },
+    {
       "path": "docs/ARCHITECTURE.md",
       "id": "agy-vibe-coding/docs/ARCHITECTURE.md",
       "doc_type": "architecture",
@@ -77,7 +99,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "b6afb255"
+      "sha8": "33e5c575"
     },
     {
       "path": "docs/README.md",
@@ -99,7 +121,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "995228b4"
+      "sha8": "5cb1ccfc"
     },
     {
       "path": "docs/RULES.md",
@@ -113,39 +135,6 @@
       "sha8": "974fb865"
     },
     {
-      "path": "docs/antigravity-manual-reevaluation.md",
-      "id": "agy-vibe-coding/docs/antigravity-manual-reevaluation.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "8ef3052a"
-    },
-    {
-      "path": "docs/non-developer-manual-improvements.md",
-      "id": "agy-vibe-coding/docs/non-developer-manual-improvements.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "a6dc2658"
-    },
-    {
-      "path": "docs/vibe-coding-one-prompt-setup.md",
-      "id": "agy-vibe-coding/docs/vibe-coding-one-prompt-setup.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "387dd578"
-    },
-    {
       "path": "handoffs/README.md",
       "id": "agy-vibe-coding/handoffs/README.md",
       "doc_type": "handoff",
@@ -155,6 +144,17 @@
       ],
       "updated": "2026-11-07",
       "sha8": "4c416c40"
+    },
+    {
+      "path": "non-developer-manual-improvements.md",
+      "id": "agy-vibe-coding/non-developer-manual-improvements.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "4cf309fb"
     },
     {
       "path": "public/README.md",
@@ -221,11 +221,23 @@
       ],
       "updated": "2026-11-07",
       "sha8": "61c0bb93"
+    },
+    {
+      "path": "vibe-coding-one-prompt-setup.md",
+      "id": "agy-vibe-coding/vibe-coding-one-prompt-setup.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "59912797"
     }
   ],
   "excluded": [
     "assets/images/**",
     "assets/binaries/**",
+    "assets/videos/**",
     "secrets/**",
     "dist/**",
     "build/**",

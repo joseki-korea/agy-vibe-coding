@@ -1,5 +1,5 @@
 ---
-id: agy-vibe-coding/docs/antigravity-manual-reevaluation.md
+id: agy-vibe-coding/antigravity-manual-reevaluation.md
 title: Antigravity 비개발자 매뉴얼 최종 평가
 repo: joseki-korea/agy-vibe-coding
 device_scope: all
@@ -9,7 +9,7 @@ tags:
   - standard-documentation
 status: DRAFT
 updated: '2026-11-07'
-source_of_truth: docs/antigravity-manual-reevaluation.md
+source_of_truth: antigravity-manual-reevaluation.md
 ---
 
 # Antigravity 비개발자 매뉴얼 최종 평가
