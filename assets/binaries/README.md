@@ -15,4 +15,9 @@ source_of_truth: assets/binaries/README.md
 # Binary Artifacts Index
 
 ## Purpose
-This directory houses binary artifacts and compiled resources. Large binaries must not be committed directly into Git history; use external object storage or dedicated Git LFS tracking.
+This directory manages binary artifacts, archives, and compiled resources.
+
+## Google Drive Synchronization
+- **Drive Storage Path**: `Orca 자산/agy-vibe-coding/binaries`
+- **Sync Mechanism**: Managed by host devices with active Google Drive authorization (per login-context-cards). Only new or updated assets are synchronized.
+- **Tracking**: File metadata and Drive sync status are tracked in `drive-manifest.json`.

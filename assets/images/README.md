@@ -6,7 +6,7 @@ device_scope: all
 doc_type: asset-index
 tags:
   - assets
-  - assets
+  - images
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: assets/images/README.md
@@ -15,4 +15,9 @@ source_of_truth: assets/images/README.md
 # Image Assets Index
 
 ## Purpose
-This directory houses visual assets, diagrams, and UI captures. Each image stored here must have a corresponding markdown entry with descriptive alt-text and a factual source caption. Purely decorative or orphan images without direct citations are prohibited.
+This directory manages visual assets, diagrams, and UI captures.
+
+## Google Drive Synchronization
+- **Drive Storage Path**: `Orca 자산/agy-vibe-coding/images`
+- **Sync Mechanism**: Managed by host devices with active Google Drive authorization (per login-context-cards). Only new or updated assets are synchronized.
+- **Tracking**: File metadata and Drive sync status are tracked in `drive-manifest.json`.
