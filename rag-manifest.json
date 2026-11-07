@@ -1,246 +1,307 @@
 {
+  "manifest_version": "1.0.0",
   "repo": "joseki-korea/agy-vibe-coding",
   "updated": "2026-11-07",
   "docs": [
     {
       "path": "README.md",
       "id": "agy-vibe-coding/README.md",
+      "title": "안전한 재고관리 실습 앱",
       "doc_type": "readme",
       "tags": [
         "readme",
         "standard-documentation"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "98adee90"
     },
     {
       "path": "antigravity-manual-reevaluation.md",
       "id": "agy-vibe-coding/antigravity-manual-reevaluation.md",
+      "title": "Antigravity 비개발자 매뉴얼 최종 평가",
       "doc_type": "readme",
       "tags": [
         "readme",
         "standard-documentation"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "dbba3832"
     },
     {
       "path": "assets/README.md",
       "id": "agy-vibe-coding/assets/README.md",
+      "title": "Assets Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "2848cded"
     },
     {
       "path": "assets/binaries/README.md",
       "id": "agy-vibe-coding/assets/binaries/README.md",
+      "title": "Binary Artifacts Index",
       "doc_type": "asset-index",
       "tags": [
-        "asset-index",
-        "standard-documentation"
+        "assets",
+        "binaries"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "b32f8824"
     },
     {
       "path": "assets/components/README.md",
       "id": "agy-vibe-coding/assets/components/README.md",
+      "title": "Reusable Components Asset Index",
       "doc_type": "asset-index",
       "tags": [
-        "asset-index",
-        "standard-documentation"
+        "assets",
+        "components"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "b3cc2e50"
     },
     {
       "path": "assets/images/README.md",
       "id": "agy-vibe-coding/assets/images/README.md",
+      "title": "Image Assets Index",
       "doc_type": "asset-index",
       "tags": [
-        "asset-index",
-        "standard-documentation"
+        "assets",
+        "images"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "8fb60a5f"
     },
     {
       "path": "assets/src/README.md",
       "id": "agy-vibe-coding/assets/src/README.md",
+      "title": "Source Snippets Asset Index",
       "doc_type": "asset-index",
       "tags": [
-        "asset-index",
-        "standard-documentation"
+        "assets",
+        "source-snippets"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "26a001a0"
     },
     {
       "path": "assets/videos/README.md",
       "id": "agy-vibe-coding/assets/videos/README.md",
+      "title": "Video Assets Index",
       "doc_type": "asset-index",
       "tags": [
-        "asset-index",
-        "standard-documentation"
+        "assets",
+        "videos"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "851d4347"
     },
     {
       "path": "docs/ARCHITECTURE.md",
       "id": "agy-vibe-coding/docs/ARCHITECTURE.md",
+      "title": "Repository Architecture and Migration Design",
       "doc_type": "architecture",
       "tags": [
         "architecture",
-        "standard-documentation"
+        "directory-design",
+        "migration-plan"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "07e014bc"
     },
     {
       "path": "docs/README.md",
       "id": "agy-vibe-coding/docs/README.md",
+      "title": "Docs Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "6ef70e32"
     },
     {
       "path": "docs/ROLES.md",
       "id": "agy-vibe-coding/docs/ROLES.md",
+      "title": "Agent Roles and Session Allocation",
       "doc_type": "roles",
       "tags": [
         "roles",
-        "standard-documentation"
+        "orchestration",
+        "multi-agent"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "5cb1ccfc"
     },
     {
       "path": "docs/RULES.md",
       "id": "agy-vibe-coding/docs/RULES.md",
+      "title": "Repository Governance Rules",
       "doc_type": "rules",
       "tags": [
         "rules",
-        "standard-documentation"
+        "governance",
+        "draft"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "974fb865"
     },
     {
       "path": "handoffs/README.md",
       "id": "agy-vibe-coding/handoffs/README.md",
+      "title": "Agent Session Handoff Records",
       "doc_type": "handoff",
       "tags": [
         "handoff",
-        "standard-documentation"
+        "session-notes"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "4c416c40"
     },
     {
       "path": "non-developer-manual-improvements.md",
       "id": "agy-vibe-coding/non-developer-manual-improvements.md",
+      "title": "비개발자용 매뉴얼 개선 사항",
       "doc_type": "readme",
       "tags": [
         "readme",
         "standard-documentation"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "4cf309fb"
     },
     {
       "path": "public/README.md",
       "id": "agy-vibe-coding/public/README.md",
+      "title": "Public Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "93b8679a"
     },
     {
       "path": "scripts/README.md",
       "id": "agy-vibe-coding/scripts/README.md",
+      "title": "Scripts Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "c4871d94"
     },
     {
       "path": "src/README.md",
       "id": "agy-vibe-coding/src/README.md",
+      "title": "Src Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "603c8941"
     },
     {
       "path": "src/assets/README.md",
       "id": "agy-vibe-coding/src/assets/README.md",
+      "title": "Src > Assets Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "f16a4628"
     },
     {
       "path": "src/components/README.md",
       "id": "agy-vibe-coding/src/components/README.md",
+      "title": "Src > Components Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "f39b7b16"
     },
     {
       "path": "src/lib/README.md",
       "id": "agy-vibe-coding/src/lib/README.md",
+      "title": "Src > Lib Index",
       "doc_type": "readme",
       "tags": [
         "readme",
-        "standard-documentation"
+        "folder-index"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "87411056"
     },
     {
       "path": "vibe-coding-one-prompt-setup.md",
       "id": "agy-vibe-coding/vibe-coding-one-prompt-setup.md",
+      "title": "Antigravity CLI 최소 개입 원샷 세팅",
       "doc_type": "readme",
       "tags": [
         "readme",
         "standard-documentation"
       ],
+      "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "59912797"
     }
   ],
   "excluded": [
-    "assets/images/**",
-    "assets/binaries/**",
-    "assets/videos/**",
-    "secrets/**",
-    "dist/**",
-    "build/**",
-    "node_modules/**"
+    "assets/images/*",
+    "assets/binaries/*",
+    "assets/videos/*",
+    ".env*",
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    ".cache",
+    "__pycache__"
+  ],
+  "excluded_paths": [
+    "assets/images/*",
+    "assets/binaries/*",
+    "assets/videos/*",
+    ".env*",
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    ".cache",
+    "__pycache__"
   ]
 }
