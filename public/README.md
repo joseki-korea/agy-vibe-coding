@@ -6,7 +6,7 @@ device_scope: all
 doc_type: readme
 tags:
   - readme
-  - directory-index
+  - folder-index
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: public/README.md

@@ -27,13 +27,13 @@
     {
       "path": "assets/README.md",
       "id": "agy-vibe-coding/assets/README.md",
-      "doc_type": "asset-index",
+      "doc_type": "readme",
       "tags": [
-        "asset-index",
+        "readme",
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "ec313a6e"
+      "sha8": "2848cded"
     },
     {
       "path": "assets/binaries/README.md",
@@ -99,7 +99,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "33e5c575"
+      "sha8": "07e014bc"
     },
     {
       "path": "docs/README.md",
@@ -110,7 +110,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "7b3d916e"
+      "sha8": "6ef70e32"
     },
     {
       "path": "docs/ROLES.md",
@@ -165,7 +165,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "fdb6e599"
+      "sha8": "93b8679a"
     },
     {
       "path": "scripts/README.md",
@@ -176,7 +176,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "a22ebb91"
+      "sha8": "c4871d94"
     },
     {
       "path": "src/README.md",
@@ -187,18 +187,18 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "67342989"
+      "sha8": "603c8941"
     },
     {
       "path": "src/assets/README.md",
       "id": "agy-vibe-coding/src/assets/README.md",
-      "doc_type": "asset-index",
+      "doc_type": "readme",
       "tags": [
-        "asset-index",
+        "readme",
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "d892f0c4"
+      "sha8": "f16a4628"
     },
     {
       "path": "src/components/README.md",
@@ -209,7 +209,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "9c54ef89"
+      "sha8": "f39b7b16"
     },
     {
       "path": "src/lib/README.md",
@@ -220,7 +220,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "61c0bb93"
+      "sha8": "87411056"
     },
     {
       "path": "vibe-coding-one-prompt-setup.md",
