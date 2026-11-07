@@ -1,3 +1,60 @@
 {
-  "files": []
+  "repo": "joseki-korea/agy-vibe-coding",
+  "drive_path": "Orca 자산/agy-vibe-coding/images",
+  "files": [
+    {
+      "name": "antigravity_site_preview.jpg",
+      "path": "antigravity_site_preview.jpg",
+      "size": 535408,
+      "sha8": "2e0ae838",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    },
+    {
+      "name": "dashboard_preview.jpg",
+      "path": "dashboard_preview.jpg",
+      "size": 520053,
+      "sha8": "c6f17ca0",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    },
+    {
+      "name": "github_repository_preview.jpg",
+      "path": "github_repository_preview.jpg",
+      "size": 488031,
+      "sha8": "8ae6d08f",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    },
+    {
+      "name": "dashboard_preview.jpg",
+      "path": "public/dashboard_preview.jpg",
+      "size": 520053,
+      "sha8": "c6f17ca0",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    },
+    {
+      "name": "hero.png",
+      "path": "src/assets/hero.png",
+      "size": 13057,
+      "sha8": "881ffbca",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    },
+    {
+      "name": "supabase_dashboard_preview.jpg",
+      "path": "supabase_dashboard_preview.jpg",
+      "size": 498649,
+      "sha8": "cb730bd9",
+      "drive_id": "PENDING_SYNC",
+      "status": "migrate_later",
+      "updated": "2026-11-07"
+    }
+  ]
 }
