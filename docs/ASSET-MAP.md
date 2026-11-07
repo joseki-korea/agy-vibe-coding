@@ -73,3 +73,7 @@ python3 -c "import json; json.load(open('rag-manifest.json'))"
 - `src/assets/react.svg` → `assets/images/` (category and references require review).
 - `src/assets/vite.svg` → `assets/images/` (category and references require review).
 - `supabase_dashboard_preview.jpg` → `assets/images/` (category and references require review).
+
+## Migration status
+
+BLOCKED: Screenshot moves were reverted because npm ci fails: package-lock.json is inconsistent with package.json.
