@@ -28,6 +28,6 @@ Directory index for `public` within `agy-vibe-coding`. Houses components and art
 
 ## Directory Artifacts
 - `_redirects`
-- `dashboard_preview.jpg`
+- `dashboard-preview.jpg`
 - `favicon.svg`
 - `icons.svg`

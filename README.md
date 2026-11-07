@@ -60,7 +60,7 @@ npx wrangler pages deploy ./dist --project-name=vibe-inventory
 
 ## 상세 매뉴얼
 
-[비개발자용 Antigravity 실습 가이드](./antigravity-cli-inventory-vibe-coding-manual.html)
+[비개발자용 Antigravity 실습 가이드](./안티그래비티-매뉴얼.html)
 
 > 학습용 프로젝트입니다. 실제 고객 또는 회사 데이터를 사용하기 전에는 별도의 보안·백업·감사 검토가 필요합니다.
 

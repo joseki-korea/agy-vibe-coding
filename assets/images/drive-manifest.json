@@ -3,8 +3,8 @@
   "drive_path": "Orca 자산/agy-vibe-coding/images",
   "files": [
     {
-      "name": "antigravity_site_preview.jpg",
-      "path": "antigravity_site_preview.jpg",
+      "name": "antigravity-site-preview.jpg",
+      "path": "assets/images/screenshots/antigravity-site-preview.jpg",
       "size": 535408,
       "sha8": "2e0ae838",
       "drive_id": "PENDING_SYNC",
@@ -12,8 +12,8 @@
       "updated": "2026-11-07"
     },
     {
-      "name": "dashboard_preview.jpg",
-      "path": "dashboard_preview.jpg",
+      "name": "dashboard-preview.jpg",
+      "path": "assets/images/screenshots/dashboard-preview.jpg",
       "size": 520053,
       "sha8": "c6f17ca0",
       "drive_id": "PENDING_SYNC",
@@ -21,8 +21,8 @@
       "updated": "2026-11-07"
     },
     {
-      "name": "github_repository_preview.jpg",
-      "path": "github_repository_preview.jpg",
+      "name": "github-repository-preview.jpg",
+      "path": "assets/images/screenshots/github-repository-preview.jpg",
       "size": 488031,
       "sha8": "8ae6d08f",
       "drive_id": "PENDING_SYNC",
@@ -30,8 +30,8 @@
       "updated": "2026-11-07"
     },
     {
-      "name": "dashboard_preview.jpg",
-      "path": "public/dashboard_preview.jpg",
+      "name": "dashboard-preview.jpg",
+      "path": "public/dashboard-preview.jpg",
       "size": 520053,
       "sha8": "c6f17ca0",
       "drive_id": "PENDING_SYNC",
@@ -48,8 +48,8 @@
       "updated": "2026-11-07"
     },
     {
-      "name": "supabase_dashboard_preview.jpg",
-      "path": "supabase_dashboard_preview.jpg",
+      "name": "supabase-dashboard-preview.jpg",
+      "path": "assets/images/screenshots/supabase-dashboard-preview.jpg",
       "size": 498649,
       "sha8": "cb730bd9",
       "drive_id": "PENDING_SYNC",
