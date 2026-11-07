@@ -6,17 +6,13 @@
     {
       "path": "AGENTS.md",
       "id": "agy-vibe-coding/AGENTS.md",
-      "title": "Codex Terra Agent Role and Execution Guidelines",
+      "title": "AGENTS.md agent entrypoint",
       "doc_type": "roles",
       "tags": [
-        "agent",
-        "codex",
-        "worker"
+        "agent"
       ],
-      "status": "DRAFT",
-      "updated": "2026-11-07",
-      "sha8": "3fd01841",
-      "source_of_truth": "docs/agents/codex-role.md"
+      "updated": "2026-11-08",
+      "sha8": "d43efa2e"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -27,39 +23,41 @@
         "architecture",
         "pointer"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "a8aa2cf5"
+      "sha8": "c2d84b02"
     },
     {
       "path": "CLAUDE.md",
       "id": "agy-vibe-coding/CLAUDE.md",
-      "title": "Claude Agent Role and Control Guidelines",
+      "title": "CLAUDE.md agent entrypoint",
       "doc_type": "roles",
       "tags": [
-        "agent",
-        "claude",
-        "control"
+        "agent"
       ],
-      "status": "DRAFT",
-      "updated": "2026-11-07",
-      "sha8": "2b160f70",
-      "source_of_truth": "docs/agents/claude-role.md"
+      "updated": "2026-11-08",
+      "sha8": "35a30960"
     },
     {
       "path": "GEMINI.md",
       "id": "agy-vibe-coding/GEMINI.md",
-      "title": "Antigravity Agent Role and Execution Guidelines",
+      "title": "GEMINI.md agent entrypoint",
       "doc_type": "roles",
       "tags": [
-        "agent",
-        "antigravity",
-        "worker"
+        "agent"
       ],
-      "status": "DRAFT",
-      "updated": "2026-11-07",
-      "sha8": "319ba973",
-      "source_of_truth": "docs/agents/antigravity-role.md"
+      "updated": "2026-11-08",
+      "sha8": "d6c4cd06"
+    },
+    {
+      "path": "RAG.md",
+      "id": "agy-vibe-coding/RAG.md",
+      "title": "RAG indexing",
+      "doc_type": "guide",
+      "tags": [
+        "guide"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "dd867001"
     },
     {
       "path": "README.md",
@@ -70,9 +68,8 @@
         "readme",
         "standard-documentation"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "9db83074"
+      "sha8": "fda2bcb1"
     },
     {
       "path": "RULES.md",
@@ -83,9 +80,8 @@
         "rules",
         "pointer"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "6acd0682"
+      "sha8": "ad5deb01"
     },
     {
       "path": "antigravity-manual-reevaluation.md",
@@ -101,6 +97,17 @@
       "sha8": "dbba3832"
     },
     {
+      "path": "assets/MANIFEST.md",
+      "id": "agy-vibe-coding/assets/MANIFEST.md",
+      "title": "Asset manifest",
+      "doc_type": "assets",
+      "tags": [
+        "assets"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "b803abde"
+    },
+    {
       "path": "assets/README.md",
       "id": "agy-vibe-coding/assets/README.md",
       "title": "Assets Index",
@@ -109,9 +116,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "2848cded"
+      "sha8": "fa5e025a"
     },
     {
       "path": "assets/binaries/README.md",
@@ -122,9 +128,8 @@
         "assets",
         "binaries"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "b32f8824"
+      "sha8": "f409637a"
     },
     {
       "path": "assets/components/README.md",
@@ -135,9 +140,8 @@
         "assets",
         "components"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "b3cc2e50"
+      "sha8": "b7024222"
     },
     {
       "path": "assets/images/README.md",
@@ -148,9 +152,63 @@
         "assets",
         "images"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "8fb60a5f"
+      "sha8": "e2b5053e"
+    },
+    {
+      "path": "assets/images/brand/README.md",
+      "id": "agy-vibe-coding/assets/images/brand/README.md",
+      "title": "assets/images/brand",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "b5a609dd"
+    },
+    {
+      "path": "assets/images/diagrams/README.md",
+      "id": "agy-vibe-coding/assets/images/diagrams/README.md",
+      "title": "assets/images/diagrams",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "6148c053"
+    },
+    {
+      "path": "assets/images/photos/README.md",
+      "id": "agy-vibe-coding/assets/images/photos/README.md",
+      "title": "assets/images/photos",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "66741ae7"
+    },
+    {
+      "path": "assets/images/product/README.md",
+      "id": "agy-vibe-coding/assets/images/product/README.md",
+      "title": "assets/images/product",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "f8f099b5"
+    },
+    {
+      "path": "assets/images/screenshots/README.md",
+      "id": "agy-vibe-coding/assets/images/screenshots/README.md",
+      "title": "assets/images/screenshots",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "92818ab7"
     },
     {
       "path": "assets/src/README.md",
@@ -161,9 +219,8 @@
         "assets",
         "source-snippets"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "26a001a0"
+      "sha8": "4621d751"
     },
     {
       "path": "assets/ui-components/README.md",
@@ -174,9 +231,63 @@
         "assets",
         "ui-components"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "b10abea8"
+      "sha8": "ff77373e"
+    },
+    {
+      "path": "assets/ui/README.md",
+      "id": "agy-vibe-coding/assets/ui/README.md",
+      "title": "assets/ui",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "a9956545"
+    },
+    {
+      "path": "assets/ui/components/README.md",
+      "id": "agy-vibe-coding/assets/ui/components/README.md",
+      "title": "assets/ui/components",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "3a5f2bc7"
+    },
+    {
+      "path": "assets/ui/icons/README.md",
+      "id": "agy-vibe-coding/assets/ui/icons/README.md",
+      "title": "assets/ui/icons",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "1f2b0f29"
+    },
+    {
+      "path": "assets/ui/mockups/README.md",
+      "id": "agy-vibe-coding/assets/ui/mockups/README.md",
+      "title": "assets/ui/mockups",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "c48f945e"
+    },
+    {
+      "path": "assets/ui/tokens/README.md",
+      "id": "agy-vibe-coding/assets/ui/tokens/README.md",
+      "title": "assets/ui/tokens",
+      "doc_type": "readme",
+      "tags": [
+        "readme"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "1be34a42"
     },
     {
       "path": "assets/videos/README.md",
@@ -187,9 +298,8 @@
         "assets",
         "videos"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "851d4347"
+      "sha8": "88575a6e"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -201,9 +311,8 @@
         "directory-design",
         "migration-plan"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "07e014bc"
+      "sha8": "a62cffa7"
     },
     {
       "path": "docs/ASSET-MAP.md",
@@ -215,9 +324,8 @@
         "assets",
         "semantic-reorg"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "5ffad781"
+      "sha8": "414aa60c"
     },
     {
       "path": "docs/README.md",
@@ -228,9 +336,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "6ef70e32"
+      "sha8": "41d8526d"
     },
     {
       "path": "docs/ROLES.md",
@@ -242,9 +349,8 @@
         "orchestration",
         "multi-agent"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "5cb1ccfc"
+      "sha8": "02a3254e"
     },
     {
       "path": "docs/RULES.md",
@@ -256,9 +362,8 @@
         "governance",
         "draft"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "974fb865"
+      "sha8": "1fc3c7de"
     },
     {
       "path": "docs/agents/README.md",
@@ -270,9 +375,8 @@
         "roles",
         "rules"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "24fc1f00"
+      "sha8": "f81c322b"
     },
     {
       "path": "docs/agents/antigravity-role.md",
@@ -284,9 +388,8 @@
         "role",
         "worker"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "3bf3a7ff"
+      "sha8": "d98e41d7"
     },
     {
       "path": "docs/agents/antigravity-rules.md",
@@ -298,9 +401,8 @@
         "rules",
         "worker"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "fb7a9192"
+      "sha8": "56360dad"
     },
     {
       "path": "docs/agents/claude-role.md",
@@ -312,9 +414,8 @@
         "role",
         "control"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "a96c010b"
+      "sha8": "3b323f17"
     },
     {
       "path": "docs/agents/claude-rules.md",
@@ -326,9 +427,8 @@
         "rules",
         "control"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "b87a2389"
+      "sha8": "323a8c6b"
     },
     {
       "path": "docs/agents/codex-role.md",
@@ -340,9 +440,8 @@
         "role",
         "worker"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "973b6a91"
+      "sha8": "09a3ad59"
     },
     {
       "path": "docs/agents/codex-rules.md",
@@ -354,9 +453,19 @@
         "rules",
         "worker"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "1ff08606"
+      "sha8": "a0efeffb"
+    },
+    {
+      "path": "docs/glossary.md",
+      "id": "agy-vibe-coding/docs/glossary.md",
+      "title": "Glossary",
+      "doc_type": "guide",
+      "tags": [
+        "guide"
+      ],
+      "updated": "2026-11-08",
+      "sha8": "e16b4051"
     },
     {
       "path": "handoffs/README.md",
@@ -367,9 +476,8 @@
         "handoff",
         "session-notes"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "4c416c40"
+      "sha8": "ce94fb4f"
     },
     {
       "path": "non-developer-manual-improvements.md",
@@ -393,9 +501,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "93b8679a"
+      "sha8": "19be6a32"
     },
     {
       "path": "scripts/README.md",
@@ -406,9 +513,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "c4871d94"
+      "sha8": "eb3e44af"
     },
     {
       "path": "src/README.md",
@@ -419,9 +525,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "603c8941"
+      "sha8": "182d21af"
     },
     {
       "path": "src/assets/README.md",
@@ -432,9 +537,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "f16a4628"
+      "sha8": "6794b8c6"
     },
     {
       "path": "src/components/README.md",
@@ -445,9 +549,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "f39b7b16"
+      "sha8": "e5ac14b1"
     },
     {
       "path": "src/lib/README.md",
@@ -458,9 +561,8 @@
         "readme",
         "folder-index"
       ],
-      "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "87411056"
+      "sha8": "4b189de5"
     },
     {
       "path": "vibe-coding-one-prompt-setup.md",

@@ -11,6 +11,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/agents/codex-rules.md"
+summary: Codex Terra Agent Operational Rules
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/agents/codex-rules.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Codex Terra Operational Rules — agy-vibe-coding

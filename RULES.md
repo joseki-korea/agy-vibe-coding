@@ -10,6 +10,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/RULES.md"
+summary: Repository Global Rules Pointer
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: RULES.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Repository Global Rules — agy-vibe-coding

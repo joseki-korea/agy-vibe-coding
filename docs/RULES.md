@@ -11,6 +11,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: docs/RULES.md
+summary: Repository Governance Rules
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/RULES.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Repository Governance Rules

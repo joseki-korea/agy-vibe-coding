@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: assets/videos/README.md
+summary: Video Assets Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: assets/videos/README.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Video Assets Index

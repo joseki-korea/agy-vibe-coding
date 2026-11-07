@@ -10,6 +10,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/ARCHITECTURE.md"
+summary: Repository Architecture Pointer
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: ARCHITECTURE.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Repository Architecture — agy-vibe-coding

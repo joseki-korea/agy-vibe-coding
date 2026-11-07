@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: assets/images/README.md
+summary: Image Assets Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: assets/images/README.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Image Assets Index

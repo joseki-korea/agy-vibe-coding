@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: src/components/README.md
+summary: Src > Components Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: src/components/README.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Src > Components

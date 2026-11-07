@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: assets/binaries/README.md
+summary: Binary Artifacts Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: assets/binaries/README.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Binary Artifacts Index

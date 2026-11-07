@@ -11,6 +11,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/agents/antigravity-role.md"
+summary: Antigravity Worker Role Definition
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/agents/antigravity-role.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Antigravity Role Definition — agy-vibe-coding

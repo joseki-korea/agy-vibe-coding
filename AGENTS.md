@@ -1,3 +1,7 @@
+---
+{"id": "agy-vibe-coding/AGENTS.md", "title": "AGENTS.md agent entrypoint", "summary": "Agent entrypoint and repository pointers", "domain": "repository", "tags": ["agent"], "owner": "repository maintainers", "status": "DRAFT", "created": "2026-11-07", "updated": "2026-11-08", "source": "AGENTS.md", "lang": "ko", "sensitivity": "public", "related": ["RULES.md"], "repo": "agy-vibe-coding", "device_scope": "all", "doc_type": "roles", "source_of_truth": "AGENTS.md"}
+---
+
 # Codex Terra Agent Guidelines — agy-vibe-coding
 
 본 문서는 `agy-vibe-coding` 프로젝트에서 Codex Terra 에이전트의 역할과 작업 강령을 정의합니다.

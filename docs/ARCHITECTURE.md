@@ -11,6 +11,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: docs/ARCHITECTURE.md
+summary: Repository Architecture and Migration Design
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/ARCHITECTURE.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Repository Architecture and Migration Design
@@ -118,3 +127,7 @@ In the event that reviewer assessment requires reverting staged relocations, exe
 ```bash
 # No relocations to roll back
 ```
+
+## Code-derived components
+
+`src/` contains the React application and UI components; `index.html` and `vite.config.js` define the Vite entry and build. The app uses Supabase client libraries for authentication and data access; the root SQL scripts describe database tables and policies. `public/` contains static assets.

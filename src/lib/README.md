@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: src/lib/README.md
+summary: Src > Lib Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: src/lib/README.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Src > Lib

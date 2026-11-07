@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: handoffs/README.md
+summary: Agent Session Handoff Records
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: handoffs/README.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Agent Session Handoff Records

@@ -11,6 +11,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/agents/antigravity-rules.md"
+summary: Antigravity Agent Operational Rules
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/agents/antigravity-rules.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Antigravity Operational Rules — agy-vibe-coding

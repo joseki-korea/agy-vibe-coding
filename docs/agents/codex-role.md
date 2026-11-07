@@ -11,6 +11,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/agents/codex-role.md"
+summary: Codex Terra Worker Role Definition
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/agents/codex-role.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Codex Terra Role Definition — agy-vibe-coding

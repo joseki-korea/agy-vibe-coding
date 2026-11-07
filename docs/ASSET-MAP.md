@@ -11,6 +11,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "docs/ASSET-MAP.md"
+summary: Asset Mapping and Semantic Migration Plan
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/ASSET-MAP.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Asset Mapping & Semantic Reorganization Plan — agy-vibe-coding
@@ -51,3 +60,16 @@ git diff -M --summary origin/main
 # 2. RAG 매니페스트 및 프론트엔드/백엔드 구동 검증
 python3 -c "import json; json.load(open('rag-manifest.json'))"
 ```
+
+## Observed image locations (proposed only)
+
+- `antigravity_site_preview.jpg` → `assets/images/` (category and references require review).
+- `dashboard_preview.jpg` → `assets/images/` (category and references require review).
+- `github_repository_preview.jpg` → `assets/images/` (category and references require review).
+- `public/dashboard_preview.jpg` → `assets/images/` (category and references require review).
+- `public/favicon.svg` → `assets/images/` (category and references require review).
+- `public/icons.svg` → `assets/images/` (category and references require review).
+- `src/assets/hero.png` → `assets/images/` (category and references require review).
+- `src/assets/react.svg` → `assets/images/` (category and references require review).
+- `src/assets/vite.svg` → `assets/images/` (category and references require review).
+- `supabase_dashboard_preview.jpg` → `assets/images/` (category and references require review).

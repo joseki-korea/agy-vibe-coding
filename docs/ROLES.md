@@ -11,6 +11,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: docs/ROLES.md
+summary: Agent Roles and Session Allocation
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: docs/ROLES.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Agent Roles and Session Allocation

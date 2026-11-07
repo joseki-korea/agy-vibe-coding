@@ -10,6 +10,15 @@ tags:
 status: "DRAFT"
 updated: "2026-11-07"
 source_of_truth: "assets/ui-components/README.md"
+summary: UI Components Asset Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: assets/ui-components/README.md
+lang: ko
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # UI Components Asset Index — agy-vibe-coding

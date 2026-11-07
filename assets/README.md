@@ -10,6 +10,15 @@ tags:
 status: DRAFT
 updated: '2026-11-07'
 source_of_truth: assets/README.md
+summary: Assets Index
+domain: repository
+owner: repository maintainers
+created: '2026-11-07'
+source: assets/README.md
+lang: en
+sensitivity: public
+related:
+- RULES.md
 ---
 
 # Assets
