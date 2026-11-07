@@ -14,6 +14,17 @@
       "sha8": "98adee90"
     },
     {
+      "path": "assets/README.md",
+      "id": "agy-vibe-coding/assets/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "ec313a6e"
+    },
+    {
       "path": "assets/binaries/README.md",
       "id": "agy-vibe-coding/assets/binaries/README.md",
       "doc_type": "asset-index",
@@ -66,7 +77,18 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "d2dcf56f"
+      "sha8": "e3f1da93"
+    },
+    {
+      "path": "docs/README.md",
+      "id": "agy-vibe-coding/docs/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "7b3d916e"
     },
     {
       "path": "docs/ROLES.md",
@@ -133,6 +155,72 @@
       ],
       "updated": "2026-11-07",
       "sha8": "4c416c40"
+    },
+    {
+      "path": "public/README.md",
+      "id": "agy-vibe-coding/public/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "fdb6e599"
+    },
+    {
+      "path": "scripts/README.md",
+      "id": "agy-vibe-coding/scripts/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "a22ebb91"
+    },
+    {
+      "path": "src/README.md",
+      "id": "agy-vibe-coding/src/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "67342989"
+    },
+    {
+      "path": "src/assets/README.md",
+      "id": "agy-vibe-coding/src/assets/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "d892f0c4"
+    },
+    {
+      "path": "src/components/README.md",
+      "id": "agy-vibe-coding/src/components/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "9c54ef89"
+    },
+    {
+      "path": "src/lib/README.md",
+      "id": "agy-vibe-coding/src/lib/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "61c0bb93"
     }
   ],
   "excluded": [

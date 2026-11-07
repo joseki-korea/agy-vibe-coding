@@ -1,0 +1,24 @@
+---
+id: agy-vibe-coding/public/README.md
+title: "Public Index"
+repo: joseki-korea/agy-vibe-coding
+device_scope: all
+doc_type: readme
+tags:
+  - readme
+  - directory-index
+status: DRAFT
+updated: '2026-11-07'
+source_of_truth: public/README.md
+---
+
+# Public
+
+## Purpose
+Directory index for `public` within `agy-vibe-coding`. Houses components and artifacts supporting this domain.
+
+## Directory Artifacts
+- `_redirects`
+- `dashboard_preview.jpg`
+- `favicon.svg`
+- `icons.svg`
