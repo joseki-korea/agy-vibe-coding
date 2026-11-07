@@ -11,6 +11,8 @@ status: DRAFT
 updated: '2026-11-07'
 source_of_truth: README.md
 ---
+- **GitHub Repository**: https://github.com/joseki-korea/agy-vibe-coding
+- **Google Drive Artifacts**: `Orca 산출물/프로젝트/agy-vibe-coding/` (pending upload)
 
 # 안전한 재고관리 실습 앱
 

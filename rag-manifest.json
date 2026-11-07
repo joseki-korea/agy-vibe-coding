@@ -4,6 +4,64 @@
   "updated": "2026-11-07",
   "docs": [
     {
+      "path": "AGENTS.md",
+      "id": "agy-vibe-coding/AGENTS.md",
+      "title": "Codex Terra Agent Role and Execution Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "codex",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "3fd01841",
+      "source_of_truth": "docs/agents/codex-role.md"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "id": "agy-vibe-coding/ARCHITECTURE.md",
+      "title": "Repository Architecture Pointer",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "pointer"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "a8aa2cf5"
+    },
+    {
+      "path": "CLAUDE.md",
+      "id": "agy-vibe-coding/CLAUDE.md",
+      "title": "Claude Agent Role and Control Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "claude",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "2b160f70",
+      "source_of_truth": "docs/agents/claude-role.md"
+    },
+    {
+      "path": "GEMINI.md",
+      "id": "agy-vibe-coding/GEMINI.md",
+      "title": "Antigravity Agent Role and Execution Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "antigravity",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "319ba973",
+      "source_of_truth": "docs/agents/antigravity-role.md"
+    },
+    {
       "path": "README.md",
       "id": "agy-vibe-coding/README.md",
       "title": "안전한 재고관리 실습 앱",
@@ -14,7 +72,20 @@
       ],
       "status": "DRAFT",
       "updated": "2026-11-07",
-      "sha8": "98adee90"
+      "sha8": "9db83074"
+    },
+    {
+      "path": "RULES.md",
+      "id": "agy-vibe-coding/RULES.md",
+      "title": "Repository Global Rules Pointer",
+      "doc_type": "rules",
+      "tags": [
+        "rules",
+        "pointer"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "6acd0682"
     },
     {
       "path": "antigravity-manual-reevaluation.md",
@@ -95,6 +166,19 @@
       "sha8": "26a001a0"
     },
     {
+      "path": "assets/ui-components/README.md",
+      "id": "agy-vibe-coding/assets/ui-components/README.md",
+      "title": "UI Components Asset Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "ui-components"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b10abea8"
+    },
+    {
       "path": "assets/videos/README.md",
       "id": "agy-vibe-coding/assets/videos/README.md",
       "title": "Video Assets Index",
@@ -120,6 +204,20 @@
       "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "07e014bc"
+    },
+    {
+      "path": "docs/ASSET-MAP.md",
+      "id": "agy-vibe-coding/docs/ASSET-MAP.md",
+      "title": "Asset Mapping and Semantic Migration Plan",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "assets",
+        "semantic-reorg"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "5ffad781"
     },
     {
       "path": "docs/README.md",
@@ -161,6 +259,578 @@
       "status": "DRAFT",
       "updated": "2026-11-07",
       "sha8": "974fb865"
+    },
+    {
+      "path": "docs/agents/README.md",
+      "id": "agy-vibe-coding/docs/agents/README.md",
+      "title": "Agent Roles and Rules Index",
+      "doc_type": "readme",
+      "tags": [
+        "agents",
+        "roles",
+        "rules"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "24fc1f00"
+    },
+    {
+      "path": "docs/agents/antigravity-role.md",
+      "id": "agy-vibe-coding/docs/agents/antigravity-role.md",
+      "title": "Antigravity Worker Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "antigravity",
+        "role",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "3bf3a7ff"
+    },
+    {
+      "path": "docs/agents/antigravity-rules.md",
+      "id": "agy-vibe-coding/docs/agents/antigravity-rules.md",
+      "title": "Antigravity Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "antigravity",
+        "rules",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "fb7a9192"
+    },
+    {
+      "path": "docs/agents/claude-role.md",
+      "id": "agy-vibe-coding/docs/agents/claude-role.md",
+      "title": "Claude Lead Orchestrator Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "claude",
+        "role",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "a96c010b"
+    },
+    {
+      "path": "docs/agents/claude-rules.md",
+      "id": "agy-vibe-coding/docs/agents/claude-rules.md",
+      "title": "Claude Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "claude",
+        "rules",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b87a2389"
+    },
+    {
+      "path": "docs/agents/codex-role.md",
+      "id": "agy-vibe-coding/docs/agents/codex-role.md",
+      "title": "Codex Terra Worker Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "codex",
+        "role",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "973b6a91"
+    },
+    {
+      "path": "docs/agents/codex-rules.md",
+      "id": "agy-vibe-coding/docs/agents/codex-rules.md",
+      "title": "Codex Terra Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "codex",
+        "rules",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "1ff08606"
+    },
+    {
+      "path": "handoffs/README.md",
+      "id": "agy-vibe-coding/handoffs/README.md",
+      "title": "Agent Session Handoff Records",
+      "doc_type": "handoff",
+      "tags": [
+        "handoff",
+        "session-notes"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "4c416c40"
+    },
+    {
+      "path": "non-developer-manual-improvements.md",
+      "id": "agy-vibe-coding/non-developer-manual-improvements.md",
+      "title": "비개발자용 매뉴얼 개선 사항",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "4cf309fb"
+    },
+    {
+      "path": "public/README.md",
+      "id": "agy-vibe-coding/public/README.md",
+      "title": "Public Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "93b8679a"
+    },
+    {
+      "path": "scripts/README.md",
+      "id": "agy-vibe-coding/scripts/README.md",
+      "title": "Scripts Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "c4871d94"
+    },
+    {
+      "path": "src/README.md",
+      "id": "agy-vibe-coding/src/README.md",
+      "title": "Src Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "603c8941"
+    },
+    {
+      "path": "src/assets/README.md",
+      "id": "agy-vibe-coding/src/assets/README.md",
+      "title": "Src > Assets Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "f16a4628"
+    },
+    {
+      "path": "src/components/README.md",
+      "id": "agy-vibe-coding/src/components/README.md",
+      "title": "Src > Components Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "f39b7b16"
+    },
+    {
+      "path": "src/lib/README.md",
+      "id": "agy-vibe-coding/src/lib/README.md",
+      "title": "Src > Lib Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "87411056"
+    },
+    {
+      "path": "vibe-coding-one-prompt-setup.md",
+      "id": "agy-vibe-coding/vibe-coding-one-prompt-setup.md",
+      "title": "Antigravity CLI 최소 개입 원샷 세팅",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "59912797"
+    }
+  ],
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "id": "agy-vibe-coding/AGENTS.md",
+      "title": "Codex Terra Agent Role and Execution Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "codex",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "3fd01841",
+      "source_of_truth": "docs/agents/codex-role.md"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "id": "agy-vibe-coding/ARCHITECTURE.md",
+      "title": "Repository Architecture Pointer",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "pointer"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "a8aa2cf5"
+    },
+    {
+      "path": "CLAUDE.md",
+      "id": "agy-vibe-coding/CLAUDE.md",
+      "title": "Claude Agent Role and Control Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "claude",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "2b160f70",
+      "source_of_truth": "docs/agents/claude-role.md"
+    },
+    {
+      "path": "GEMINI.md",
+      "id": "agy-vibe-coding/GEMINI.md",
+      "title": "Antigravity Agent Role and Execution Guidelines",
+      "doc_type": "roles",
+      "tags": [
+        "agent",
+        "antigravity",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "319ba973",
+      "source_of_truth": "docs/agents/antigravity-role.md"
+    },
+    {
+      "path": "README.md",
+      "id": "agy-vibe-coding/README.md",
+      "title": "안전한 재고관리 실습 앱",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "9db83074"
+    },
+    {
+      "path": "RULES.md",
+      "id": "agy-vibe-coding/RULES.md",
+      "title": "Repository Global Rules Pointer",
+      "doc_type": "rules",
+      "tags": [
+        "rules",
+        "pointer"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "6acd0682"
+    },
+    {
+      "path": "antigravity-manual-reevaluation.md",
+      "id": "agy-vibe-coding/antigravity-manual-reevaluation.md",
+      "title": "Antigravity 비개발자 매뉴얼 최종 평가",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "dbba3832"
+    },
+    {
+      "path": "assets/README.md",
+      "id": "agy-vibe-coding/assets/README.md",
+      "title": "Assets Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "2848cded"
+    },
+    {
+      "path": "assets/binaries/README.md",
+      "id": "agy-vibe-coding/assets/binaries/README.md",
+      "title": "Binary Artifacts Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "binaries"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b32f8824"
+    },
+    {
+      "path": "assets/components/README.md",
+      "id": "agy-vibe-coding/assets/components/README.md",
+      "title": "Reusable Components Asset Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "components"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b3cc2e50"
+    },
+    {
+      "path": "assets/images/README.md",
+      "id": "agy-vibe-coding/assets/images/README.md",
+      "title": "Image Assets Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "images"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "8fb60a5f"
+    },
+    {
+      "path": "assets/src/README.md",
+      "id": "agy-vibe-coding/assets/src/README.md",
+      "title": "Source Snippets Asset Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "source-snippets"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "26a001a0"
+    },
+    {
+      "path": "assets/ui-components/README.md",
+      "id": "agy-vibe-coding/assets/ui-components/README.md",
+      "title": "UI Components Asset Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "ui-components"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b10abea8"
+    },
+    {
+      "path": "assets/videos/README.md",
+      "id": "agy-vibe-coding/assets/videos/README.md",
+      "title": "Video Assets Index",
+      "doc_type": "asset-index",
+      "tags": [
+        "assets",
+        "videos"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "851d4347"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "id": "agy-vibe-coding/docs/ARCHITECTURE.md",
+      "title": "Repository Architecture and Migration Design",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "directory-design",
+        "migration-plan"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "07e014bc"
+    },
+    {
+      "path": "docs/ASSET-MAP.md",
+      "id": "agy-vibe-coding/docs/ASSET-MAP.md",
+      "title": "Asset Mapping and Semantic Migration Plan",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "assets",
+        "semantic-reorg"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "5ffad781"
+    },
+    {
+      "path": "docs/README.md",
+      "id": "agy-vibe-coding/docs/README.md",
+      "title": "Docs Index",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "folder-index"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "6ef70e32"
+    },
+    {
+      "path": "docs/ROLES.md",
+      "id": "agy-vibe-coding/docs/ROLES.md",
+      "title": "Agent Roles and Session Allocation",
+      "doc_type": "roles",
+      "tags": [
+        "roles",
+        "orchestration",
+        "multi-agent"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "5cb1ccfc"
+    },
+    {
+      "path": "docs/RULES.md",
+      "id": "agy-vibe-coding/docs/RULES.md",
+      "title": "Repository Governance Rules",
+      "doc_type": "rules",
+      "tags": [
+        "rules",
+        "governance",
+        "draft"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "974fb865"
+    },
+    {
+      "path": "docs/agents/README.md",
+      "id": "agy-vibe-coding/docs/agents/README.md",
+      "title": "Agent Roles and Rules Index",
+      "doc_type": "readme",
+      "tags": [
+        "agents",
+        "roles",
+        "rules"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "24fc1f00"
+    },
+    {
+      "path": "docs/agents/antigravity-role.md",
+      "id": "agy-vibe-coding/docs/agents/antigravity-role.md",
+      "title": "Antigravity Worker Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "antigravity",
+        "role",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "3bf3a7ff"
+    },
+    {
+      "path": "docs/agents/antigravity-rules.md",
+      "id": "agy-vibe-coding/docs/agents/antigravity-rules.md",
+      "title": "Antigravity Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "antigravity",
+        "rules",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "fb7a9192"
+    },
+    {
+      "path": "docs/agents/claude-role.md",
+      "id": "agy-vibe-coding/docs/agents/claude-role.md",
+      "title": "Claude Lead Orchestrator Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "claude",
+        "role",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "a96c010b"
+    },
+    {
+      "path": "docs/agents/claude-rules.md",
+      "id": "agy-vibe-coding/docs/agents/claude-rules.md",
+      "title": "Claude Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "claude",
+        "rules",
+        "control"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "b87a2389"
+    },
+    {
+      "path": "docs/agents/codex-role.md",
+      "id": "agy-vibe-coding/docs/agents/codex-role.md",
+      "title": "Codex Terra Worker Role Definition",
+      "doc_type": "roles",
+      "tags": [
+        "codex",
+        "role",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "973b6a91"
+    },
+    {
+      "path": "docs/agents/codex-rules.md",
+      "id": "agy-vibe-coding/docs/agents/codex-rules.md",
+      "title": "Codex Terra Agent Operational Rules",
+      "doc_type": "rules",
+      "tags": [
+        "codex",
+        "rules",
+        "worker"
+      ],
+      "status": "DRAFT",
+      "updated": "2026-11-07",
+      "sha8": "1ff08606"
     },
     {
       "path": "handoffs/README.md",
@@ -281,27 +951,33 @@
     }
   ],
   "excluded": [
-    "assets/images/*",
-    "assets/binaries/*",
-    "assets/videos/*",
-    ".env*",
-    "node_modules",
-    ".git",
-    "dist",
-    "build",
-    ".cache",
-    "__pycache__"
+    {
+      "path": "assets/images/*",
+      "reason": "media-asset (managed via Drive manifest)"
+    },
+    {
+      "path": "assets/binaries/*",
+      "reason": "binary-asset (managed via Drive manifest)"
+    },
+    {
+      "path": "assets/videos/*",
+      "reason": "video-asset (managed via Drive manifest)"
+    },
+    {
+      "path": ".git",
+      "reason": "vcs-internal"
+    }
   ],
   "excluded_paths": [
     "assets/images/*",
     "assets/binaries/*",
     "assets/videos/*",
-    ".env*",
-    "node_modules",
-    ".git",
-    "dist",
-    "build",
-    ".cache",
-    "__pycache__"
-  ]
+    ".git"
+  ],
+  "excluded_reasons": {
+    "assets/images/*": "media-asset (managed via Drive manifest)",
+    "assets/binaries/*": "binary-asset (managed via Drive manifest)",
+    "assets/videos/*": "video-asset (managed via Drive manifest)",
+    ".git": "vcs-internal"
+  }
 }

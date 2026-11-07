@@ -53,3 +53,12 @@ assets/videos/*
 *.mkv
 __pycache__/
 *.pyc
+
+# assets/ui-components: ignore only media/binary extensions, keep UI source tracked
+/assets/ui-components/**/*.png
+/assets/ui-components/**/*.jpg
+/assets/ui-components/**/*.jpeg
+/assets/ui-components/**/*.gif
+/assets/ui-components/**/*.webp
+/assets/ui-components/**/*.zip
+/assets/ui-components/**/*.tar.gz
