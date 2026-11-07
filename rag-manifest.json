@@ -1,0 +1,145 @@
+{
+  "repo": "joseki-korea/agy-vibe-coding",
+  "updated": "2026-11-07",
+  "docs": [
+    {
+      "path": "README.md",
+      "id": "agy-vibe-coding/README.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "98adee90"
+    },
+    {
+      "path": "antigravity-manual-reevaluation.md",
+      "id": "agy-vibe-coding/antigravity-manual-reevaluation.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "dbba3832"
+    },
+    {
+      "path": "assets/binaries/README.md",
+      "id": "agy-vibe-coding/assets/binaries/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "649e5e1c"
+    },
+    {
+      "path": "assets/components/README.md",
+      "id": "agy-vibe-coding/assets/components/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "b3cc2e50"
+    },
+    {
+      "path": "assets/images/README.md",
+      "id": "agy-vibe-coding/assets/images/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "ede2b664"
+    },
+    {
+      "path": "assets/src/README.md",
+      "id": "agy-vibe-coding/assets/src/README.md",
+      "doc_type": "asset-index",
+      "tags": [
+        "asset-index",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "26a001a0"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "id": "agy-vibe-coding/docs/ARCHITECTURE.md",
+      "doc_type": "architecture",
+      "tags": [
+        "architecture",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "8d025cb3"
+    },
+    {
+      "path": "docs/ROLES.md",
+      "id": "agy-vibe-coding/docs/ROLES.md",
+      "doc_type": "roles",
+      "tags": [
+        "roles",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "995228b4"
+    },
+    {
+      "path": "docs/RULES.md",
+      "id": "agy-vibe-coding/docs/RULES.md",
+      "doc_type": "rules",
+      "tags": [
+        "rules",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "974fb865"
+    },
+    {
+      "path": "handoffs/README.md",
+      "id": "agy-vibe-coding/handoffs/README.md",
+      "doc_type": "handoff",
+      "tags": [
+        "handoff",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "4c416c40"
+    },
+    {
+      "path": "non-developer-manual-improvements.md",
+      "id": "agy-vibe-coding/non-developer-manual-improvements.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "4cf309fb"
+    },
+    {
+      "path": "vibe-coding-one-prompt-setup.md",
+      "id": "agy-vibe-coding/vibe-coding-one-prompt-setup.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "59912797"
+    }
+  ],
+  "excluded": [
+    "assets/binaries/**",
+    "secrets/**",
+    "dist/**",
+    "build/**",
+    "node_modules/**"
+  ]
+}

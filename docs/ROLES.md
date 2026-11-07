@@ -1,0 +1,36 @@
+---
+id: agy-vibe-coding/docs/ROLES.md
+title: Agent Roles and Session Allocation
+repo: joseki-korea/agy-vibe-coding
+device_scope: all
+doc_type: roles
+tags:
+  - roles
+  - orchestration
+  - multi-agent
+status: DRAFT
+updated: '2026-11-07'
+source_of_truth: docs/ROLES.md
+---
+
+# Agent Roles and Session Allocation
+
+## Architecture Overview
+Operations in this repository follow a coordinated multi-agent model with segregated session responsibilities.
+
+## Session Roles
+
+### PM Session (Project Management and Dispatch)
+- Oversees task intake, dependency mapping, and dispatching.
+- Synthesizes findings from work sessions and prepares deliverables.
+- Verifies adherence to repository standards before merging or publishing.
+
+### Work Sessions
+- **Antigravity (AGY)**: Full-stack implementation, architecture refactoring, and multi-file workflows.
+- **Codex Terra**: Algorithmic implementation, core logic routines, and test automation.
+- **Claude Haiku**: Rapid transformations, style normalization, and lightweight linting.
+
+### Janitor Session (Context-Overload Watchdog)
+- Dedicated context watchdog monitoring session saturation.
+- Enforces handoff and context clearance when saturation reaches 30 percent.
+- Does not author features or modify application logic.
