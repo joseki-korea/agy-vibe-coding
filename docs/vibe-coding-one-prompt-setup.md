@@ -1,5 +1,5 @@
 ---
-id: agy-vibe-coding/vibe-coding-one-prompt-setup.md
+id: agy-vibe-coding/docs/vibe-coding-one-prompt-setup.md
 title: Antigravity CLI 최소 개입 원샷 세팅
 repo: joseki-korea/agy-vibe-coding
 device_scope: all
@@ -9,7 +9,7 @@ tags:
   - standard-documentation
 status: DRAFT
 updated: '2026-11-07'
-source_of_truth: vibe-coding-one-prompt-setup.md
+source_of_truth: docs/vibe-coding-one-prompt-setup.md
 ---
 
 # Antigravity CLI 최소 개입 원샷 세팅

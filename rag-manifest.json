@@ -14,17 +14,6 @@
       "sha8": "98adee90"
     },
     {
-      "path": "antigravity-manual-reevaluation.md",
-      "id": "agy-vibe-coding/antigravity-manual-reevaluation.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "dbba3832"
-    },
-    {
       "path": "assets/binaries/README.md",
       "id": "agy-vibe-coding/assets/binaries/README.md",
       "doc_type": "asset-index",
@@ -77,7 +66,7 @@
         "standard-documentation"
       ],
       "updated": "2026-11-07",
-      "sha8": "8d025cb3"
+      "sha8": "d2dcf56f"
     },
     {
       "path": "docs/ROLES.md",
@@ -102,6 +91,39 @@
       "sha8": "974fb865"
     },
     {
+      "path": "docs/antigravity-manual-reevaluation.md",
+      "id": "agy-vibe-coding/docs/antigravity-manual-reevaluation.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "8ef3052a"
+    },
+    {
+      "path": "docs/non-developer-manual-improvements.md",
+      "id": "agy-vibe-coding/docs/non-developer-manual-improvements.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "a6dc2658"
+    },
+    {
+      "path": "docs/vibe-coding-one-prompt-setup.md",
+      "id": "agy-vibe-coding/docs/vibe-coding-one-prompt-setup.md",
+      "doc_type": "readme",
+      "tags": [
+        "readme",
+        "standard-documentation"
+      ],
+      "updated": "2026-11-07",
+      "sha8": "387dd578"
+    },
+    {
       "path": "handoffs/README.md",
       "id": "agy-vibe-coding/handoffs/README.md",
       "doc_type": "handoff",
@@ -111,31 +133,10 @@
       ],
       "updated": "2026-11-07",
       "sha8": "4c416c40"
-    },
-    {
-      "path": "non-developer-manual-improvements.md",
-      "id": "agy-vibe-coding/non-developer-manual-improvements.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "4cf309fb"
-    },
-    {
-      "path": "vibe-coding-one-prompt-setup.md",
-      "id": "agy-vibe-coding/vibe-coding-one-prompt-setup.md",
-      "doc_type": "readme",
-      "tags": [
-        "readme",
-        "standard-documentation"
-      ],
-      "updated": "2026-11-07",
-      "sha8": "59912797"
     }
   ],
   "excluded": [
+    "assets/images/**",
     "assets/binaries/**",
     "secrets/**",
     "dist/**",
