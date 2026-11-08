@@ -19,3 +19,7 @@
 - 정리 담당: [docs/agents/ROLE-janitor.md](docs/agents/ROLE-janitor.md)
 - 감시 담당: [docs/agents/ROLE-watchdog.md](docs/agents/ROLE-watchdog.md)
 - 훅 목록: [docs/agents/HOOKS.md](docs/agents/HOOKS.md)
+
+## 규칙 상속 (전역 → 지역)
+
+전역: solucionemos-vault main의 `rules/INDEX.md`, Rule 00·01·02·04와 `~/.claude/CLAUDE.md`, `~/orca/CLAUDE.md`. 지역: `MODEL-SESSION-RULES.md`, `ROLES.md`, `PM.md`, `ARCHITECTURE.md`. 지역 규칙은 이 저장소의 맥락만 추가하며 전역 안전 및 승인 규칙을 완화할 수 없다.

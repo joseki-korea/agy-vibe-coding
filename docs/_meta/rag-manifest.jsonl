@@ -1,18 +1,33 @@
-{"heading": "Codex Terra Agent Guidelines — agy-vibe-coding", "id": "AGENTS.md#L5", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "2f9f90db", "tags": ["agent"]}
-{"heading": "1. 역할 범위: Worker Session (작업 세션)", "id": "AGENTS.md#L9", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "2f9f90db", "tags": ["agent"]}
-{"heading": "2. 운영 지침", "id": "AGENTS.md#L13", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "2f9f90db", "tags": ["agent"]}
-{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "AGENTS.md#L17", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "2f9f90db", "tags": ["agent"]}
-{"heading": "Repository Architecture — agy-vibe-coding", "id": "ARCHITECTURE.md#L24", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "c2d84b02", "tags": ["-"]}
-{"heading": "1. 아키텍처 요약", "id": "ARCHITECTURE.md#L28", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "c2d84b02", "tags": ["-"]}
-{"heading": "2. 정본 문서 안내", "id": "ARCHITECTURE.md#L35", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "c2d84b02", "tags": ["-"]}
-{"heading": "Claude Agent Guidelines — agy-vibe-coding", "id": "CLAUDE.md#L5", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "8cc9bbae", "tags": ["agent"]}
-{"heading": "1. 역할 범위: Control & Monitoring ONLY", "id": "CLAUDE.md#L9", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "8cc9bbae", "tags": ["agent"]}
-{"heading": "2. 작업 위임 지침", "id": "CLAUDE.md#L14", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "8cc9bbae", "tags": ["agent"]}
-{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "CLAUDE.md#L18", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "8cc9bbae", "tags": ["agent"]}
+{"heading": "Codex Terra Agent Guidelines — agy-vibe-coding", "id": "AGENTS.md#L5", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "1. 역할 범위: Worker Session (작업 세션)", "id": "AGENTS.md#L9", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "2. 운영 지침", "id": "AGENTS.md#L13", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "AGENTS.md#L17", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "규칙 상속 (전역 → 지역)", "id": "AGENTS.md#L23", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "Repository Architecture — agy-vibe-coding", "id": "ARCHITECTURE.md#L24", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "1. 아키텍처 요약", "id": "ARCHITECTURE.md#L28", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "2. 정본 문서 안내", "id": "ARCHITECTURE.md#L35", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "현재 최상위 디렉터리", "id": "ARCHITECTURE.md#L39", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "Claude Agent Guidelines — agy-vibe-coding", "id": "CLAUDE.md#L5", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "1. 역할 범위: Control & Monitoring ONLY", "id": "CLAUDE.md#L9", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "2. 작업 위임 지침", "id": "CLAUDE.md#L14", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "CLAUDE.md#L18", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "규칙 상속 (전역 → 지역)", "id": "CLAUDE.md#L24", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
 {"heading": "Antigravity Agent Guidelines — agy-vibe-coding", "id": "GEMINI.md#L5", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
 {"heading": "1. 역할 범위: Worker Session (작업 세션)", "id": "GEMINI.md#L9", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
 {"heading": "2. 운영 지침", "id": "GEMINI.md#L13", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
 {"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "GEMINI.md#L16", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
+{"heading": "모델 세션 규칙", "id": "MODEL-SESSION-RULES.md#L1", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "Status", "id": "MODEL-SESSION-RULES.md#L3", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "상속 (Inheritance)", "id": "MODEL-SESSION-RULES.md#L6", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "모델 배치 (Model placement)", "id": "MODEL-SESSION-RULES.md#L9", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "이름 (Naming)", "id": "MODEL-SESSION-RULES.md#L12", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "컨텍스트 (Context)", "id": "MODEL-SESSION-RULES.md#L15", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "승인 (Approval)", "id": "MODEL-SESSION-RULES.md#L18", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "PM", "id": "PM.md#L1", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Owner (담당)", "id": "PM.md#L3", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Priorities", "id": "PM.md#L6", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Backlog", "id": "PM.md#L11", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Status / Updated", "id": "PM.md#L14", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
 {"heading": "RAG indexing", "id": "RAG.md#L23", "lang": "en", "path": "RAG.md", "sensitivity": "public", "sha8": "735aaacf", "tags": ["- guide"]}
 {"heading": "LLM Wiki", "id": "RAG.md#L27", "lang": "en", "path": "RAG.md", "sensitivity": "public", "sha8": "735aaacf", "tags": ["- guide"]}
 {"heading": "안전한 재고관리 실습 앱", "id": "README.md#L17", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
@@ -21,6 +36,7 @@
 {"heading": "검증과 배포", "id": "README.md#L51", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
 {"heading": "상세 매뉴얼", "id": "README.md#L61", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
 {"heading": "Repository Governance & Architecture", "id": "README.md#L68", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "역할", "id": "ROLES.md#L1", "lang": "unknown", "path": "ROLES.md", "sensitivity": "unknown", "sha8": "fc2ad1f0", "tags": []}
 {"heading": "Repository Global Rules — agy-vibe-coding", "id": "RULES.md#L24", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
 {"heading": "1. 핵심 전역 규칙 요약", "id": "RULES.md#L28", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
 {"heading": "2. 정본 문서 안내", "id": "RULES.md#L34", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
