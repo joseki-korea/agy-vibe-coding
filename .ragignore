@@ -16,3 +16,9 @@ __pycache__/
 *.jpeg
 *.mp4
 *.zip
+.env
+.env.*
+*.p12
+*.pfx
+*.sqlite
+*.db
