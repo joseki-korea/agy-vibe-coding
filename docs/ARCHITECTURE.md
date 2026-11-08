@@ -35,7 +35,7 @@ This document specifies the baseline directory structure, target standard archit
 - `.oxlintrc.json`
 - `README.md`
 - `antigravity-manual-reevaluation.md`
-- `assets/images/screenshots/antigravity-site-preview.jpg`
+- [assets/images/screenshots/antigravity-site-preview.jpg](https://drive.google.com/file/d/1fIiEIpp6IdfNF7FgU6pjUiO-czYz895j/view?usp=drivesdk)
 - `assets/images/screenshots/dashboard-preview.jpg`
 - `assets/images/screenshots/github-repository-preview.jpg`
 - `index.html`
@@ -67,7 +67,7 @@ This document specifies the baseline directory structure, target standard archit
 - `.oxlintrc.json`
 - `README.md`
 - `antigravity-manual-reevaluation.md`
-- `assets/images/screenshots/antigravity-site-preview.jpg`
+- [assets/images/screenshots/antigravity-site-preview.jpg](https://drive.google.com/file/d/1fIiEIpp6IdfNF7FgU6pjUiO-czYz895j/view?usp=drivesdk)
 - `assets/images/screenshots/dashboard-preview.jpg`
 - `assets/images/screenshots/github-repository-preview.jpg`
 - `index.html`
