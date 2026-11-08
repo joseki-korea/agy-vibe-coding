@@ -1,0 +1,226 @@
+{"heading": "Codex Terra Agent Guidelines — agy-vibe-coding", "id": "AGENTS.md#L5", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "1. 역할 범위: Worker Session (작업 세션)", "id": "AGENTS.md#L9", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "2. 운영 지침", "id": "AGENTS.md#L13", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "AGENTS.md#L17", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "규칙 상속 (전역 → 지역)", "id": "AGENTS.md#L23", "lang": "ko", "path": "AGENTS.md", "sensitivity": "public", "sha8": "ad0c31c2", "tags": ["agent"]}
+{"heading": "Repository Architecture — agy-vibe-coding", "id": "ARCHITECTURE.md#L24", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "1. 아키텍처 요약", "id": "ARCHITECTURE.md#L28", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "2. 정본 문서 안내", "id": "ARCHITECTURE.md#L35", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "현재 최상위 디렉터리", "id": "ARCHITECTURE.md#L39", "lang": "ko", "path": "ARCHITECTURE.md", "sensitivity": "public", "sha8": "ab63d71c", "tags": ["-"]}
+{"heading": "Claude Agent Guidelines — agy-vibe-coding", "id": "CLAUDE.md#L5", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "1. 역할 범위: Control & Monitoring ONLY", "id": "CLAUDE.md#L9", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "2. 작업 위임 지침", "id": "CLAUDE.md#L14", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "CLAUDE.md#L18", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "규칙 상속 (전역 → 지역)", "id": "CLAUDE.md#L24", "lang": "ko", "path": "CLAUDE.md", "sensitivity": "public", "sha8": "dcd37584", "tags": ["agent"]}
+{"heading": "Antigravity Agent Guidelines — agy-vibe-coding", "id": "GEMINI.md#L5", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
+{"heading": "1. 역할 범위: Worker Session (작업 세션)", "id": "GEMINI.md#L9", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
+{"heading": "2. 운영 지침", "id": "GEMINI.md#L13", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
+{"heading": "멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)", "id": "GEMINI.md#L16", "lang": "ko", "path": "GEMINI.md", "sensitivity": "public", "sha8": "d953e22b", "tags": ["agent"]}
+{"heading": "모델 세션 규칙", "id": "MODEL-SESSION-RULES.md#L1", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "Status", "id": "MODEL-SESSION-RULES.md#L3", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "상속 (Inheritance)", "id": "MODEL-SESSION-RULES.md#L6", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "모델 배치 (Model placement)", "id": "MODEL-SESSION-RULES.md#L9", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "이름 (Naming)", "id": "MODEL-SESSION-RULES.md#L12", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "컨텍스트 (Context)", "id": "MODEL-SESSION-RULES.md#L15", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "승인 (Approval)", "id": "MODEL-SESSION-RULES.md#L18", "lang": "unknown", "path": "MODEL-SESSION-RULES.md", "sensitivity": "unknown", "sha8": "b2caab9a", "tags": []}
+{"heading": "PM", "id": "PM.md#L1", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Owner (담당)", "id": "PM.md#L3", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Priorities", "id": "PM.md#L6", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Backlog", "id": "PM.md#L11", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "Status / Updated", "id": "PM.md#L14", "lang": "unknown", "path": "PM.md", "sensitivity": "unknown", "sha8": "72fabfb1", "tags": []}
+{"heading": "RAG indexing", "id": "RAG.md#L23", "lang": "en", "path": "RAG.md", "sensitivity": "public", "sha8": "735aaacf", "tags": ["- guide"]}
+{"heading": "LLM Wiki", "id": "RAG.md#L27", "lang": "en", "path": "RAG.md", "sensitivity": "public", "sha8": "735aaacf", "tags": ["- guide"]}
+{"heading": "안전한 재고관리 실습 앱", "id": "README.md#L17", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "시작하기", "id": "README.md#L21", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "데이터베이스 설정", "id": "README.md#L40", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "검증과 배포", "id": "README.md#L51", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "상세 매뉴얼", "id": "README.md#L61", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "Repository Governance & Architecture", "id": "README.md#L68", "lang": "unknown", "path": "README.md", "sensitivity": "unknown", "sha8": "88905af0", "tags": ["- readme"]}
+{"heading": "역할", "id": "ROLES.md#L1", "lang": "unknown", "path": "ROLES.md", "sensitivity": "unknown", "sha8": "fc2ad1f0", "tags": []}
+{"heading": "Repository Global Rules — agy-vibe-coding", "id": "RULES.md#L24", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
+{"heading": "1. 핵심 전역 규칙 요약", "id": "RULES.md#L28", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
+{"heading": "2. 정본 문서 안내", "id": "RULES.md#L34", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
+{"heading": "핸드오프 절차", "id": "RULES.md#L38", "lang": "ko", "path": "RULES.md", "sensitivity": "public", "sha8": "36b47507", "tags": ["-"]}
+{"heading": "Antigravity 비개발자 매뉴얼 최종 평가", "id": "antigravity-manual-reevaluation.md#L15", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "종합 평가", "id": "antigravity-manual-reevaluation.md#L17", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "완료된 핵심 개선", "id": "antigravity-manual-reevaluation.md#L23", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "검증 결과", "id": "antigravity-manual-reevaluation.md#L41", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "사용 순서", "id": "antigravity-manual-reevaluation.md#L51", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "검증 범위 주의사항", "id": "antigravity-manual-reevaluation.md#L60", "lang": "unknown", "path": "antigravity-manual-reevaluation.md", "sensitivity": "unknown", "sha8": "dbba3832", "tags": ["- readme"]}
+{"heading": "Asset manifest", "id": "assets/MANIFEST.md#L23", "lang": "en", "path": "assets/MANIFEST.md", "sensitivity": "public", "sha8": "ab949c29", "tags": ["- assets"]}
+{"heading": "Binary migration B3", "id": "assets/MANIFEST.md#L27", "lang": "en", "path": "assets/MANIFEST.md", "sensitivity": "public", "sha8": "ab949c29", "tags": ["- assets"]}
+{"heading": "Assets", "id": "assets/README.md#L24", "lang": "en", "path": "assets/README.md", "sensitivity": "public", "sha8": "fa5e025a", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "assets/README.md#L26", "lang": "en", "path": "assets/README.md", "sensitivity": "public", "sha8": "fa5e025a", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "assets/README.md#L29", "lang": "en", "path": "assets/README.md", "sensitivity": "public", "sha8": "fa5e025a", "tags": ["- readme"]}
+{"heading": "Binary Artifacts Index", "id": "assets/binaries/README.md#L24", "lang": "ko", "path": "assets/binaries/README.md", "sensitivity": "public", "sha8": "f409637a", "tags": ["- assets"]}
+{"heading": "Purpose", "id": "assets/binaries/README.md#L26", "lang": "ko", "path": "assets/binaries/README.md", "sensitivity": "public", "sha8": "f409637a", "tags": ["- assets"]}
+{"heading": "Google Drive Synchronization", "id": "assets/binaries/README.md#L29", "lang": "ko", "path": "assets/binaries/README.md", "sensitivity": "public", "sha8": "f409637a", "tags": ["- assets"]}
+{"heading": "Reusable Components Asset Index", "id": "assets/components/README.md#L24", "lang": "en", "path": "assets/components/README.md", "sensitivity": "public", "sha8": "b7024222", "tags": ["- assets"]}
+{"heading": "Purpose", "id": "assets/components/README.md#L26", "lang": "en", "path": "assets/components/README.md", "sensitivity": "public", "sha8": "b7024222", "tags": ["- assets"]}
+{"heading": "Image Assets Index", "id": "assets/images/README.md#L24", "lang": "ko", "path": "assets/images/README.md", "sensitivity": "public", "sha8": "e2b5053e", "tags": ["- assets"]}
+{"heading": "Purpose", "id": "assets/images/README.md#L26", "lang": "ko", "path": "assets/images/README.md", "sensitivity": "public", "sha8": "e2b5053e", "tags": ["- assets"]}
+{"heading": "Google Drive Synchronization", "id": "assets/images/README.md#L29", "lang": "ko", "path": "assets/images/README.md", "sensitivity": "public", "sha8": "e2b5053e", "tags": ["- assets"]}
+{"heading": "assets/images/brand", "id": "assets/images/brand/README.md#L23", "lang": "en", "path": "assets/images/brand/README.md", "sensitivity": "public", "sha8": "b5a609dd", "tags": ["- readme"]}
+{"heading": "assets/images/diagrams", "id": "assets/images/diagrams/README.md#L23", "lang": "en", "path": "assets/images/diagrams/README.md", "sensitivity": "public", "sha8": "6148c053", "tags": ["- readme"]}
+{"heading": "assets/images/photos", "id": "assets/images/photos/README.md#L23", "lang": "en", "path": "assets/images/photos/README.md", "sensitivity": "public", "sha8": "66741ae7", "tags": ["- readme"]}
+{"heading": "assets/images/product", "id": "assets/images/product/README.md#L23", "lang": "en", "path": "assets/images/product/README.md", "sensitivity": "public", "sha8": "f8f099b5", "tags": ["- readme"]}
+{"heading": "assets/images/screenshots", "id": "assets/images/screenshots/README.md#L23", "lang": "en", "path": "assets/images/screenshots/README.md", "sensitivity": "public", "sha8": "92818ab7", "tags": ["- readme"]}
+{"heading": "Source Snippets Asset Index", "id": "assets/src/README.md#L24", "lang": "en", "path": "assets/src/README.md", "sensitivity": "public", "sha8": "4621d751", "tags": ["- assets"]}
+{"heading": "Purpose", "id": "assets/src/README.md#L26", "lang": "en", "path": "assets/src/README.md", "sensitivity": "public", "sha8": "4621d751", "tags": ["- assets"]}
+{"heading": "assets/ui", "id": "assets/ui/README.md#L23", "lang": "en", "path": "assets/ui/README.md", "sensitivity": "public", "sha8": "a9956545", "tags": ["- readme"]}
+{"heading": "assets/ui/components", "id": "assets/ui/components/README.md#L23", "lang": "en", "path": "assets/ui/components/README.md", "sensitivity": "public", "sha8": "3a5f2bc7", "tags": ["- readme"]}
+{"heading": "assets/ui/icons", "id": "assets/ui/icons/README.md#L23", "lang": "en", "path": "assets/ui/icons/README.md", "sensitivity": "public", "sha8": "1f2b0f29", "tags": ["- readme"]}
+{"heading": "assets/ui/mockups", "id": "assets/ui/mockups/README.md#L23", "lang": "en", "path": "assets/ui/mockups/README.md", "sensitivity": "public", "sha8": "c48f945e", "tags": ["- readme"]}
+{"heading": "assets/ui/tokens", "id": "assets/ui/tokens/README.md#L23", "lang": "en", "path": "assets/ui/tokens/README.md", "sensitivity": "public", "sha8": "1be34a42", "tags": ["- readme"]}
+{"heading": "UI Components Asset Index — agy-vibe-coding", "id": "assets/ui-components/README.md#L24", "lang": "ko", "path": "assets/ui-components/README.md", "sensitivity": "public", "sha8": "ff77373e", "tags": ["-"]}
+{"heading": "1. 개요", "id": "assets/ui-components/README.md#L26", "lang": "ko", "path": "assets/ui-components/README.md", "sensitivity": "public", "sha8": "ff77373e", "tags": ["-"]}
+{"heading": "2. 추적 원칙", "id": "assets/ui-components/README.md#L29", "lang": "ko", "path": "assets/ui-components/README.md", "sensitivity": "public", "sha8": "ff77373e", "tags": ["-"]}
+{"heading": "Video Assets Index", "id": "assets/videos/README.md#L24", "lang": "ko", "path": "assets/videos/README.md", "sensitivity": "public", "sha8": "88575a6e", "tags": ["- assets"]}
+{"heading": "Purpose", "id": "assets/videos/README.md#L26", "lang": "ko", "path": "assets/videos/README.md", "sensitivity": "public", "sha8": "88575a6e", "tags": ["- assets"]}
+{"heading": "Google Drive Synchronization", "id": "assets/videos/README.md#L29", "lang": "ko", "path": "assets/videos/README.md", "sensitivity": "public", "sha8": "88575a6e", "tags": ["- assets"]}
+{"heading": "Repository Architecture and Migration Design", "id": "docs/ARCHITECTURE.md#L25", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "1. Overview", "id": "docs/ARCHITECTURE.md#L27", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "2. Baseline Architecture (CURRENT Tree)", "id": "docs/ARCHITECTURE.md#L30", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Tracked Root Files (origin/main)", "id": "docs/ARCHITECTURE.md#L32", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Tracked Directory Hierarchy (origin/main, depth ≤ 3)", "id": "docs/ARCHITECTURE.md#L54", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "3. Target Standard Architecture (TARGET Tree)", "id": "docs/ARCHITECTURE.md#L62", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Tracked Root Files (Target)", "id": "docs/ARCHITECTURE.md#L64", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Tracked Directory Hierarchy (Target, depth ≤ 3)", "id": "docs/ARCHITECTURE.md#L87", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "4. Current → Target Mapping Table", "id": "docs/ARCHITECTURE.md#L103", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "5. Move-Safety Validation & Grep Evidence", "id": "docs/ARCHITECTURE.md#L113", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "6. Migration Execution & Rollback Plan", "id": "docs/ARCHITECTURE.md#L118", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Migration Protocol", "id": "docs/ARCHITECTURE.md#L120", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Rollback Commands", "id": "docs/ARCHITECTURE.md#L125", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Code-derived components", "id": "docs/ARCHITECTURE.md#L131", "lang": "ko", "path": "docs/ARCHITECTURE.md", "sensitivity": "public", "sha8": "0505bcc6", "tags": ["- architecture"]}
+{"heading": "Asset map", "id": "docs/ASSET-MAP.md#L1", "lang": "unknown", "path": "docs/ASSET-MAP.md", "sensitivity": "unknown", "sha8": "5b85f1d8", "tags": []}
+{"heading": "Docs", "id": "docs/README.md#L24", "lang": "en", "path": "docs/README.md", "sensitivity": "public", "sha8": "41d8526d", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "docs/README.md#L26", "lang": "en", "path": "docs/README.md", "sensitivity": "public", "sha8": "41d8526d", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "docs/README.md#L29", "lang": "en", "path": "docs/README.md", "sensitivity": "public", "sha8": "41d8526d", "tags": ["- readme"]}
+{"heading": "Agent Roles and Session Allocation", "id": "docs/ROLES.md#L25", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "Architecture Overview", "id": "docs/ROLES.md#L27", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "Session Roles", "id": "docs/ROLES.md#L30", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "PM Session (Project Management and Dispatch)", "id": "docs/ROLES.md#L32", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "Work Sessions", "id": "docs/ROLES.md#L38", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "Janitor Session (Context-Overload Watchdog)", "id": "docs/ROLES.md#L43", "lang": "en", "path": "docs/ROLES.md", "sensitivity": "public", "sha8": "02a3254e", "tags": ["- roles"]}
+{"heading": "Repository Governance Rules", "id": "docs/RULES.md#L25", "lang": "en", "path": "docs/RULES.md", "sensitivity": "public", "sha8": "1fc3c7de", "tags": ["- rules"]}
+{"heading": "Canonical Governance References", "id": "docs/RULES.md#L27", "lang": "en", "path": "docs/RULES.md", "sensitivity": "public", "sha8": "1fc3c7de", "tags": ["- rules"]}
+{"heading": "Local Repository Guidelines", "id": "docs/RULES.md#L35", "lang": "en", "path": "docs/RULES.md", "sensitivity": "public", "sha8": "1fc3c7de", "tags": ["- rules"]}
+{"heading": "Binary migration plan", "id": "docs/_meta/binary-plan.md#L1", "lang": "unknown", "path": "docs/_meta/binary-plan.md", "sensitivity": "unknown", "sha8": "26dee9af", "tags": []}
+{"heading": "훅 목록 (실측)", "id": "docs/agents/HOOKS.md#L17", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "요약", "id": "docs/agents/HOOKS.md#L21", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "1. Claude Code 훅", "id": "docs/agents/HOOKS.md#L31", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "2. Codex 훅", "id": "docs/agents/HOOKS.md#L34", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "3. git 훅", "id": "docs/agents/HOOKS.md#L37", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "4. CI (GitHub Actions)", "id": "docs/agents/HOOKS.md#L40", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "5. npm 라이프사이클 스크립트", "id": "docs/agents/HOOKS.md#L43", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "실패 시 동작 (종류별)", "id": "docs/agents/HOOKS.md#L46", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "추가 방법 (안전 규칙)", "id": "docs/agents/HOOKS.md#L52", "lang": "ko", "path": "docs/agents/HOOKS.md", "sensitivity": "internal", "sha8": "078bd886", "tags": ["["]}
+{"heading": "Agent Roles and Rules Index — agy-vibe-coding", "id": "docs/agents/README.md#L25", "lang": "ko", "path": "docs/agents/README.md", "sensitivity": "public", "sha8": "f81c322b", "tags": ["-"]}
+{"heading": "에이전트 문서 목록", "id": "docs/agents/README.md#L29", "lang": "ko", "path": "docs/agents/README.md", "sensitivity": "public", "sha8": "f81c322b", "tags": ["-"]}
+{"heading": "정리 담당(janitor) 역할", "id": "docs/agents/ROLE-janitor.md#L17", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "목적", "id": "docs/agents/ROLE-janitor.md#L19", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "정리 대상 (일반 규칙)", "id": "docs/agents/ROLE-janitor.md#L22", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "금지", "id": "docs/agents/ROLE-janitor.md#L28", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "절차: 목록 → 기록 → 실행 → 영수증", "id": "docs/agents/ROLE-janitor.md#L34", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "이 레포 정리 대상 (실측, 2026-11-08, @8a680b90)", "id": "docs/agents/ROLE-janitor.md#L40", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "빌드·설치 산출물 (재생성 가능)", "id": "docs/agents/ROLE-janitor.md#L42", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "큰 최상위 폴더 (50MB 이상)", "id": "docs/agents/ROLE-janitor.md#L47", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "임시 파일 후보 (추적되지 않는 것만)", "id": "docs/agents/ROLE-janitor.md#L52", "lang": "ko", "path": "docs/agents/ROLE-janitor.md", "sensitivity": "internal", "sha8": "ec82cec8", "tags": ["["]}
+{"heading": "감시 담당(watchdog) 역할", "id": "docs/agents/ROLE-watchdog.md#L17", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "목적", "id": "docs/agents/ROLE-watchdog.md#L19", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "감시 항목", "id": "docs/agents/ROLE-watchdog.md#L22", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "이 레포 검증 명령 (실측)", "id": "docs/agents/ROLE-watchdog.md#L31", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "CI 워크플로 (실측)", "id": "docs/agents/ROLE-watchdog.md#L35", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "규칙", "id": "docs/agents/ROLE-watchdog.md#L38", "lang": "ko", "path": "docs/agents/ROLE-watchdog.md", "sensitivity": "internal", "sha8": "766f5cbb", "tags": ["["]}
+{"heading": "Antigravity Role Definition — agy-vibe-coding", "id": "docs/agents/antigravity-role.md#L25", "lang": "ko", "path": "docs/agents/antigravity-role.md", "sensitivity": "public", "sha8": "d98e41d7", "tags": ["-"]}
+{"heading": "1. 역할 정의 (Role Overview)", "id": "docs/agents/antigravity-role.md#L27", "lang": "ko", "path": "docs/agents/antigravity-role.md", "sensitivity": "public", "sha8": "d98e41d7", "tags": ["-"]}
+{"heading": "2. 주요 책임 (Responsibilities)", "id": "docs/agents/antigravity-role.md#L30", "lang": "ko", "path": "docs/agents/antigravity-role.md", "sensitivity": "public", "sha8": "d98e41d7", "tags": ["-"]}
+{"heading": "Antigravity Operational Rules — agy-vibe-coding", "id": "docs/agents/antigravity-rules.md#L25", "lang": "ko", "path": "docs/agents/antigravity-rules.md", "sensitivity": "public", "sha8": "56360dad", "tags": ["-"]}
+{"heading": "1. 운영 규칙 (Operational Rules)", "id": "docs/agents/antigravity-rules.md#L27", "lang": "ko", "path": "docs/agents/antigravity-rules.md", "sensitivity": "public", "sha8": "56360dad", "tags": ["-"]}
+{"heading": "Claude Role Definition — agy-vibe-coding", "id": "docs/agents/claude-role.md#L25", "lang": "ko", "path": "docs/agents/claude-role.md", "sensitivity": "public", "sha8": "3b323f17", "tags": ["-"]}
+{"heading": "1. 역할 정의 (Role Overview)", "id": "docs/agents/claude-role.md#L27", "lang": "ko", "path": "docs/agents/claude-role.md", "sensitivity": "public", "sha8": "3b323f17", "tags": ["-"]}
+{"heading": "2. 주요 책임 (Responsibilities)", "id": "docs/agents/claude-role.md#L30", "lang": "ko", "path": "docs/agents/claude-role.md", "sensitivity": "public", "sha8": "3b323f17", "tags": ["-"]}
+{"heading": "3. 금지 사항 (Prohibitions)", "id": "docs/agents/claude-role.md#L35", "lang": "ko", "path": "docs/agents/claude-role.md", "sensitivity": "public", "sha8": "3b323f17", "tags": ["-"]}
+{"heading": "Claude Operational Rules — agy-vibe-coding", "id": "docs/agents/claude-rules.md#L25", "lang": "ko", "path": "docs/agents/claude-rules.md", "sensitivity": "public", "sha8": "323a8c6b", "tags": ["-"]}
+{"heading": "1. 운영 규칙 (Operational Rules)", "id": "docs/agents/claude-rules.md#L27", "lang": "ko", "path": "docs/agents/claude-rules.md", "sensitivity": "public", "sha8": "323a8c6b", "tags": ["-"]}
+{"heading": "Codex Terra Role Definition — agy-vibe-coding", "id": "docs/agents/codex-role.md#L25", "lang": "ko", "path": "docs/agents/codex-role.md", "sensitivity": "public", "sha8": "09a3ad59", "tags": ["-"]}
+{"heading": "1. 역할 정의 (Role Overview)", "id": "docs/agents/codex-role.md#L27", "lang": "ko", "path": "docs/agents/codex-role.md", "sensitivity": "public", "sha8": "09a3ad59", "tags": ["-"]}
+{"heading": "2. 주요 책임 (Responsibilities)", "id": "docs/agents/codex-role.md#L30", "lang": "ko", "path": "docs/agents/codex-role.md", "sensitivity": "public", "sha8": "09a3ad59", "tags": ["-"]}
+{"heading": "Codex Terra Operational Rules — agy-vibe-coding", "id": "docs/agents/codex-rules.md#L25", "lang": "ko", "path": "docs/agents/codex-rules.md", "sensitivity": "public", "sha8": "a0efeffb", "tags": ["-"]}
+{"heading": "1. 운영 규칙 (Operational Rules)", "id": "docs/agents/codex-rules.md#L27", "lang": "ko", "path": "docs/agents/codex-rules.md", "sensitivity": "public", "sha8": "a0efeffb", "tags": ["-"]}
+{"heading": "핸드오프 폴더 (docs/agents/handoffs)", "id": "docs/agents/handoffs/README.md#L17", "lang": "ko", "path": "docs/agents/handoffs/README.md", "sensitivity": "internal", "sha8": "abb63488", "tags": ["["]}
+{"heading": "파일 이름", "id": "docs/agents/handoffs/README.md#L21", "lang": "ko", "path": "docs/agents/handoffs/README.md", "sensitivity": "internal", "sha8": "abb63488", "tags": ["["]}
+{"heading": "규칙", "id": "docs/agents/handoffs/README.md#L27", "lang": "ko", "path": "docs/agents/handoffs/README.md", "sensitivity": "internal", "sha8": "abb63488", "tags": ["["]}
+{"heading": "절차", "id": "docs/agents/handoffs/README.md#L36", "lang": "ko", "path": "docs/agents/handoffs/README.md", "sensitivity": "internal", "sha8": "abb63488", "tags": ["["]}
+{"heading": "관련 문서", "id": "docs/agents/handoffs/README.md#L41", "lang": "ko", "path": "docs/agents/handoffs/README.md", "sensitivity": "internal", "sha8": "abb63488", "tags": ["["]}
+{"heading": "핸드오프: <제목>", "id": "docs/agents/handoffs/TEMPLATE.md#L17", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "정보", "id": "docs/agents/handoffs/TEMPLATE.md#L19", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "목표", "id": "docs/agents/handoffs/TEMPLATE.md#L27", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "완료", "id": "docs/agents/handoffs/TEMPLATE.md#L29", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "남은 일", "id": "docs/agents/handoffs/TEMPLATE.md#L31", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "결정", "id": "docs/agents/handoffs/TEMPLATE.md#L33", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "위험", "id": "docs/agents/handoffs/TEMPLATE.md#L35", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "근거", "id": "docs/agents/handoffs/TEMPLATE.md#L37", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "다음 담당", "id": "docs/agents/handoffs/TEMPLATE.md#L40", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "ACK", "id": "docs/agents/handoffs/TEMPLATE.md#L42", "lang": "ko", "path": "docs/agents/handoffs/TEMPLATE.md", "sensitivity": "internal", "sha8": "731656b9", "tags": ["["]}
+{"heading": "Glossary", "id": "docs/glossary.md#L23", "lang": "en", "path": "docs/glossary.md", "sensitivity": "public", "sha8": "e16b4051", "tags": ["- guide"]}
+{"heading": "위키 작성 규칙", "id": "docs/wiki/SCHEMA.md#L5", "lang": "ko", "path": "docs/wiki/SCHEMA.md", "sensitivity": "public", "sha8": "7edfdd03", "tags": ["wiki"]}
+{"heading": "Ingest", "id": "docs/wiki/SCHEMA.md#L7", "lang": "ko", "path": "docs/wiki/SCHEMA.md", "sensitivity": "public", "sha8": "7edfdd03", "tags": ["wiki"]}
+{"heading": "Query", "id": "docs/wiki/SCHEMA.md#L11", "lang": "ko", "path": "docs/wiki/SCHEMA.md", "sensitivity": "public", "sha8": "7edfdd03", "tags": ["wiki"]}
+{"heading": "Lint", "id": "docs/wiki/SCHEMA.md#L15", "lang": "ko", "path": "docs/wiki/SCHEMA.md", "sensitivity": "public", "sha8": "7edfdd03", "tags": ["wiki"]}
+{"heading": "페이지 종류", "id": "docs/wiki/SCHEMA.md#L19", "lang": "ko", "path": "docs/wiki/SCHEMA.md", "sensitivity": "public", "sha8": "7edfdd03", "tags": ["wiki"]}
+{"heading": "위키 색인", "id": "docs/wiki/index.md#L5", "lang": "ko", "path": "docs/wiki/index.md", "sensitivity": "public", "sha8": "e255ca48", "tags": ["wiki"]}
+{"heading": "에이전트 문서 (docs/agents)", "id": "docs/wiki/index.md#L16", "lang": "ko", "path": "docs/wiki/index.md", "sensitivity": "public", "sha8": "e255ca48", "tags": ["wiki"]}
+{"heading": "수집 기록", "id": "docs/wiki/log.md#L5", "lang": "ko", "path": "docs/wiki/log.md", "sensitivity": "public", "sha8": "046663f5", "tags": ["wiki"]}
+{"heading": "[2026-11-08] ingest | README, 앱 코드, 재고 SQL", "id": "docs/wiki/log.md#L7", "lang": "ko", "path": "docs/wiki/log.md", "sensitivity": "public", "sha8": "046663f5", "tags": ["wiki"]}
+{"heading": "행 수준 보안", "id": "docs/wiki/pages/concepts/row-level-security.md#L5", "lang": "ko", "path": "docs/wiki/pages/concepts/row-level-security.md", "sensitivity": "public", "sha8": "6eff9940", "tags": ["wiki"]}
+{"heading": "재고 품목", "id": "docs/wiki/pages/entities/inventory-item.md#L5", "lang": "ko", "path": "docs/wiki/pages/entities/inventory-item.md", "sensitivity": "public", "sha8": "0af02e8f", "tags": ["wiki"]}
+{"heading": "자주 묻는 질문", "id": "docs/wiki/pages/faq.md#L5", "lang": "ko", "path": "docs/wiki/pages/faq.md", "sensitivity": "public", "sha8": "d273e659", "tags": ["wiki"]}
+{"heading": "로컬 개발", "id": "docs/wiki/pages/howto/local-development.md#L5", "lang": "ko", "path": "docs/wiki/pages/howto/local-development.md", "sensitivity": "public", "sha8": "c6540e31", "tags": ["wiki"]}
+{"heading": "앱 상태와 데이터 조회", "id": "docs/wiki/pages/modules/app.md#L5", "lang": "ko", "path": "docs/wiki/pages/modules/app.md", "sensitivity": "public", "sha8": "6393e54f", "tags": ["wiki"]}
+{"heading": "입출고 모달", "id": "docs/wiki/pages/modules/stock-modal.md#L5", "lang": "ko", "path": "docs/wiki/pages/modules/stock-modal.md", "sensitivity": "public", "sha8": "af3fb38b", "tags": ["wiki"]}
+{"heading": "Supabase 클라이언트", "id": "docs/wiki/pages/modules/supabase.md#L5", "lang": "ko", "path": "docs/wiki/pages/modules/supabase.md", "sensitivity": "public", "sha8": "5ccfc39c", "tags": ["wiki"]}
+{"heading": "저장소 개요", "id": "docs/wiki/pages/overview.md#L5", "lang": "ko", "path": "docs/wiki/pages/overview.md", "sensitivity": "public", "sha8": "e157e1cc", "tags": ["wiki"]}
+{"heading": "Agent Session Handoff Records", "id": "handoffs/README.md#L24", "lang": "en", "path": "handoffs/README.md", "sensitivity": "public", "sha8": "ce94fb4f", "tags": ["- handoff"]}
+{"heading": "Purpose", "id": "handoffs/README.md#L26", "lang": "en", "path": "handoffs/README.md", "sensitivity": "public", "sha8": "ce94fb4f", "tags": ["- handoff"]}
+{"heading": "Recording Guidelines", "id": "handoffs/README.md#L29", "lang": "en", "path": "handoffs/README.md", "sensitivity": "public", "sha8": "ce94fb4f", "tags": ["- handoff"]}
+{"heading": "비개발자용 매뉴얼 개선 사항", "id": "non-developer-manual-improvements.md#L15", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "개선 방향", "id": "non-developer-manual-improvements.md#L17", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "핵심 개선 사항", "id": "non-developer-manual-improvements.md#L26", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "권장 진행 순서", "id": "non-developer-manual-improvements.md#L42", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "단계 작성 예시", "id": "non-developer-manual-improvements.md#L59", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "Antigravity CLI 실행하기", "id": "non-developer-manual-improvements.md#L61", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "최종 확인 체크리스트", "id": "non-developer-manual-improvements.md#L77", "lang": "unknown", "path": "non-developer-manual-improvements.md", "sensitivity": "unknown", "sha8": "4cf309fb", "tags": ["- readme"]}
+{"heading": "Public", "id": "public/README.md#L24", "lang": "en", "path": "public/README.md", "sensitivity": "public", "sha8": "2845d1d5", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "public/README.md#L26", "lang": "en", "path": "public/README.md", "sensitivity": "public", "sha8": "2845d1d5", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "public/README.md#L29", "lang": "en", "path": "public/README.md", "sensitivity": "public", "sha8": "2845d1d5", "tags": ["- readme"]}
+{"heading": "Scripts", "id": "scripts/README.md#L24", "lang": "en", "path": "scripts/README.md", "sensitivity": "public", "sha8": "eb3e44af", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "scripts/README.md#L26", "lang": "en", "path": "scripts/README.md", "sensitivity": "public", "sha8": "eb3e44af", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "scripts/README.md#L29", "lang": "en", "path": "scripts/README.md", "sensitivity": "public", "sha8": "eb3e44af", "tags": ["- readme"]}
+{"heading": "Src", "id": "src/README.md#L24", "lang": "en", "path": "src/README.md", "sensitivity": "public", "sha8": "182d21af", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "src/README.md#L26", "lang": "en", "path": "src/README.md", "sensitivity": "public", "sha8": "182d21af", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "src/README.md#L29", "lang": "en", "path": "src/README.md", "sensitivity": "public", "sha8": "182d21af", "tags": ["- readme"]}
+{"heading": "Src > Assets", "id": "src/assets/README.md#L24", "lang": "en", "path": "src/assets/README.md", "sensitivity": "public", "sha8": "6794b8c6", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "src/assets/README.md#L26", "lang": "en", "path": "src/assets/README.md", "sensitivity": "public", "sha8": "6794b8c6", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "src/assets/README.md#L29", "lang": "en", "path": "src/assets/README.md", "sensitivity": "public", "sha8": "6794b8c6", "tags": ["- readme"]}
+{"heading": "Src > Components", "id": "src/components/README.md#L24", "lang": "en", "path": "src/components/README.md", "sensitivity": "public", "sha8": "e5ac14b1", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "src/components/README.md#L26", "lang": "en", "path": "src/components/README.md", "sensitivity": "public", "sha8": "e5ac14b1", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "src/components/README.md#L29", "lang": "en", "path": "src/components/README.md", "sensitivity": "public", "sha8": "e5ac14b1", "tags": ["- readme"]}
+{"heading": "Src > Lib", "id": "src/lib/README.md#L24", "lang": "en", "path": "src/lib/README.md", "sensitivity": "public", "sha8": "4b189de5", "tags": ["- readme"]}
+{"heading": "Purpose", "id": "src/lib/README.md#L26", "lang": "en", "path": "src/lib/README.md", "sensitivity": "public", "sha8": "4b189de5", "tags": ["- readme"]}
+{"heading": "Directory Artifacts", "id": "src/lib/README.md#L29", "lang": "en", "path": "src/lib/README.md", "sensitivity": "public", "sha8": "4b189de5", "tags": ["- readme"]}
+{"heading": "Antigravity CLI 최소 개입 원샷 세팅", "id": "vibe-coding-one-prompt-setup.md#L15", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "실행 방법", "id": "vibe-coding-one-prompt-setup.md#L28", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "기본 설정", "id": "vibe-coding-one-prompt-setup.md#L48", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "에이전트 실행 규칙", "id": "vibe-coding-one-prompt-setup.md#L71", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 1: 사전 점검과 자동 인증", "id": "vibe-coding-one-prompt-setup.md#L83", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "GitHub", "id": "vibe-coding-one-prompt-setup.md#L96", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Cloudflare", "id": "vibe-coding-one-prompt-setup.md#L106", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Supabase MCP", "id": "vibe-coding-one-prompt-setup.md#L114", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 2: React 앱 완성", "id": "vibe-coding-one-prompt-setup.md#L134", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 3: Supabase Auth와 데이터베이스", "id": "vibe-coding-one-prompt-setup.md#L168", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 4: 로컬 자동 검증", "id": "vibe-coding-one-prompt-setup.md#L195", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 5: 한 번의 최종 승인", "id": "vibe-coding-one-prompt-setup.md#L219", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "Phase 6: GitHub와 Cloudflare 자동 완료", "id": "vibe-coding-one-prompt-setup.md#L232", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "완료 조건", "id": "vibe-coding-one-prompt-setup.md#L258", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}
+{"heading": "최종 보고 형식", "id": "vibe-coding-one-prompt-setup.md#L274", "lang": "unknown", "path": "vibe-coding-one-prompt-setup.md", "sensitivity": "unknown", "sha8": "59912797", "tags": ["- readme"]}

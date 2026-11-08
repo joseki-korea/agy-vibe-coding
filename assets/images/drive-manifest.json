@@ -1,0 +1,60 @@
+{
+  "repo": "joseki-korea/agy-vibe-coding",
+  "drive_path": "Orca 산출물/프로젝트/agy-vibe-coding/assets/images",
+  "files": [
+    {
+      "name": "antigravity-site-preview.jpg",
+      "path": "assets/images/screenshots/antigravity-site-preview.jpg",
+      "size": 535408,
+      "sha8": "2e0ae838",
+      "drive_id": "1fIiEIpp6IdfNF7FgU6pjUiO-czYz895j",
+      "status": "ON_DRIVE",
+      "updated": "2026-11-08"
+    },
+    {
+      "name": "dashboard-preview.jpg",
+      "path": "assets/images/screenshots/dashboard-preview.jpg",
+      "size": 520053,
+      "sha8": "c6f17ca0",
+      "drive_id": null,
+      "status": "KEPT_RUNTIME",
+      "updated": "2026-11-08"
+    },
+    {
+      "name": "github-repository-preview.jpg",
+      "path": "assets/images/screenshots/github-repository-preview.jpg",
+      "size": 488031,
+      "sha8": "8ae6d08f",
+      "drive_id": null,
+      "status": "KEPT_RUNTIME",
+      "updated": "2026-11-08"
+    },
+    {
+      "name": "dashboard-preview.jpg",
+      "path": "public/dashboard-preview.jpg",
+      "size": 520053,
+      "sha8": "c6f17ca0",
+      "drive_id": null,
+      "status": "KEPT_RUNTIME",
+      "updated": "2026-11-08"
+    },
+    {
+      "name": "hero.png",
+      "path": "src/assets/hero.png",
+      "size": 13057,
+      "sha8": "881ffbca",
+      "drive_id": null,
+      "status": "KEPT_RUNTIME",
+      "updated": "2026-11-08"
+    },
+    {
+      "name": "supabase-dashboard-preview.jpg",
+      "path": "assets/images/screenshots/supabase-dashboard-preview.jpg",
+      "size": 498649,
+      "sha8": "cb730bd9",
+      "drive_id": null,
+      "status": "KEPT_RUNTIME",
+      "updated": "2026-11-08"
+    }
+  ]
+}

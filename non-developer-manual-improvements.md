@@ -1,3 +1,17 @@
+---
+id: agy-vibe-coding/non-developer-manual-improvements.md
+title: 비개발자용 매뉴얼 개선 사항
+repo: joseki-korea/agy-vibe-coding
+device_scope: all
+doc_type: readme
+tags:
+  - readme
+  - standard-documentation
+status: DRAFT
+updated: '2026-11-07'
+source_of_truth: non-developer-manual-improvements.md
+---
+
 # 비개발자용 매뉴얼 개선 사항
 
 ## 개선 방향

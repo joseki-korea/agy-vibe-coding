@@ -1,3 +1,17 @@
+---
+id: agy-vibe-coding/vibe-coding-one-prompt-setup.md
+title: Antigravity CLI 최소 개입 원샷 세팅
+repo: joseki-korea/agy-vibe-coding
+device_scope: all
+doc_type: readme
+tags:
+  - readme
+  - standard-documentation
+status: DRAFT
+updated: '2026-11-07'
+source_of_truth: vibe-coding-one-prompt-setup.md
+---
+
 # Antigravity CLI 최소 개입 원샷 세팅
 
 이 파일을 Antigravity CLI에 전달하면 현재 폴더의 재고관리 앱을 점검하고, 로컬 구축부터 Supabase 연결, 검증, GitHub 및 Cloudflare 배포까지 가능한 범위에서 연속 실행합니다.
