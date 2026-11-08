@@ -14,3 +14,9 @@
 ## 2. 작업 위임 지침
 - 모든 실제 소스코드 구현 및 시스템 작업은 **Codex Terra** 또는 **Antigravity** 작업 세션으로 위임합니다.
 - 상세 역할 및 규칙: 👉 **[docs/agents/claude-role.md](docs/agents/claude-role.md)** · **[docs/agents/claude-rules.md](docs/agents/claude-rules.md)**
+
+## 멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)
+- 핸드오프 규칙: [docs/agents/handoffs/README.md](docs/agents/handoffs/README.md)
+- 정리 담당: [docs/agents/ROLE-janitor.md](docs/agents/ROLE-janitor.md)
+- 감시 담당: [docs/agents/ROLE-watchdog.md](docs/agents/ROLE-watchdog.md)
+- 훅 목록: [docs/agents/HOOKS.md](docs/agents/HOOKS.md)

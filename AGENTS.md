@@ -13,3 +13,9 @@
 ## 2. 운영 지침
 - 작업 완료 후 구체적인 코드 실행 증거를 제시합니다.
 - 상세 역할 및 규칙: 👉 **[docs/agents/codex-role.md](docs/agents/codex-role.md)** · **[docs/agents/codex-rules.md](docs/agents/codex-rules.md)**
+
+## 멀티에이전트 핸드오프·정리·감시·훅 (docs/agents)
+- 핸드오프 규칙: [docs/agents/handoffs/README.md](docs/agents/handoffs/README.md)
+- 정리 담당: [docs/agents/ROLE-janitor.md](docs/agents/ROLE-janitor.md)
+- 감시 담당: [docs/agents/ROLE-watchdog.md](docs/agents/ROLE-watchdog.md)
+- 훅 목록: [docs/agents/HOOKS.md](docs/agents/HOOKS.md)

@@ -34,3 +34,8 @@ related:
 ## 2. 정본 문서 안내
 전체 세부 규칙 및 행동 지침은 아래 정본 문서를 참고하십시오:
 👉 **[docs/RULES.md](docs/RULES.md)**
+
+## 핸드오프 절차
+1. 일을 넘길 때는 `docs/agents/handoffs/active/`에 TEMPLATE.md 복사본을 만든다.
+2. 파일명, append-only, ACK, archive 규칙은 [핸드오프 규칙](docs/agents/handoffs/README.md)을 따른다.
+3. 끝난 핸드오프는 `docs/agents/handoffs/archive/`로 옮긴다.

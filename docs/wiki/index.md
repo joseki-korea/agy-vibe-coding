@@ -12,3 +12,10 @@
 - [입출고 모달](pages/modules/stock-modal.md) — 입출고 모달은 현재 수량과 안전재고를 사용해 예상 수량과 재고 상태를 계산한다. [source: src/components/StockModal.jsx#L17 @72302b12]
 - [Supabase 클라이언트](pages/modules/supabase.md) — 클라이언트 설정은 두 Vite 환경변수 값을 읽으며 값이 유효하지 않으면 클라이언트를 생성하지 않는다. [source: src/lib/supabase.js#L3 @0c273b20]
 - [저장소 개요](pages/overview.md) — 이 저장소는 React와 Supabase Auth/RLS 등을 배우는 비개발자용 재고관리 예제다. [source: README.md#L19 @88905af0]
+
+## 에이전트 문서 (docs/agents)
+- [핸드오프 규칙](../agents/handoffs/README.md) — 넘김 기록의 이름·ACK·보관 규칙
+- [핸드오프 양식](../agents/handoffs/TEMPLATE.md) — 새 핸드오프를 만들 때 복사하는 양식
+- [정리 담당](../agents/ROLE-janitor.md) — 임시 파일과 복제본 정리 규칙
+- [감시 담당](../agents/ROLE-watchdog.md) — 정체·디스크·규칙 위반 감시 규칙
+- [훅 목록](../agents/HOOKS.md) — 이 레포의 실제 훅 목록
